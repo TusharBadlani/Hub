@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+        <variable
+            name="childItem3ViewModel"
+            type="cessini.technology.explore.viewmodel.SearchViewModel" />
+
+        <variable
+            name="parentPosition"
+            type="java.lang.Integer" />
+
+        <variable
+            name="imageDescription"
+            type="String" />
+
+        <variable
+            name="imageTitle"
+            type="String" />
+
+        <variable
+            name="position"
+            type="java.lang.Integer" />
+
+        <variable
+            name="context"
+            type="cessini.technology.explore.fragment.ExploreSearchFragment" />
+
+        <variable
+            name="childItem3"
+            type="cessini.technology.cvo.exploremodels.PublicEventsModel" />
+
+        <variable
+            name="onClickChild3"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="image"
+            type="String" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dimen_5"
+        android:background="@drawable/custom_shadow"
+        android:onClick="@{onClickChild3}">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/abtest_slider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="@dimen/dimen_0"
+            app:cardCornerRadius="@dimen/dimen_33"
+            app:cardElevation="@dimen/dimen_0"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    setImageView="@{image}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/middletextview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{imageDescription}"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_15"
+                    app:layout_constraintBottom_toTopOf="@+id/middleuppertext"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/middleuppertext"
+                    style="@style/TextShadowStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/dimen_25"
+                    android:text="@{imageTitle}"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_25"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/dimen_30"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                    app:layout_constraintEnd_toEndOf="@+id/middletextview"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/middletextview"
+                   />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

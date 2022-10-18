@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Myworld</string>
+    <string name="large_text">"Avoiding elevation interference.\n\n" </string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sharedPrefName">SuggestionSharedPreference</string>
+    <string name="sharedPrefName2">SuggestionSharedPreference2</string>
+    <string name="sharedPrefName3">SuggestionSharedPreferenceReverse</string>
+    <string name="authSharedPref">AuthSharedPreference</string>
+    <!--Home Fragment -->
+    <string name="gallery_image">गैलरी</string>
+    <string name="hint"><font size="15"> सर्च हब, एक्स्पर्ट</font></string>
+    <!--video upload category list-->
+    <string-array name="category">
+        <item>Select Video Category</item>
+        <item>Film and animation</item>
+        <item>News and politics</item>
+        <item>Music</item>
+        <item>Education</item>
+        <item>Pets and animals</item>
+        <item>Sport</item>
+        <item>Entertainment</item>
+        <item>Cars and vehicles</item>
+        <item>Web development</item>
+        <item>Cricket</item>
+        <item>Cloud computing</item>
+        <item>Travel and events</item>
+        <item>People and blogs </item>
+        <item>How-to and style</item>
+        <item>Science and technology</item>
+        <item>Non-profits and activism</item>
+    </string-array>
+    <string name="view_all">सभी देखें</string>
+    <string name="doyc">डिस्कवरी</string>
+    <string name="earn">मोनेटाइजेशन</string>
+    <string name="payment">पेमन्ट और पेआउट</string>
+    <string name="autop">ऑटोप्ले</string>
+    <string name="video_Q">वीडियो क्वालिटी </string>
+    <string name="camera_A">कैमरा उन्नति</string>
+    <string name="notify">नोटिफिकेशन</string>
+    <string name="notification_Activity"> सभी गतिविधि</string>
+    <string name="log_O">लॉग आउट </string>
+    <string name="myspace_list">अपना हब मैनेज करें</string>
+    <string name="myspace_L_T">हब पर अपनी समस्या का समाधान करें</string>
+    <string name="myspace_intro">चलो हब पर बात करते हैं</string>
+    <string name="myspace_public_help_text">अपनी समस्याओं के बारे में लाइव बातचीत शुरू करें।</string>
+    <string name="Create_s_n">कुछ नया करें</string>
+    <string name="myspace">हब</string>
+    <string name="createmyspace">हब बनाएं</string>
+    <string name="add_mpace">हब मैनेज करें</string>
+    <string name="add_myspace">हब</string>
+    <string name="everyone">यहां बताया गया है कि यह कैसे काम करता है</string>
+    <string name="listener">श्रोता</string>
+    <string name="leave">छोड़ें</string>
+    <string name="accepted">स्वीकृत</string>
+    <string name="message_wtr">मैसेज लिखे</string>
+    <string name="video_T">अपने वीडियो के समाप्त होने पर मिलते-जुलते वीडियो ट्रैक को देखते रहें</string>
+    <string name="smart_A">स्मार्ट एडॉप्टिव (नेटवर्क की पैमाइश या धीमा होने पर डेटा का उपयोग कम करता है)</string>
+    <string name="recommended_M">डिवाइस पर अनुशंसित मोड आधार (टैब और रिकॉर्डिंग होल्ड करें)</string>
+    <string name="video_T_N">अपना नया वीडियो ट्रेंड नोटिफिकेशन इस पर सेट करें</string>
+    <string name="data_S">डेटा बचतकर्ता</string>
+    <string name="video_Q_E">आपके वीडियो की गुणवत्ता को कम (40 kbit/s के बराबर) पर सेट करें और क्रिएटर कैनवस को अक्षम करें</string>
+    <string name="setting">सेटिंग</string>
+    <string name="views">प्रोफाइल देखें</string>
+    <string name="Ok">ठीक है</string>
+    <string name="active">हब से जुड़ें</string>
+    <string name="add_message">कुछ भी पूछें</string>
+    <string name="revenue">आय</string>
+    <string name="edit_Pro">एडिट प्रोफाइल</string>
+    <string name="edit_P">एडिट</string>
+    <string name="location">स्थान</string>
+    <string name="email">ईमेल</string>
+    <string name="expo_share">माईवर्ल्ड पर देखना चाहते हैं कि आप किसे जानते हैं?  </string>
+    <string name="expo_share_sub">अपने संपर्कों पर एक नज़र डालें</string>
+    <string name="expo_share_button">आरंभ करें</string>
+    <string name="creator_studio">माईवर्ल्ड क्रिएटर स्टूडियो</string>
+    <string name="share_Bio_H">अपने बारे में कुछ साझा करें</string>
+    <string name="share_Bio_E">आपकी विशेषज्ञता का क्षेत्र</string>
+    <string name="channel_N">चैनल का नाम</string>
+    <string name="search_V">वह वीडियो ढूंढें जिसे आप सीख सकते हैं  </string>
+    <string name="search_My">उन ढूंढें जिसे आप प्रेरित कर सकते हैं</string>
+    <string name="search_M">उन क्रिएटर को ढूंढें जिनसे आप बात कर सकते हैं</string>
+    <string name="search_C">उन क्रिएटर को खोजें जो मदद कर सके</string>
+    <string name="search_H_V_T">लाखों क्रिएटर, विशेषज्ञ और पेशेवर से।</string>
+    <string name="search_H_M_T">आपके द्वारा अनुसरण किए जाने वाले क्रिएटर से।</string>
+    <string name="search_H_C_T">दुनिया भर के हर कोने से।</string>
+    <string name="manage_hub_help">अपना हब बनाएं और प्रबंधित करें, और उपयोगकर्ता से जुड़ने का अनुरोध, आपके द्वारा पसंद की गई लंबित हब सूचियां यहां लाइव रहेंगी।</string>
+<string name="when_Nothing">कहानी, हब में क्रिएटर की बातचीत, और आपके द्वारा पसंद की गई वीडियो प्लेलिस्ट यहां लाइव रहेंगी।</string>
+<string name="Notification_help">यहां आपको सभी मित्र, अनुयायी, हब अनुरोध, जैसे, प्रतिबद्ध गतिविधियां मिल जाएंगी।  </string>
+<string name="make_Y_V_E">कई प्लेटफॉर्म पर लाइव जाकर अपने ऑडियंस की संख्या बढ़ाएं. आप इसे अभी या बाद में सेटिंग में सेट कर सकते हैं</string>
+<string name="make_Y_V">अपना हब हर जगह लाइव करें</string>
+<string name="get_inspire">आज की प्रेरणा</string>
+<string name="yout">यूट्यूब</string>
+<string name="inst">इंस्टाग्राम</string>
+<string name="tweet">ट्विटर</string>
+<string name="twitch">ट्विच</string>
+<string name="add_G">गूगल के साथ जारी रखें</string>
+<string name="add_F">गूगल के साथ जारी रखें</string>
+<string name="make_M">निरीक्षण</string>
+<string name="make_M_E">जब आपके चैनल के 50 घंटे देखे जाने के बाद दर्शक,  100 फालोअर हो जाएंगे और सूची 5 हब होस्ट कर लेंगे, तो आप मोनेटाईजेसन के एलिजिबल होगा।</string>
+<string name="channel_M">मोनेटाईजेसन</string>
+<string name="add_Comment">कमेंट करें</string>
+<string name="post">पोस्ट करें</string>
+<string name="story_T">कहानी का शीर्षक</string>
+<string name="intro_D">समस्याओं को एक साथ हल करें </string>
+<string name="select_L">आप कौन सी भाषाएं बोलते हैं?</string>
+<string name="login_I">जारी रखने के लिए आपको एक माइवर्ल्ड अकाउंट की आवश्यकता है</string>
+<string name="video_l">प्लेलिस्ट से सीखें</string>
+<string name="user_N">यूजर नेम </string>
+<string name="edit_prof">एडिट प्रोफाइल</string>
+<string name="follow">फालोअर</string>
+<string name="following">फोल्लोविंग</string>
+<string name="permisison_allow_button">एक्सेस करने की अनुमति दें</string>
+<string name="addContactDetails">जोड़ें</string>
+<string name="save">सेव करें</string>
+<string name="done">समाप्त करें</string>
+<string name="edit_profile_add_intro">जोड़ें</string>
+<string name="abt_u">आपके बारे में</string>
+<string name="add_T">जोड़ें</string>
+<string name="edit_profile_user_name">हमें जोड़ें</string>
+<string name="upload">अपलोड करें</string>
+<string name="for_you">गैलरी</string>
+<string name="ProfileStories">अभी तक कोई हब नहीं है</string>
+<string name="ProfileVideo">अभी तक कोई वीडियो नहीं  </string>
+<string name="ProfileMore">अभी तक कोई गतिविधि नहीं है</string>
+<string name="gallery">गैलरी</string>
+<string name="video_Title">वीडियो टाइटल</string>
+<string name="more"><a href="http://joinmyworld.ml/faq.html"><b>अधिक जाने</b></a></string>
+<string name="every">हर कोई</string>
+<string name="Only_people_W">केवल वे लोग जिन्हें आप चाहते हैं</string>
+<string name="camera_Title">माईवर्ल्ड कैमरा में आपका स्वागत है!</string>
+<string name="add_I_S">अपनी रुचियां चुनें</string>
+<string name="schedule_H">शेड्यूल हब े</string>
+<string name="display_title">गो लाइव के 3 मिनट से पहले रिमाइंडर द्वारा सूचित किए जाने पर शेड्यूल का समय पूरा हो जाएगा।</string>
+<string name="video_D">वीडियो डिस्क्रिप्शन </string>
+<string name="explore_I">मल्टीप्ल मंच पर अपने सम्मेलन की बात को सक्षम करें.</string>
+<string name="explore_info">आपके वीडियो को और अधिक स्थानों पर प्रदर्शित किया जा सकता है</string>
+<string name="camera_intro_text">हब बनाएं, वीडियो एडिट करें और स्वयं को अभिव्यक्त करने के नए तरीके खोजें</string>
+<string name="helpforeveryonemyspace">कोई भी आपको हब जॉइन रिक्वेस्ट भेज सकता है।</string>
+<string name="search_here">सर्च करे</string>
+<string name="search_here_name">नाम से सर्च करे</string>
+<string name="wellcome_Tochat">आपके इनबॉक्स में आपका स्वागत है!</string>
+<string name="wellcome_Tochat_helptext">विशेषज्ञों को खोजें और आप व अन्य हबस्टार के बीच निजी बातचीत के साथ बात करें।।</string>
+<string name="search_cancel">कैंसल</string>
+<string name="open_camera_for_profile">कैमरा खोले</string>
+<string name="choose_from_gallery_for_profile">गैलरी से चुनें</string>
+<string name="edit_profile_UserName">पूरा नाम</string>
+<string name="audio_file_title">ऑडियो फ़ाइल टाइटल</string>
+<string name="profile_image_desc">प्रोफ़ाइल  इमेज </string>
+<string name="n_money_wid">निकासी के लिए पैसे नहीं हैं</string>
+<string name="MC_revenue">माईवर्ल्ड क्रिएटर की इन्कम</string>
+<string name="payment_p">पेमन्ट</string>
+<string name="myworld_payment">माईवर्ल्ड पेमन्ट (नया!)</string>
+<string name="payment_info">अपने दर्शकों और अन्य लोगों को आपको पैसे भेजने के लिए आसान पहुंच प्रदान करें। शुरू करने के लिए, हमारे भुगतान भागीदार गूगल पे के साथ एक खाता बनाएं।</string>
+<string name="cancel_upload_recorded_video">पूरा वीडियो छोड़ें?</string>
+<string name="dialog_message_video_upload_fragment">यदि आप अभी वापस जाते हैं, तो आप अपने वीडियो में जोड़ी गई सभी क्लिप खो देंगे।</string>
+<string name="no_internet_text">ऐसा लगता है कि आप ऑफ़लाइन हैं।</string>
+<string name="no_internet_sub_text">आप ऑफ़लाइन हैं। कृपया अपना इंटरनेट कनेक्शन जांचें</string>
+<string name="no_internet_text_help">जब आप वापस ऑनलाइन होंगे तो आपको और स्टोरी दिखाई देगी।</string>
+<string name="music_text">आपके लिए</string>
+<string name="non_profits_and_activism">गैर-लाभकारी और सक्रियता</string>
+<string name="science_and_technology">विज्ञान और प्रौद्योगिकी</string>
+<string name="education">शिक्षा</string>
+<string name="how_to_and_style">कैसे करें और स्टाइल करें</string>
+<string name="news_and_politics">समाचार और राजनीति</string>
+<string name="entertainment">मनोरंजन</string>
+<string name="comedy">कॉमेडी</string>
+<string name="people_and_blogs">लोग और ब्लॉग</string>
+<string name="gaming">गेमिंग</string>
+<string name="Roomhint"><font size="13">हब का शीर्षक जोड़ें</font></string>
+<string name="Schedule_myspace">शेड्यूल हब</string>
+<string name="area_of_topic">अपनी बातचीत का क्षेत्र चुनें</string>
+<string name="hubLock">अपना हब देखें</string>
+<string name="travel_and_events">यात्रा और इवेंट</string>
+<string name="sport">खेल</string>
+<string name="no_comments_right_now">अभी तक कोई कमेंट नहीं</string>
+<string name="pets_and_animals">पालतू  और जानवर</string>
+<string name="music">संगीत</string>
+<string name="cars_and_vehicles">कार और वाहन</string>
+<string name="film_and_animation">फ़िल्म और एनिमेशन</string>
+<string name="get_your_reco">अपने वैयक्तिकृत हब वार्तालाप, विशेषज्ञों की सहायता, प्लेलिस्ट प्राप्त करें, कृपया कम से कम 5 श्रेणी चुनें।</string>
+<string name="get_your_reco_lan">आप अपनी चुनी हुई किसी भी भाषा में हब कॉन्फ़्रेंस कॉल, लोग और रुझान देख पाएंगे।</string>
+<string name="english">अंग्रेज़ी</string>
+<string name="hindi">हिन्दी | Hindi</string>
+<string name="bangla">বাংলা | Bengali</string>
+<string name="marathi">मराठी | Marathi</string>
+<string name="punjabi">ਪੰਜਾਬੀ | Punjabi</string>
+<string name="telugu">తెలుగు | Telugu</string>
+<string name="kannada">ಕನ್ನಡ | Kannada</string>
+<string name="tamil">தமிழ் | Tamil</string>
+<string name="malayalam">മലയാളം | Malayalam</string>
+<string name="gujarati">ગુજરાતી | Gujarati</string>
+<string name="dark_theme">डार्क थीम</string>
+<string name="dark_theme_change">थीम बदलें</string>
+<string name="join_later">बाद में जुड़े</string>
+<string name="block">ब्लॉक करे</string>
+<string name="report">रिपोर्ट करे</string>
+<string name="dont_recommend">हब रेकमेन्ड ना करे</string>
+<string name="terms_and_privacy_policies">साइन अप करके, आप कन्फर्म करते हैं कि आप हमारी  <a href="http://joinmyworld.ml/terms.html"><b><u>उपयोग की शर्तों</u></b></a>और पढ़ लिया है और समझ लिया है <a href="http://joinmyworld.ml/privacy.html"><b><u>प्राइवेसी और पॉलिसी</u></b></a>.</string>
+<string name="intro_terms_and_privacy">डिस्कवर माईवर्ल्ड पर क्लिक करके आप हमारी शर्तों से सहमत होते हैं।</string>
+<string name="msg_successful_vid">आपका  %1$ 10 मिनट में सार्वजनिक रूप से उपलब्ध हो जाता है</string>
+    <string name="Dis_y_hub">डिस्कवर योर हब</string>
+    <string name="pgwt"> गेम खेले, एक साथ देखें</string>
+    <string name="belowhelptext">स्टोरी शेयर करे, वीडियो इसमें अच्छा है</string>
+<string name="Dyourinspiration">डिस्कवर योर इन्स्परेशन</string>
+<string name="join_myspace">जॉइन</string>
+<string name="jm_1">चलो हब पर बात करते हैं।</string>
+<string name="hubTopic">हब का विषय</string>
+<string name="jm_2">क्रिएटर से मदद मांगें।</string>
+<string name="jm_3">दोस्त और परिवार से जुड़ें।</string>
+<string name="jm_1_know_more">रॉयल्टी सहायता का तत्काल भुगतान किया जाता है।</string>
+<string name="jm_2_know_more">अधिकतम 100 श्रोता जोड़ें।</string>
+<string name="jm_3_know_more">सब कुछ एन्क्रिप्ट किया गया है</string>
+<string name="hubhelptext">आपके द्वारा प्रकाशित हब माईवर्ल्ड को एक सुरक्षित और प्रेरक स्थान बनाने में मदद करता है। जो कोई भी बनाता है उसे प्रकाशित करने से पहले क्रिएटर कोड को पढ़ना और उससे सहमत होना चाहिए।.</string>
+<string name="jm_ask_me_anything">श्रोता पूछ सकता है कि आप कहां मास्टर हैं।</string>
+<string name="jm_Keep_on_con">अपने पसंदीदा मित्रों, आकाओं के साथ वीडियो कॉन्फ़्रेंस करते रहें।</string>
+<string name="jm_ask_me_anything_sub">श्रोता आपसे अपनी समस्या के बारे में पूछ सकते हैं।</string>
+<string name="jm_public_sharevideostories">माईवर्ल्ड पर आपके द्वारा पोस्ट की जाने वाली प्रत्येक कहानी, वीडियो दूसरों की मदद कर सकती है।</string>
+<string name="jm_public_watchtogather">हब के साथ आप एक साथ चल सकते हैं और मूवी देख सकते हैं।</string>
+<string name="jm_public_ask">आप अपनी समस्या के बारे में कुछ भी पूछ सकते हैं।</string>
+<string name="jm_anyone_join">कोई भी बात करने के लिए माईवर्ल्ड पर आमंत्रित या शामिल हो सकता है।</string>
+<string name="jm_family">अपनी समस्या पर चर्चा करने के लिए अपने करीबी दोस्तों और परिवार को साथ लाएं</string>
+<string name="jm_royalty_support">माईवर्ल्ड श्रोताओं से आपकी मदद के लिए समर्थन मांगेगा।</string>
+<string name="jm_encription">हम शून्य-ज्ञान एन्क्रिप्शन का उपयोग करते हैं, इसलिए कोई अन्य आपके अलावा आपके किसी भी डेटा तक नहीं पहुंच सकता है।</string>
+<string name="tool_text">लगभग सभी सुरक्षा जांच पूरी होने के 48 घंटों के भीतर यह राशि उपलब्ध हो जाएगी</string>
+<string-array name="video_option">
+<item>Share</item>
+<item>Delete</item>
+</string-array>
+<string name="share_room" formatted="false">इस सर्वोत्तम हब %s को चेकआउट करें। अभी शामिल हों, क्लिक करें: %s</string>
+<string name="learn_more">और जानें</string>
+<string name="go_live">गो लाइव</string>
+<string name="story">कहानी</string>
+<string name="video">वीडियो</string>
+<string name="camera">कैमरा</string>
+<string name="payment_button_value">Send %1$s %2$s</string>
+<string name="some_text">
+
+</string>
+<string name="home">Home</string>
+<string name="explore">Explore</string>
+<string name="recent">हल के</string>
+<string name="profile">प्रोफ़ाईल</string>
+<string name="action_onboard_welcome">स्वागत है!</string>
+<string name="mygrid_Title">हब मे आपका स्वागत है।</string>
+<string name="mygrid_intro_text">स्पेस बनाएं, स्क्रिन शेयर करें और ख़ुद को व्यक्त करने के नएं तरीके जाने</string>
+
+</resources>

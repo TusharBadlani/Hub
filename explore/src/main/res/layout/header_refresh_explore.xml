@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/go_to_homefeed"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_45"
+            android:layout_marginVertical="@dimen/dimen_25"
+            android:background="@drawable/round_viewbutton"
+            android:elevation="@dimen/dimen_0"
+            android:stateListAnimator="@null"
+            android:gravity="center"
+            android:padding="@dimen/dimen_10"
+            android:text="Go to feed"
+            android:textAllCaps="false"
+            android:textColor="@color/cpHelpText"
+            android:textSize="@dimen/font_size_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+        <ImageView
+            android:id="@+id/imageView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/dimen_20"
+            app:srcCompat="@drawable/ic_more_load" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="That's all for now!"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/cpHelpText"
+            android:textSize="@dimen/font_size_16"
+            android:layout_marginTop="@dimen/dimen_20"
+            app:layout_constraintTop_toBottomOf="@+id/imageView20" />
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginHorizontal="@dimen/dimen_40"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:text="Explore more hub conversation in your home feed"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_18"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView25" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

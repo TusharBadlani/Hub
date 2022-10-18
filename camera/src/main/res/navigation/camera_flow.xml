@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/camera_flow"
+    app:startDestination="@id/cameraOptionBottomSheetFragment">
+
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="cessini.technology.camera.presentation.fragment.CameraFragment"
+        android:label="CameraFragment">
+        <action
+            android:id="@+id/action_cameraFragment_to_musicBottomSheetFragment"
+            app:destination="@id/musicBottomSheetFragment" />
+        <action
+            android:id="@+id/action_cameraFragment_to_videoGalleryFragment"
+            app:destination="@id/videoGalleryFragment" />
+        <action
+            android:id="@+id/action_cameraFragment_to_videoUploadFragment"
+            app:destination="@id/videoUploadFragment" />
+        <action
+            android:id="@+id/action_cameraFragment_to_cameraOptionBottomSheetFragment"
+            app:destination="@id/cameraOptionBottomSheetFragment" />
+
+        <!-- Hide bottom navigation bar from this destination -->
+        <argument
+            android:name="@string/nav_arg_hide_bottom_nav"
+            app:argType="boolean"
+            android:defaultValue="true" />
+
+        <!-- Use dark status bar -->
+        <argument
+            android:name="@string/nav_arg_force_dark_status_bar"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
+
+
+    <dialog
+        android:id="@+id/musicBottomSheetFragment"
+        android:name="cessini.technology.camera.presentation.fragment.MusicBottomSheetFragment"
+        android:label="MusicBottomSheetFragment" />
+
+
+    <fragment
+        android:id="@+id/videoUploadFragment"
+        android:name="cessini.technology.camera.presentation.fragment.VideoUploadFragment"
+        android:label="VideoUploadFragment">
+        <action
+            android:id="@+id/action_videoUploadFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment"
+            app:popUpTo="@id/cameraFragment" />
+    </fragment>
+
+
+    <dialog
+        android:id="@+id/videoGalleryFragment"
+        android:name="cessini.technology.camera.presentation.fragment.VideoGalleryFragment"
+        android:label="VideoGalleryFragment">
+        <action
+            android:id="@+id/action_videoGalleryFragment_to_videoUploadFragment"
+            app:destination="@id/videoUploadFragment" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/cameraOptionBottomSheetFragment"
+        android:name="cessini.technology.camera.presentation.fragment.CameraOptionBottomSheetFragment"
+        android:label="fragment_camera_option_bottom_sheet"
+        tools:layout="@layout/fragment_camera_option_bottom_sheet" >
+
+        <action
+            android:id="@+id/action_cameraOptionBottomSheetFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+    </dialog>
+</navigation>

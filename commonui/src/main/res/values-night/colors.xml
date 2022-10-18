@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="cpDark">#FFFFFFFF</color>
+<color name="cpTextDark">#FFEFEFEF</color>
+<color name="twhite">#FFEFEFEF</color>
+<color name="cpHelpText">#FF767676</color>
+<color name="cpHelpTextIcon">#FF767676</color>
+<color name="cpBackgroundbutton">#FF4b4b4b</color>
+<color name="btnfllow">#FF4b4b4b</color>
+<color name="cpNavLine">#FF4b4b4b</color>
+<color name="tbstext">#FF262626</color>
+<color name="cpBottomSheetBackground">#FF262626</color>
+<color name="cpBackground">#FF262626</color>
+<color name="addEditBtn">#FF0F1419</color>
+<color name="videotype">#FF0F1419</color>
+<color name="cpWhite">#FF000000</color>
+<color name="Dark">#FF000000</color>
+<color name="cpPrimeBlue">#FF1D9BF0</color>
+<color name="cpPrime">#ff7725ff</color>
+<color name="cpPrimeHelp">#ffa10eeb</color>
+<color name="cpRed">#ffFE2C55</color>
+<color name="cpYellow">#ffff9100</color>
+<color name="cpTransparent">#00000000</color>
+<color name="shadow1">#00222222</color>
+<color name="shadow2">#1A222222</color>
+<color name="shadow3">#33222222</color>
+<color name="shadow4">#4d222222</color>
+<color name="shadow5">#66222222</color>
+</resources>

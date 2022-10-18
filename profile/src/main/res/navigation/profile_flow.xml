@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/profile_flow"
+    app:startDestination="@id/profileFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="cessini.technology.profile.fragment.ProfileFragment"
+        android:label="ProfileFragment">
+        <action
+            android:id="@+id/action_profileFragment_to_editUserProfileFragment"
+            app:destination="@id/editUserProfileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_profileSettingFragment"
+            app:destination="@id/profileSettingFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_profileVideoFragment"
+            app:destination="@id/profileVideoFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_followerFollowing3"
+            app:destination="@id/followerFollowing" />
+        <action
+            android:id="@+id/to_manage_room"
+            app:destination="@id/manageRoomFragment" />
+
+    </fragment>
+
+    <dialog
+        android:id="@+id/editUserProfileFragment"
+        android:name="cessini.technology.profile.fragment.editProfile.EditUserProfileFragment"
+        android:label="EditUserProfileFragment">
+        <action
+            android:id="@+id/action_editUserProfileFragment_to_profileFragment"
+            app:popUpTo="@id/profileFragment"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true"
+            app:destination="@id/profileFragment" />
+    </dialog>
+    <dialog
+        android:id="@+id/profileSettingFragment"
+        android:name="cessini.technology.profile.fragment.settings.ProfileSettingFragment"
+        android:label="ProfileSettingFragment">
+        <action
+            android:id="@+id/action_profileSettingFragment_to_editUserProfileFragment"
+            app:destination="@id/editUserProfileFragment" />
+        <action
+            android:id="@+id/action_profileSettingFragment_to_discoveryFragment"
+            app:destination="@id/discoveryFragment" />
+        <action
+            android:id="@+id/action_profileSettingFragment_to_earningFragment"
+            app:destination="@id/earningFragment" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/profileImageCroppingFragment"
+        android:name="cessini.technology.profile.fragment.editProfile.ProfileImageCroppingFragment"
+        android:label="ProfileImageCroppingFragment">
+        <action
+            android:id="@+id/action_profileImageCroppingFragment_to_editUserProfileFragment"
+            app:destination="@id/editUserProfileFragment" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/imageGalleryBottomSheetFragment"
+        android:name="cessini.technology.profile.fragment.editProfile.ImageGalleryBottomSheetFragment"
+        android:label="ImageGalleryBottomSheetFragment">
+        <action
+            android:id="@+id/action_imageGalleryBottomSheetFragment_to_profileImageCroppingFragment"
+            app:destination="@id/profileImageCroppingFragment" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/profileVideoFragment"
+        android:name="cessini.technology.profile.fragment.profileVideo.ProfileVideoFragment"
+        android:label="ProfileVideoFragment" />
+    <dialog
+        android:id="@+id/followerFollowing"
+        android:name="cessini.technology.profile.fragment.FollowerFollowing"
+        android:label="FollowerFollowing">
+        <argument
+            android:name="profileId"
+            app:argType="string"
+            app:nullable="true" />
+    </dialog>
+    <dialog
+        android:id="@+id/discoveryFragment"
+        android:name="cessini.technology.profile.fragment.settings.DiscoveryFragment"
+        android:label="DiscoveryFragment" />
+    <dialog
+        android:id="@+id/earningFragment"
+        android:name="cessini.technology.profile.fragment.settings.EarningFragment"
+        android:label="EarningFragment" />
+    <dialog
+        android:id="@+id/manageRoomFragment"
+        android:name="cessini.technology.profile.fragment.ManageRoomFragment"
+        android:label="ManageRoomFragment">
+        <argument
+            android:name="profile_id"
+            app:argType="string" />
+    </dialog>
+
+
+
+    <action android:id="@+id/global_action_to_imageGalleryBottomSheetFragment"
+        app:destination="@id/imageGalleryBottomSheetFragment" />
+
+    <action android:id="@+id/global_action_to_profileImageCroppingFragment"
+        app:destination="@+id/profileImageCroppingFragment" />
+    <dialog
+        android:id="@+id/shareMyworldFragment"
+        android:name="cessini.technology.commonui.fragment.ShareMyworldFragment"
+        android:label="ShareMyworldFragment" />
+
+</navigation>

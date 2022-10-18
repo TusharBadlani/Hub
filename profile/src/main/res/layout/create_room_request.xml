@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="userPicture"
+            type="String" />
+
+        <variable
+            name="userName"
+            type="String" />
+
+        <variable
+            name="message"
+            type="String" />
+
+        <variable
+            name="createRoomListener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dimen_15"
+        android:layout_marginTop="@dimen/dimen_10">
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="@dimen/dimen_43"
+            android:layout_height="@dimen/dimen_43"
+            creatorImage="@{userPicture}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_user_defolt_avator" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/materialButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_40"
+            android:layout_marginVertical="@dimen/dimen_10"
+            android:background="@drawable/round_viewbutton"
+            android:drawablePadding="@dimen/dimen_5"
+            android:elevation="@dimen/dimen_0"
+            android:padding="@dimen/dimen_10"
+            android:stateListAnimator="@null"
+            android:text="@string/createmyspace"
+            android:textAllCaps="false"
+            android:onClick="@{createRoomListener}"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/room_name"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_10"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingRight="@dimen/dimen_15"
+            android:singleLine="true"
+            android:text="@{message}"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_18"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/materialButton2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/profile_image"
+            app:layout_constraintTop_toTopOf="@+id/materialButton2" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{userName}"
+            android:textColor="@color/cpHelpText"
+            android:textSize="@dimen/font_size_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/room_name"
+            app:layout_constraintStart_toStartOf="@id/room_name"
+            app:layout_constraintTop_toBottomOf="@id/room_name"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

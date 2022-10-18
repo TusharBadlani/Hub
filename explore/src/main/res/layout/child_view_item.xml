@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="childViewModel"
+            type="cessini.technology.explore.viewmodel.SearchViewModel" />
+
+        <variable
+            name="position"
+            type="java.lang.Integer" />
+
+        <variable
+            name="allCategory"
+            type="cessini.technology.cvo.exploremodels.AllCategory" />
+
+        <variable
+            name="categoryTitle"
+            type="java.lang.String" />
+        <variable
+            name="visible"
+            type="java.lang.Integer" />
+        <variable
+            name="size"
+            type="String" />
+        <variable
+            name="childController"
+            type="cessini.technology.explore.controller.ChildRecyclerViewController" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView29"
+            visible="@{visible}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_5"
+            android:text="Live"
+            android:textSize="@dimen/dimen_10"
+            android:paddingHorizontal="@dimen/dimen_5"
+            android:paddingVertical="@dimen/dimen_1"
+            android:background="@drawable/squer_roundview_live"
+            android:textColor="@color/cpWhite"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewTitle"
+            app:layout_constraintStart_toEndOf="@+id/textViewTitle"
+            app:layout_constraintTop_toTopOf="@+id/textViewTitle" />
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dimen_15"
+            android:layout_marginTop="@dimen/dimen_17"
+            android:ellipsize="end"
+            android:hint="@string/myspace"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text='@{categoryTitle}'
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_18"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/user_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{size}"
+            android:hint="@string/add_T"
+            android:textColor="@color/cpHelpText"
+            android:textSize="@dimen/font_size_14"
+            app:layout_constraintStart_toStartOf="@+id/textViewTitle"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+        <com.airbnb.epoxy.EpoxyRecyclerView
+            android:id="@+id/recyclerViewChild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:overScrollMode="never"
+            android:paddingLeft="@dimen/dimen_10"
+            android:theme="@style/EdgeOverlayTheme"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_activity"
+            app:layout_constraintVertical_bias="0.0"
+            app:setController="@{childController}" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="@dimen/dimen_22"
+            android:layout_height="@dimen/dimen_22"
+            android:layout_marginEnd="@dimen/dimen_7"
+            android:padding="4dp"
+            app:layout_constraintBottom_toTopOf="@+id/user_activity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewTitle"
+            app:srcCompat="@drawable/ic_back_right_light" />
+
+        <TextView
+            android:id="@+id/textView31"
+            visible="@{visible}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_1"
+            android:text="@string/view_all"
+            android:textColor="@color/cpPrimeBlue"
+            android:textStyle="bold"
+            android:textSize="@dimen/dimen_12"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+            app:layout_constraintEnd_toStartOf="@id/imageView9"
+            app:layout_constraintTop_toTopOf="@+id/imageView9" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

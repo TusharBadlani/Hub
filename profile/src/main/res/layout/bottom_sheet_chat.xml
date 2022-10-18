@@ -1,0 +1,141 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_bottom_sheet_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_dialog">
+
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="@dimen/dimen_40"
+            android:layout_height="@dimen/dimen_7"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_tabicon" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_25"
+            android:layout_marginBottom="@dimen/dimen_15"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView16">
+
+            <TextView
+                android:id="@+id/bottom_sheet_chat_block"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingHorizontal="@dimen/dimen_15"
+                android:paddingVertical="@dimen/dimen_15"
+                android:text="@string/join_later"
+                android:textColor="@color/cpTextDark"
+                android:textSize="@dimen/dimen_16"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView9"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/bottom_sheet_chat_report"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingHorizontal="@dimen/dimen_15"
+                android:paddingVertical="@dimen/dimen_15"
+                android:text="@string/report"
+                android:textColor="@color/cpTextDark"
+                android:textSize="@dimen/dimen_16"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imageView10"
+                app:layout_constraintTop_toBottomOf="@id/bottom_sheet_chat_block" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingHorizontal="@dimen/dimen_15"
+                android:paddingVertical="@dimen/dimen_15"
+                android:text="@string/dont_recommend"
+                android:textColor="@color/cpTextDark"
+                android:textSize="@dimen/dimen_16"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView12"
+                app:layout_constraintTop_toBottomOf="@+id/bottom_sheet_chat_report" />
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingHorizontal="@dimen/dimen_15"
+                android:paddingVertical="@dimen/dimen_15"
+                android:text="@string/block"
+                android:textColor="@color/cpTextDark"
+                android:textSize="@dimen/dimen_16"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView14"
+                app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="@dimen/dimen_25"
+                android:layout_height="@dimen/dimen_25"
+                android:layout_marginStart="@dimen/dimen_15"
+                app:layout_constraintBottom_toBottomOf="@+id/bottom_sheet_chat_block"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/bottom_sheet_chat_block"
+                app:srcCompat="@drawable/ic_hubnew" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="@dimen/dimen_25"
+                android:layout_height="@dimen/dimen_25"
+                android:layout_marginStart="@dimen/dimen_15"
+                app:layout_constraintBottom_toBottomOf="@+id/bottom_sheet_chat_report"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/bottom_sheet_chat_report"
+                app:srcCompat="@drawable/ic_report" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="@dimen/dimen_25"
+                android:layout_height="@dimen/dimen_25"
+                android:layout_marginStart="@dimen/dimen_15"
+                app:layout_constraintBottom_toTopOf="@+id/textView29"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView25"
+                app:srcCompat="@drawable/ic_likedislike" />
+
+            <ImageView
+                android:id="@+id/imageView14"
+                android:layout_width="@dimen/dimen_25"
+                android:layout_height="@dimen/dimen_25"
+                android:layout_marginStart="@dimen/dimen_15"
+                app:layout_constraintBottom_toBottomOf="@+id/textView29"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView29"
+                app:srcCompat="@drawable/ic_blockicon" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

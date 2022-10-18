@@ -1,0 +1,77 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Myworld" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/cpDark</item>
+        <item name="colorPrimaryDark">@color/cpWhite</item>
+        <item name="colorPrimaryVariant">@color/cpBackground</item>
+        <item name="colorOnPrimary">@color/cpWhite</item>
+
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:enforceNavigationBarContrast" tools:targetApi="q">false</item>
+        <item name="android:enforceStatusBarContrast" tools:targetApi="q">false</item>
+    </style>
+
+    <style name="Theme.Myworld.Splash" parent="Theme.SplashScreen">
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="windowSplashScreenBackground">@color/cpWhite</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splashscreen</item>
+
+        <item name="android:windowSplashScreenBrandingImage" tools:targetApi="s">@drawable/ic_splash_text</item>
+        <item name="windowSplashScreenAnimationDuration">200</item>
+        <item name="postSplashScreenTheme">@style/Theme.Myworld</item>
+    </style>
+
+    <style name="AppTheme.ActionBar" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:textSize">@dimen/font_size_20</item>
+        <item name="actionMenuTextColor">@color/cpDark</item>
+    </style>
+
+    <style name="AppTheme.TabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="tabSelectedTextColor">@color/cpWhite</item>
+        <item name="tabTextColor">@color/cpDark</item>
+    </style>
+
+    <style name="ButtonStyle" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textSize">32sp</item>
+        <item name="android:backgroundTint">@color/cpBackground</item>
+        <item name="cornerRadius">0dp</item>
+    </style>
+
+    <style name="MyworldChipStyle" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="chipBackgroundColor">@color/chip_selector</item>
+        <item name="android:textColor">@color/chip_text_color</item>
+        <item name="chipStrokeColor">@color/chip_selector_stroke_color</item>
+        <item name="chipCornerRadius">@dimen/dimen_18</item>
+        <item name="ensureMinTouchTargetSize">false</item>
+        <item name="chipMinHeight">@dimen/dimen_35</item>
+        <item name="chipSpacingVertical">@dimen/dimen_9</item>
+        <item name="chipSpacingHorizontal">@dimen/dimen_9</item>
+        <item name="chipStartPadding">@dimen/dimen_5</item>
+        <item name="chipEndPadding">@dimen/dimen_5</item>
+        <item name="android:textSize">@dimen/font_size_16</item>
+<!--        <item name="android:textStyle">bold</item>-->
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="rippleColor">@color/cpTransparent</item>
+        <item name="checkedIconEnabled">false</item>
+        <item name="checkedIcon">@null</item>
+    </style>
+
+    <style name="PaymentChipStyle" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="chipBackgroundColor">@color/chip_selector_payments</item>
+        <item name="android:textColor">@color/chip_text_color_payments</item>
+        <item name="chipCornerRadius">@dimen/dimen_15</item>
+        <item name="chipMinHeight">@dimen/dimen_35</item>
+        <item name="chipStartPadding">@dimen/dimen_13</item>
+        <item name="chipEndPadding">@dimen/dimen_13</item>
+        <item name="android:textSize">@dimen/font_size_18</item>
+        <item name="checkedIconEnabled">false</item>
+        <item name="checkedIcon">@null</item>
+    </style>
+
+    <style name="CustomCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_card_custom_corners</item>
+    </style>
+</resources>

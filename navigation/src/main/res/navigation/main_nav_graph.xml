@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/home_flow">
+
+    <include app:graph="@navigation/no_internet_flow" />
+    <include app:graph="@navigation/access_room_flow" />
+<!--    <include app:graph="@navigation/nav_profile_rooms_list" />-->
+    <include app:graph="@navigation/create_room_flow" />
+    <include app:graph="@navigation/home_flow" />
+    <include app:graph="@navigation/camera_flow" />
+    <include app:graph="@navigation/explore_flow" />
+    <include app:graph="@navigation/notification_flow"/>
+    <include app:graph="@navigation/profile_flow" />
+    <include app:graph="@navigation/global_profile_flow" />
+    <include app:graph="@navigation/global_message_flow" />
+    <include app:graph="@navigation/auth_flow" />
+    <include app:graph="@navigation/suggestion_flow" />
+    <include app:graph="@navigation/global_video_flow" />
+    <include app:graph="@navigation/global_story_display_flow" />
+    <include app:graph="@navigation/global_video_display_flow" />
+    <include app:graph="@navigation/global_edit_profile_flow" />
+    <include app:graph="@navigation/global_share_flow"/>
+
+
+    <action
+        android:id="@+id/action_global_no_internet_flow"
+        app:destination="@+id/no_internet_flow" />
+
+    <action
+        android:id="@+id/action_global_access_room"
+        app:destination="@+id/access_room_flow">
+        <argument
+            android:name="room_name"
+            app:argType="string" />
+    </action>
+
+    <action
+        android:id="@+id/action_global_rooms_list"
+        app:destination="@+id/nav_profile_rooms_list">
+        <argument
+            android:name="profile_id"
+            app:argType="string" />
+    </action>
+
+<!--    <action-->
+<!--        android:id="@+id/action_global_message_flow"-->
+<!--        app:destination="@+id/nav_public_profile_room_message">-->
+<!--        <argument-->
+<!--            android:name="profile_id"-->
+<!--            app:argType="string" />-->
+<!--        <argument-->
+<!--            android:name="profile_name"-->
+<!--            app:argType="string" />-->
+<!--    </action>-->
+
+    <action
+        android:id="@+id/action_global_home_flow"
+        app:destination="@id/home_flow"
+        app:popUpTo="@id/main_nav_graph" />
+
+    <action
+        android:id="@+id/action_global_create_room_flow"
+        app:destination="@id/create_room_flow" />
+
+    <action
+        android:id="@+id/action_global_explore_flow"
+        app:destination="@id/explore_flow"
+        app:popUpTo="@id/main_nav_graph" />
+
+    <action
+        android:id="@+id/action_global_camera_flow"
+        app:destination="@id/camera_flow"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim"
+        app:popUpTo="@id/action_global_home_flow" />
+
+
+    <action
+        android:id="@+id/action_global_profile_flow"
+        app:destination="@id/profile_flow" />
+    <action
+        android:id="@+id/action_global_notification_flow"
+        app:destination="@+id/notification_flow"/>
+
+    <action
+        android:id="@+id/action_global__video_flow"
+        app:destination="@id/global_video_flow" />
+
+    <action
+        android:id="@+id/action_global_global_profile_flow"
+        app:destination="@id/global_profile_flow" />
+
+    <action
+        android:id="@+id/action_global_global_message_flow"
+        app:destination="@id/global_message_flow">
+            <argument
+                android:name="profile_id"
+                app:argType="string" />
+            <argument
+                android:name="profile_name"
+                app:argType="string" />
+    </action>
+
+    <action
+        android:id="@+id/action_global_suggestion_flow"
+        app:destination="@id/suggestion_flow"
+        app:popUpTo="@id/main_nav_graph" />
+
+    <action
+        android:id="@+id/action_global_global_story_display_flow"
+        app:destination="@+id/global_story_display_flow" />
+
+    <action
+        android:id="@+id/action_global_global_video_display_flow"
+        app:destination="@id/global_video_display_flow" />
+
+    <action
+        android:id="@+id/action_global_auth_flow"
+        app:destination="@id/auth_flow" />
+
+    <action
+        android:id="@+id/action_global_edit_profile_flow"
+        app:destination="@+id/global_edit_profile_flow" />
+    <action
+        android:id="@+id/action_global_share"
+        app:destination="@+id/global_share_flow"
+        />
+
+
+</navigation>

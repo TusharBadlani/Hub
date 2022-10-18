@@ -1,0 +1,146 @@
+buildscript {
+    ext {
+        kotlin_version = "1.6.0"
+        nav_version = '2.4.1'
+        hilt_version = "2.40.5"
+        ktlint_version = "10.0.0"
+
+        def coroutine_version = '1.6.4'
+
+        common_impl = [
+                'androidx.core:core-ktx:1.5.0',
+                'androidx.appcompat:appcompat:1.6.0-beta01',
+                'androidx.fragment:fragment-ktx:1.4.0-alpha01',
+                'androidx.activity:activity-ktx:1.2.3',
+                'com.google.android.material:material:1.3.0',
+                'androidx.recyclerview:recyclerview:1.2.1',
+                'androidx.constraintlayout:constraintlayout:2.0.4',
+                "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine_version",
+                "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine_version",
+        ]
+        common_test = [
+                'junit:junit:4.13.2',
+        ]
+        common_android_test = [
+                'androidx.test.ext:junit:1.1.2',
+                'androidx.test.espresso:espresso-core:3.3.0',
+        ]
+        hilt_lib = [
+                impl: "com.google.dagger:hilt-android:$hilt_version",
+                kap : "com.google.dagger:hilt-compiler:$hilt_version",
+        ]
+        retrofit = [
+                dependencies.create('com.squareup.retrofit2:retrofit:2.9.0') {
+                    exclude module: 'okhttp'
+                },
+                'com.squareup.okhttp3:okhttp:5.0.0-alpha.2',
+                'com.squareup.retrofit2:converter-gson:2.9.0',
+                'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2',
+        ]
+
+        def roomVersion="2.4.3"
+
+        room = [
+                impl: ["androidx.room:room-ktx:$roomVersion",
+                       "androidx.room:room-paging:$roomVersion"],
+                kap : "androidx.room:room-compiler:$roomVersion",
+        ]
+        navigation = [
+                "androidx.navigation:navigation-ui-ktx:$nav_version",
+                "androidx.navigation:navigation-fragment-ktx:$nav_version",
+        ]
+        epoxy = [
+                impl: [
+                        'com.airbnb.android:epoxy:4.3.1',
+                        'com.airbnb.android:epoxy-databinding:3.8.0',
+                ],
+                kap : 'com.airbnb.android:epoxy-processor:4.3.1'
+        ]
+        def exoplayer_version = "1.2.0.2011008"
+
+        exoplayer = [
+                "im.ene.kohii:kohii-core:$exoplayer_version",
+                "im.ene.kohii:kohii-exoplayer:$exoplayer_version",
+                "com.google.android.exoplayer:exoplayer:2.11.3",
+        ]
+        camera = [
+                'androidx.camera:camera-core:1.0.0',
+                'androidx.camera:camera-lifecycle:1.0.0',
+                'androidx.camera:camera-view:1.0.0-alpha24',
+                'androidx.camera:camera-extensions:1.0.0-alpha24',
+        ]
+        location = [
+                'com.google.android.libraries.places:places:2.4.0',
+                'com.google.android.gms:play-services-location:18.0.0',
+        ]
+        firebase = [
+                dependencies.platform('com.google.firebase:firebase-bom:28.2.0'),
+                'com.google.firebase:firebase-messaging-ktx',
+                'com.google.firebase:firebase-analytics-ktx',
+                'com.google.firebase:firebase-database-ktx'
+        ]
+        navigation_dynamic = "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
+        coil = 'io.coil-kt:coil:1.2.1'
+        notify = 'io.karn:notify:1.4.0'
+        gson = 'com.google.code.gson:gson:2.8.7'
+        paging3 = 'androidx.paging:paging-runtime:3.0.0'
+        glide = 'com.github.bumptech.glide:glide:4.12.0'
+        socket = 'org.java-websocket:Java-WebSocket:1.5.1'
+        video_compressor = 'com.otaliastudios:transcoder:0.9.1'
+        circle_image_view = 'de.hdodenhof:circleimageview:3.1.0'
+        cardview = 'androidx.cardview:cardview:1.0.0'
+        shimmer = 'com.facebook.shimmer:shimmer:0.5.0'
+        auth = 'com.google.android.gms:play-services-auth:19.0.0'
+        facebook_auth = 'com.facebook.android:facebook-android-sdk:latest.release'
+        viewpager2 = 'androidx.viewpager2:viewpager2:1.0.0'
+        swipe_refresh = 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+        swipe_refresh_2 = 'com.github.Jamshid-M:IGRefreshLayout:1.0.2'
+        date_time_picker = 'com.github.florent37:singledateandtimepicker:2.2.7'
+        cookie_cutter = 'com.adamstyrc.cookiecutter:cookie-cutter:1.0.2'
+        leak_canary = 'com.squareup.leakcanary:leakcanary-android:2.7'
+        data_store = 'androidx.datastore:datastore-preferences:1.0.0-beta02'
+        coroutines_core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine_version"
+        preferences = 'androidx.preference:preference-ktx:1.1.1'
+        flexbox = 'com.google.android.flexbox:flexbox:3.0.0'
+        badge = 'io.github.nikartm:image-support:2.0.0'
+        mikhaellopez = 'com.mikhaellopez:circularimageview:4.3.0'
+        webrtc = 'org.webrtc:google-webrtc:1.0.30039'
+        splash = 'androidx.core:core-splashscreen:1.0.0-beta02'
+
+        def paging_version = "3.1.0"
+        paging3 = "androidx.paging:paging-runtime:$paging_version"
+
+
+    }
+    repositories {
+        mavenCentral()
+        google()
+        jcenter()
+    }
+
+    dependencies {
+
+
+        classpath 'com.android.tools.build:gradle:7.2.2'
+
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21'
+        classpath 'com.google.gms:google-services:4.3.10'
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+        classpath 'com.jakewharton:butterknife-gradle-plugin:10.1.0'
+        classpath 'com.amplifyframework:amplify-tools-gradle-plugin:1.0.2'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

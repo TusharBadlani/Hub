@@ -1,0 +1,112 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'com.jakewharton.butterknife'
+    id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs'
+    id 'org.jlleitschuh.gradle.ktlint' version "$ktlint_version"
+    id 'kotlin-android-extensions'
+    id 'com.google.gms.google-services'
+}
+
+kapt {
+    correctErrorTypes = true
+}
+
+android {
+    compileSdkVersion 33
+    buildToolsVersion "30.0.3"
+
+    signingConfigs {
+        debug {
+            storeFile file("../debug.keystore")
+        }
+    }
+
+    buildFeatures {
+        dataBinding true
+    }
+
+    defaultConfig {
+        minSdkVersion 24
+        targetSdkVersion 33
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation platform('com.google.firebase:firebase-bom:29.0.3')
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation ('io.socket:socket.io-client:2.0.1') {
+        // excluding org.json which is provided by Android
+        exclude group: 'org.json', module: 'json'
+    }
+    implementation common_impl
+    implementation navigation
+
+    implementation hilt_lib.impl
+    implementation project(path: ':myspace')
+    implementation project(path: ':newapi')
+    implementation project(path: ':newapi')
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.0.0'
+    implementation 'com.google.android.gms:play-services-phenotype:17.0.0'
+    implementation 'com.google.firebase:firebase-firestore-ktx:24.0.0'
+    implementation 'com.google.firebase:firebase-database-ktx:20.0.3'
+    implementation project(path: ':persistence')
+    implementation project(path: ':persistence')
+    implementation project(path: ':persistence')
+    implementation 'com.google.android.gms:play-services-location:20.0.0'
+    implementation "com.vanniktech:emoji-google:0.15.0"
+    kapt hilt_lib.kap
+
+    implementation exoplayer
+
+    implementation epoxy.impl
+    kapt epoxy.kap
+
+    implementation gson
+    implementation glide
+    implementation cardview
+    implementation cookie_cutter
+    implementation circle_image_view
+    implementation swipe_refresh_2
+    implementation badge
+
+    implementation project(":commonui")
+    implementation "androidx.core:core-ktx:1.5.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // For implementing circular ImageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+
+    //    amazon sns client
+    implementation("aws.sdk.kotlin:sns:0.9.4-beta"){
+        exclude module: 'xpp3'
+    }
+}
+repositories {
+    mavenCentral()
+}

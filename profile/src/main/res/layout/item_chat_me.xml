@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="sent"
+            type="String" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_10"
+        android:layout_marginVertical="@dimen/dimen_1">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_gchat_message_me"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:cardPreventCornerOverlap="false"
+            android:backgroundTint="@color/cpTransparent"
+            app:cardElevation="@dimen/dimen_0"
+            android:visibility="@{sent.length()!=0 ? View.VISIBLE : View.GONE}"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/text_gchat_message_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="260dp"
+                android:background="@drawable/background_send_message_round"
+                android:paddingHorizontal="@dimen/dimen_15"
+                android:paddingVertical="@dimen/dimen_10"
+                android:text="@{sent}"
+                android:textColor="@color/cpTextDark"
+                android:textSize="16sp"
+                tools:text="@string/myspace" />
+
+        </androidx.cardview.widget.CardView>
+        <ImageView
+            android:layout_width="@dimen/dimen_40"
+            android:layout_height="@dimen/dimen_40"
+            android:tint="@color/cpRed"
+            android:visibility="@{sent.length()==0 ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_like_active"
+            tools:ignore="UseAppTint" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

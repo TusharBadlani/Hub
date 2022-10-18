@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "909136434512",
+    "project_id": "myworld-311307",
+    "storage_bucket": "myworld-311307.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909136434512:android:58bd00105e3993e827c855",
+        "android_client_info": {
+          "package_name": "cessini.technology.commonui"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "909136434512-cca9i6u7cjo19l8583l6ho5q6c5h7ccf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDl-Jt907sKv-C2u-oj7B2FWsYfppZscDw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "909136434512-cca9i6u7cjo19l8583l6ho5q6c5h7ccf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

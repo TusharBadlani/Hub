@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="liveStatus"
+            type="Boolean" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10"
+        >
+
+        <TextView
+            android:id="@+id/room_title"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingLeft="@dimen/dimen_15"
+            android:layout_marginRight="@dimen/dimen_15"
+            android:text="@{title}"
+            android:textAlignment="textStart"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/requestDone"
+            app:layout_constraintHorizontal_bias="0.096"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="title" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/requestDone"
+            android:onClick="@{onClick}"
+            changeBackground="@{liveStatus}"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_43"
+            android:layout_marginHorizontal="@dimen/dimen_15"
+            android:background="@drawable/round_viewbutton"
+            android:elevation="@dimen/dimen_0"
+            android:layout_marginVertical="@dimen/dimen_5"
+            android:padding="@dimen/dimen_10"
+            android:stateListAnimator="@null"
+            android:text="@string/accepted"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAllCaps="false"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_16"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

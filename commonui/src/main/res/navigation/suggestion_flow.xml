@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/suggestion_flow"
+    app:startDestination="@id/introduction">
+
+    <fragment
+        android:id="@+id/introduction"
+        android:name="cessini.technology.commonui.fragment.suggestion.IntroductionFragment"
+        android:label="SuggestionParentFragment">
+
+        <!-- Hide bottom navigation bar from this destination -->
+        <argument
+            android:name="@string/nav_arg_hide_bottom_nav"
+            app:argType="boolean"
+            android:defaultValue="true" />
+
+        <argument
+            android:name="@string/nav_arg_force_dark_status_bar"
+            app:argType="boolean"
+            android:defaultValue="true" />
+
+        <action
+            android:id="@+id/action_introduction_to_category_selection"
+            app:destination="@id/category_selection"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/category_selection"
+        android:name="cessini.technology.commonui.fragment.suggestion.SuggestionFragment">
+
+        <argument
+            android:name="@string/nav_arg_hide_bottom_nav"
+            app:argType="boolean"
+            android:defaultValue="true" />
+
+        <action
+            android:id="@+id/action_category_selection_to_language_selection"
+            app:destination="@id/language_selection"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/language_selection"
+        android:name="cessini.technology.commonui.fragment.suggestion.LanguageFragment">
+
+        <argument
+            android:name="@string/nav_arg_hide_bottom_nav"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
+</navigation>

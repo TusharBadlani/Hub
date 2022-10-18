@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+         <variable
+             name="content"
+             type="String" />
+         <variable
+             name="span"
+             type="android.text.Spanned" />
+
+        <variable
+            name="roomCategories1"
+            type="String" />
+
+        <variable
+            name="roomCategories2"
+            type="String" />
+
+        <variable
+            name="roomCategories3"
+            type="String" />
+
+
+        <variable
+            name="creatorName"
+            type="String" />
+
+        <variable
+            name="time"
+            type="Long" />
+
+        <variable
+            name="listener1Image"
+            type="String" />
+
+        <variable
+            name="listener2Image"
+            type="String" />
+
+        <variable
+            name="listener3Image"
+            type="String" />
+
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="onJoin"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:onClick="@{onClick}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dimen_10"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:orientation="horizontal">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="157dp"
+            android:layout_height="283dp"
+            android:background="@drawable/round_border_for_discovery_cardview"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/upcoming_room_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:bufferType="spannable"
+                android:lineSpacingExtra="@dimen/dimen_1"
+                android:maxLines="5"
+                android:paddingLeft="@dimen/dimen_9"
+                android:paddingRight="@dimen/dimen_9"
+                android:paddingTop="@dimen/dimen_17"
+                android:text="@{span}"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textSize="@dimen/font_size_15"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Hub title" />
+
+
+
+            <TextView
+                android:id="@+id/upcoming_room_host_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="120dp"
+                android:singleLine="true"
+                android:paddingLeft="@dimen/dimen_10"
+                android:ellipsize="end"
+                android:paddingTop="@dimen/dimen_2"
+                android:text="@{`@` +creatorName}"
+                android:textColor="@color/cpTextDark"
+                android:textSize="@dimen/font_size_12"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/upcoming_room_title"
+                tools:text="Channel name" />
+        <TextView
+                android:id="@+id/upcoming_room_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cpHelpText"
+                android:textSize="@dimen/font_size_12"
+                dayTime="@{time}"
+                android:letterSpacing="0.03"
+                android:paddingVertical="@dimen/dimen_3"
+                android:layout_marginLeft="@dimen/dimen_10"
+                app:layout_constraintStart_toStartOf="@+id/upcoming_room_host_time"
+                app:layout_constraintTop_toBottomOf="@+id/upcoming_room_host_time"
+                tools:text="Time" />
+
+            <ImageView
+                android:id="@+id/join_room_img_1"
+                creatorImage="@{listener2Image}"
+                android:layout_width="@dimen/dimen_45"
+                android:layout_height="@dimen/dimen_45"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="@dimen/dimen_17"
+                android:elevation="@dimen/dimen_0"
+                android:foreground="@drawable/room_strock_border"
+                app:layout_constraintBottom_toTopOf="@id/joinRoom"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/upcoming_room_title"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/ic_user_defolt_avator" />
+
+            <ImageView
+                android:id="@+id/join_room_img_2"
+                creatorImage="@{listener3Image}"
+                android:layout_width="@dimen/dimen_45"
+                android:layout_height="@dimen/dimen_45"
+                android:layout_marginEnd="@dimen/dimen_15"
+                android:elevation="@dimen/dimen_0"
+                android:foreground="@drawable/room_strock_border"
+                app:layout_constraintBottom_toBottomOf="@+id/join_room_img_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/join_room_img_1"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/ic_user_defolt_avator" />
+
+            <ImageView
+                android:id="@+id/join_room_img_3"
+                creatorImage="@{listener1Image}"
+                android:layout_width="57dp"
+                android:layout_height="57dp"
+                android:layout_marginStart="@dimen/dimen_30"
+                android:elevation="@dimen/dimen_0"
+                android:foreground="@drawable/room_strock_border"
+                app:layout_constraintBottom_toBottomOf="@+id/join_room_img_1"
+                app:layout_constraintEnd_toEndOf="@+id/join_room_img_2"
+                app:layout_constraintHorizontal_bias="0.13"
+                app:layout_constraintStart_toStartOf="@+id/join_room_img_1"
+                app:layout_constraintTop_toTopOf="@+id/join_room_img_1"
+                app:layout_constraintVertical_bias="0.5"
+                app:srcCompat="@drawable/ic_user_defolt_avator" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/joinRoom"
+                android:layout_width="@dimen/dimen_50"
+                android:layout_height="@dimen/dimen_40"
+                android:layout_marginBottom="@dimen/dimen_15"
+                android:background="@drawable/join_myspace_upcoming"
+                android:elevation="@dimen/dimen_0"
+                android:gravity="center"
+                android:onClick="@{onJoin}"
+                android:paddingHorizontal="@dimen/dimen_0"
+                android:paddingVertical="@dimen/dimen_7"
+                android:stateListAnimator="@null"
+                android:text="Join"
+                android:textAllCaps="false"
+                android:textColor="@color/cpBackground"
+                android:textSize="@dimen/font_size_16"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/category_room1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@{'#'+ roomCategories1}"-->
+<!--                android:textColor="@color/cpHelpText"-->
+<!--                android:textSize="@dimen/font_size_11"-->
+<!--                android:hint="@string/add_T"-->
+<!--                visible="@{visible1}"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/upcoming_room_time"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/upcoming_room_time" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/category_room2"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginVertical="@dimen/dimen_1"-->
+<!--                android:text="@{'#'+ roomCategories2}"-->
+<!--                android:textColor="@color/cpHelpText"-->
+<!--                android:hint="@string/add_T"-->
+<!--                android:textSize="@dimen/font_size_11"-->
+<!--                visible="@{visible2}"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/upcoming_room_time"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/category_room1" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/category_room"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginVertical="@dimen/dimen_1"-->
+<!--                android:text="@{'#'+ roomCategories3}"-->
+<!--                android:textColor="@color/cpHelpText"-->
+<!--                android:textSize="@dimen/font_size_11"-->
+<!--                android:hint="@string/add_T"-->
+<!--                visible="@{visible3}"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/upcoming_room_time"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/category_room2" />-->
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="@dimen/dimen_15"
+                android:layout_height="@dimen/dimen_15"
+                android:layout_marginRight="@dimen/dimen_5"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:padding="@dimen/dimen_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_cross_cancel_black" />
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/squer_roundview_gray"
+                android:paddingHorizontal="@dimen/dimen_3"
+                android:paddingVertical="0.5dp"
+                android:layout_marginLeft="@dimen/dimen_3"
+                android:text="Host"
+                android:textColor="@color/cpHelpText"
+                android:textSize="@dimen/font_size_11"
+                app:layout_constraintBottom_toBottomOf="@+id/upcoming_room_host_time"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/upcoming_room_host_time"
+                app:layout_constraintTop_toTopOf="@+id/upcoming_room_host_time"
+                app:layout_constraintVertical_bias="1.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/follow_following_CL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_dialog"
+        tools:context=".fragment.FollowerFollowing">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="@dimen/dimen_0"
+            android:background="@color/cpTransparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/follow_following"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/back_navigation_button_follow_following_profile"
+                    android:layout_width="@dimen/dimen_50"
+                    android:layout_height="@dimen/dimen_60"
+                    android:padding="@dimen/dimen_15"
+                    android:layout_marginStart="@dimen/dimen_5"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_back_arrow" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_follow_following"
+                    android:layout_width="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:backgroundTint="@color/cpTransparent"
+                    android:singleLine="true"
+                    app:layout_constraintBottom_toBottomOf="@+id/back_navigation_button_follow_following_profile"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/back_navigation_button_follow_following_profile"
+                    android:layout_height="@dimen/dimen_30"
+                    app:tabIndicatorColor="@color/cpTextDark"
+                    app:tabIndicatorHeight="3.6dp"
+                    app:tabIndicator="@drawable/tab_indicator"
+                    app:tabSelectedTextColor="@color/cpTextDark"
+                    app:tabGravity="fill"
+                    app:tabMode="auto"
+                    app:tabRippleColor="@null"
+                    app:tabTextAppearance="@style/TabTextAppearance"
+                    app:tabTextColor="@color/cpTextDark">
+
+                </com.google.android.material.tabs.TabLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_follower_following"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_0"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:background="@color/cpBottomSheetBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appbar"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bs_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_10"
+        android:layout_marginBottom="@dimen/dimen_10">
+
+        <ImageView
+            android:id="@+id/img_drop_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_tabicon" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="170dp"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:layout_marginBottom="@dimen/dimen_10"
+            app:layout_constraintBottom_toTopOf="@id/et_comment_body"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_drop_down" />
+
+        <TextView
+            android:id="@+id/txt_no_comments_right_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_18"
+            android:textStyle="bold"
+            android:text="@string/no_comments_right_now"
+            app:layout_constraintBottom_toTopOf="@id/et_comment_body"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_drop_down" />
+
+        <EditText
+            android:id="@+id/et_comment_body"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_43"
+            android:layout_marginRight="@dimen/dimen_7"
+            android:hint="Add your comment"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:paddingHorizontal="@dimen/dimen_15"
+            android:textSize="@dimen/font_size_16"
+            android:stateListAnimator="@null"
+            android:textAllCaps="false"
+            android:textColor="@color/cpTextDark"
+            android:background="@drawable/card_view_border"
+            android:textColorHint="@color/cpHelpText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/txt_post_comment"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/txt_post_comment"
+            android:layout_width="@dimen/dimen_43"
+            android:layout_height="@dimen/dimen_43"
+            android:importantForAccessibility="no"
+            android:padding="@dimen/dimen_10"
+            android:scaleType="centerCrop"
+            android:elevation="@dimen/dimen_0"
+            android:gravity="center"
+            android:stateListAnimator="@null"
+            app:srcCompat="@drawable/ic_sendmytext"
+            android:background="@drawable/card_view_border"
+            app:layout_constraintBottom_toBottomOf="@id/et_comment_body"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/et_comment_body" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

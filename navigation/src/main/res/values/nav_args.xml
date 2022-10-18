@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Arguments for navigation destinations -->
+<resources>
+    <!--
+    Whether the bottom navigation bar should be hidden when this destination is active
+    See {@link HomeActivity#updateBottomNavBarVisibility}
+    -->
+    <string name="nav_arg_hide_bottom_nav" translatable="false">HideBottomNav</string>
+
+    <!--
+    Force use of light status bar when this destination is active
+    See {@link HomeActivity#updateStatusBarAppearance}
+    -->
+    <string name="nav_arg_force_light_status_bar" translatable="false">ForceLightStatusBar</string>
+    <!--
+    Force use of dark status bar when this destination is active
+    See {@link HomeActivity#updateStatusBarAppearance}
+    -->
+    <string name="nav_arg_force_dark_status_bar" translatable="false">ForceDarkStatusBar</string>
+</resources>

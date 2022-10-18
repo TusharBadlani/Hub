@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/constraintLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/fragment_manage_room_xml_constraintlayout5_scene">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/manageRoomFragmentCL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_dialog"
+                app:elevation="@dimen/dimen_0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/back_navigation_button"
+                        android:layout_width="@dimen/dimen_50"
+                        android:layout_height="@dimen/dimen_60"
+                        android:layout_marginLeft="@dimen/dimen_5"
+                        android:padding="@dimen/dimen_15"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_back_arrow" />
+
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/myspace_list"
+                        android:textColor="@color/cpTextDark"
+                        android:textSize="@dimen/font_size_17"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/back_navigation_button"
+                        app:layout_constraintStart_toEndOf="@+id/back_navigation_button"
+                        app:layout_constraintTop_toTopOf="@+id/back_navigation_button" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <TextView
+                android:id="@+id/tvHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/ProfileStories"
+                android:textColor="@color/cpTextDark"
+                android:textSize="@dimen/dimen_20"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.45" />
+
+            <TextView
+                android:id="@+id/tvdeatils"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:gravity="center"
+                android:lineSpacingExtra="5sp"
+                android:paddingHorizontal="@dimen/dimen_50"
+                android:text="@string/manage_hub_help"
+                android:textColor="@color/cpHelpText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvHeading" />
+
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/manageRoomScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/app_bar">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/cpTransparent">
+
+                    <com.airbnb.epoxy.EpoxyRecyclerView
+                        android:id="@+id/rooms"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overScrollMode="never"
+                        android:paddingBottom="@dimen/dimen_15"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:itemCount="3"
+                        tools:listitem="@layout/list_item_room" />
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dimen_1"
+                        android:background="@color/cpBackgroundbutton"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/rooms"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:visibility="visible" />
+
+
+                    <com.airbnb.epoxy.EpoxyRecyclerView
+                        android:id="@+id/requests"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overScrollMode="never"
+                        android:paddingBottom="@dimen/dimen_10"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view3"
+                        tools:itemCount="3"
+                        tools:listitem="@layout/list_item_request" />
+
+                    <View
+                        android:id="@+id/view4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dimen_1"
+                        android:background="@color/cpBackgroundbutton"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/requests"
+                        tools:visibility="visible" />
+
+
+                    <com.airbnb.epoxy.EpoxyRecyclerView
+                        android:id="@+id/create_room_requests"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overScrollMode="never"
+                        android:paddingBottom="@dimen/dimen_10"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view4"
+                        tools:itemCount="3"
+                        tools:listitem="@layout/create_room_request" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cpBottomSheetBackground"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/create_room_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_45"
+                    android:layout_marginHorizontal="@dimen/dimen_20"
+                    android:layout_marginVertical="@dimen/dimen_15"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:background="@drawable/round_view_btn_blue"
+                    android:elevation="@dimen/dimen_0"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_10"
+                    android:stateListAnimator="@null"
+                    android:text="@string/createmyspace"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_20" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+</layout>

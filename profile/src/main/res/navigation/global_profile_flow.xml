@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/global_profile_flow"
+    app:startDestination="@id/publicProfileFragment">
+
+    <fragment
+        android:id="@+id/publicProfileFragment"
+        android:name="cessini.technology.profile.fragment.publicProfile.PublicProfileFragment"
+        android:label="PublicProfileFragment">
+<!--        <action-->
+<!--            android:id="@+id/action_publicProfileFragment_to_roomFragment3"-->
+<!--            app:destination="@id/publicProfileRoomFragment" />-->
+        <action
+            android:id="@+id/to_flo"
+            app:destination="@id/followerFollowing" />
+<!--        <action-->
+<!--            android:id="@+id/action_publicProfileFragment_to_publicRoomFragment"-->
+<!--            app:destination="@id/publicRoomFragment" />-->
+        <action
+            android:id="@+id/action_publicProfileFragment_to_publicProfileRoomMessage"
+            app:destination="@id/publicProfileRoomMessage" />
+        <action
+            android:id="@+id/action_publicProfileFragment_to_publicProfileRoomMessage2"
+            app:destination="@id/publicProfileRoomMessage" />
+
+
+        <!-- Hide bottom navigation bar from this destination -->
+        <argument
+            android:name="@string/nav_arg_hide_bottom_nav"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/followerFollowing"
+        android:name="cessini.technology.profile.fragment.FollowerFollowing"
+        android:label="FollowerFollowing">
+        <argument
+            android:name="profileId"
+            app:argType="string"
+            app:nullable="true" />
+    </dialog>
+
+<!--    <dialog-->
+<!--        android:id="@+id/publicProfileRoomFragment"-->
+<!--        android:name="cessini.technology.profile.fragment.publicProfile.PublicProfileRoomFragment"-->
+<!--        android:label="PublicProfileRoomFragment" />-->
+<!--    <dialog-->
+<!--        android:id="@+id/publicRoomFragment"-->
+<!--        android:name="cessini.technology.profile.fragment.PublicRoomFragment"-->
+<!--        android:label="PublicRoomFragment">-->
+<!--        <argument-->
+<!--            android:name="profile_id"-->
+<!--            app:argType="string" />-->
+<!--    </dialog>-->
+    <fragment
+        android:id="@+id/publicProfileRoomMessage"
+        android:name="cessini.technology.profile.activity.PublicProfileRoomMessage"
+        android:label="PublicProfileRoomMessage" >
+        <argument
+            android:name="profile_id"
+            app:argType="string" />
+        <argument
+            android:name="profile_name"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_publicProfileRoomMessage_to_publicProfileFragment"
+            app:destination="@id/publicProfileFragment" />
+        <action
+            android:id="@+id/action_publicProfileRoomMessage_to_chatBottomSheet"
+            app:destination="@id/chatBottomSheet" />
+
+        <!-- Hide bottom navigation bar from this destination -->
+        <argument
+            android:name="@string/nav_arg_hide_bottom_nav"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/chatBottomSheet"
+        android:name="cessini.technology.profile.activity.ChatBottomSheet"
+        android:label="ChatBottomSheet" />
+
+</navigation>

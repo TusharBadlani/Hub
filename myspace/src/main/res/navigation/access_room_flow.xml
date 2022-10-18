@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/access_room_flow"
+    app:startDestination="@id/mySpaceFragment">
+
+    <dialog
+        android:id="@+id/mySpaceFragment"
+        android:name="cessini.technology.myspace.access.MySpaceFragment"
+        android:label="MySpaceFragment">
+        <argument
+            android:name="room_name"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_mySpaceFragment_to_bottomSheetAcessRoomFragment"
+            app:destination="@id/bottomSheetAcessRoomFragment" />
+    </dialog>
+    <dialog
+        android:id="@+id/bottomSheetAcessRoomFragment"
+        android:name="cessini.technology.myspace.access.BottomSheetAcessRoomFragment"
+        android:label="BottomSheetAcessRoomFragment" />
+</navigation>

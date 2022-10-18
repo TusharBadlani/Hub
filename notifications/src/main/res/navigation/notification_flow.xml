@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/notification_flow"
+    app:startDestination="@id/notificationBottomNavFragment">
+    <fragment
+        android:id="@+id/notificationBottomNavFragment"
+        android:name="cessini.technology.notifications.NotificationBottomNavFragment"
+        android:label="NotificationBottomNavFragment" >
+<!--        <action-->
+<!--            android:id="@+id/action_notificationBottomNavFragment_to_userSearchFragment"-->
+<!--            app:destination="@id/userSearchFragment" />-->
+    </fragment>
+<!--    <fragment-->
+<!--        android:id="@+id/messageTabFragment2"-->
+<!--        android:name="cessini.technology.notifications.MessageTabFragment"-->
+<!--        android:label="MessageTabFragment" >-->
+<!--        <action-->
+<!--            android:id="@+id/action_messageTabFragment2_to_userSearchFragment"-->
+<!--            app:destination="@id/userSearchFragment" />-->
+<!--    </fragment>-->
+<!--    <fragment-->
+<!--        android:id="@+id/userSearchFragment"-->
+<!--        android:name="cessini.technology.notifications.UserSearchFragment"-->
+<!--        android:label="UserSearchFragment" />-->
+
+</navigation>

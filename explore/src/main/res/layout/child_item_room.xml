@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="searchViewModel"
+            type="cessini.technology.explore.viewmodel.SearchViewModel" />
+        <variable
+            name="roomTitle"
+            type="String" />
+
+        <variable
+            name="listenerCount"
+            type="String" />
+
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="listener1Image"
+            type="String" />
+
+        <variable
+            name="listener2Image"
+            type="String" />
+
+        <variable
+            name="listener3Image"
+            type="String" />
+
+        <variable
+            name="listener4Image"
+            type="String" />
+
+        <variable
+            name="listener5Image"
+            type="String" />
+
+        <variable
+            name="onTouchDetected"
+            type="android.view.View.OnTouchListener" />
+
+        <variable
+            name="fragment"
+            type="androidx.fragment.app.Fragment" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_3"
+        android:layout_marginBottom="@dimen/dimen_5"
+        android:layout_marginEnd="@dimen/dimen_3"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="@{onClick}"
+        >
+
+        <FrameLayout
+            android:id="@+id/frame_space"
+            android:layout_width="wrap_content"
+            android:layout_height="115dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:onTouched="@{onTouchDetected}"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                ripple="@{fragment}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <ImageView
+                    android:id="@+id/imgAnim1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.9"
+                    android:layout_marginHorizontal="@dimen/dimen_5"
+                    android:layout_marginVertical="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/myspace_group_ripple" />
+
+                <ImageView
+                    android:id="@+id/imgAnim2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.6"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_marginVertical="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/myspace_group_ripple" />
+
+                <ImageView
+                    android:id="@+id/imgAnim3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.3"
+                    android:layout_marginVertical="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/myspace_group_ripple" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/background"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/myspace_group_active_gradient" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/myspace"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:padding="@dimen/dimen_10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/myspace_iv1"
+                    creatorImage="@{listener1Image}"
+                    android:layout_width="92dp"
+                    android:layout_height="0dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_user_defolt_avator"
+                    app:civ_border_color="#80999999"
+                    app:civ_border_width="0.1dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/myspace_iv2"
+                    creatorImage="@{listener2Image}"
+                    android:layout_width="92dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="4dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_user_defolt_avator"
+                    app:civ_border_color="#80999999"
+                    app:civ_border_width="0.5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.4"
+                    app:layout_constraintStart_toEndOf="@+id/myspace_iv1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/listeners_count"
+                    gone="@{Integer.valueOf(listenerCount) &lt; 4}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:text="@{'+'+listenerCount}"
+                    android:textColor="#efefef"
+                    android:textSize="@dimen/dimen_16"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/myspace_iv2"
+                    app:layout_constraintEnd_toEndOf="@+id/myspace_iv2"
+                    app:layout_constraintStart_toStartOf="@+id/myspace_iv2"
+                    app:layout_constraintTop_toTopOf="@+id/myspace_iv2"
+                    tool:text="+2" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frame_space">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/myspace_iv3"
+                creatorImage="@{listener3Image}"
+                gone="@{listener3Image.empty}"
+                android:layout_width="25dp"
+                android:layout_height="@dimen/dimen_25"
+                android:layout_weight="0.10"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_user_defolt_avator" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/myspace_iv4"
+                creatorImage="@{listener4Image}"
+                gone="@{listener4Image.empty}"
+                android:layout_width="@dimen/dimen_25"
+                android:layout_height="@dimen/dimen_25"
+                android:layout_weight="0.10"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_user_defolt_avator" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/myspace_iv5"
+                creatorImage="@{listener5Image}"
+                gone="@{listener5Image.empty}"
+                android:layout_width="@dimen/dimen_25"
+                android:layout_height="@dimen/dimen_25"
+                android:layout_weight="0.10"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_user_defolt_avator" />
+
+            <TextView
+                android:id="@+id/tv_room_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="start"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:paddingLeft="@dimen/dimen_3"
+                android:singleLine="true"
+                android:text="@{roomTitle}"
+                android:textAlignment="textStart"
+                android:textColor="@color/cpTextDark"
+                android:textSize="@dimen/font_size_16"
+                android:textStyle="bold"
+                tool:text="live room title" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

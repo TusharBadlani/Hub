@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/scheduleFragmentConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_dialog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/done_button"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/room_notice_dropdown_icon"
+                android:layout_width="@dimen/dimen_43"
+                android:layout_height="@dimen/dimen_7"
+                android:layout_marginTop="@dimen/dimen_7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_tabicon" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_40"
+                android:gravity="center"
+                android:text="@string/schedule_H"
+                android:textColor="@color/cpTextDark"
+                android:textSize="@dimen/font_size_23"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/room_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/room_notice_dropdown_icon" />
+
+            <TextView
+                android:id="@+id/room_title"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:gravity="center"
+                android:letterSpacing="0.02"
+                android:text="@string/display_title"
+                android:paddingHorizontal="@dimen/dimen_40"
+                android:textColor="@color/cpHelpText"
+                android:textSize="@dimen/font_size_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+            <com.github.florent37.singledateandtimepicker.SingleDateAndTimePicker
+                android:id="@+id/datepicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/dimen_60"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/room_title"
+                app:picker_curved="true"
+                app:picker_cyclic="true"
+                app:picker_dayCount="31"
+                app:picker_mustBeOnFuture="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:picker_selectorColor="@color/cpHelpText"
+                app:picker_textColor="@color/cpTextDark"
+                app:picker_visibleItemCount="8" />
+
+
+            <ImageView
+                android:id="@+id/back_button"
+                android:layout_width="@dimen/dimen_40"
+                android:layout_height="@dimen/dimen_40"
+                android:padding="@dimen/dimen_10"
+                android:layout_marginStart="@dimen/dimen_5"
+                android:layout_marginTop="@dimen/dimen_10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_back_arrow" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/done_button"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="@dimen/dimen_45"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:layout_marginBottom="@dimen/dimen_15"
+            android:background="@drawable/button_large_background"
+            android:elevation="@dimen/dimen_0"
+            android:gravity="center"
+            android:stateListAnimator="@null"
+            android:text="Done"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

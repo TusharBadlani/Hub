@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="no_internet_flow" type="id" />
+    <item name="access_room_flow" type="id" />
+    <item name="create_room_flow" type="id" />
+    <item name="home_flow" type="id" />
+    <item name="explore_flow" type="id" />
+    <item name="camera_flow" type="id" />
+    <item name="notification_flow" type="id"/>
+    <item name="profile_flow" type="id" />
+    <item name="base_flow" type="id" />
+    <item name="global_profile_flow" type="id" />
+    <item name="global_message_flow" type="id" />
+    <item name="auth_flow" type="id" />
+    <item name="suggestion_flow" type="id" />
+    <item name="global_story_display_flow" type="id" />
+    <item name="global_video_display_flow" type="id" />
+    <item name="global_edit_profile_flow" type="id" />
+    <item name="exploreSearchFragment" type="id" />
+    <item name="global_share_flow" type="id"/>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<paths>
+    <external-path
+        name="my_Images"
+        path="Android/data/com.technology.myworld/files/Pictures"/>
+
+<!--    <external-media-path-->
+<!--        name="my_Videos"-->
+<!--        path="Android/media/technologyogy.myworld/Videos"/>-->
+
+<!--    <external-path-->
+<!--        name="external_files"-->
+<!--        path="." />-->
+
+</paths>

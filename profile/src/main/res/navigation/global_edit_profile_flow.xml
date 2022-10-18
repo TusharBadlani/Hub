@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/global_edit_profile_flow"
+    app:startDestination="@+id/editUserProfileFragment">
+
+
+    <fragment
+        android:id="@+id/editUserProfileFragment"
+        android:name="cessini.technology.profile.fragment.editProfile.EditUserProfileFragment"
+        android:label="EditUserProfileFragment" />
+</navigation>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="cpWhite">#ffffffff</color>
+    <color name="white">#ffffffff</color>
+    <color name="OpacityWhite">#B3ffffff</color>
+    <color name="videotype">#ffffffff</color>
+    <color name="btnfllow">#ffffffff</color>
+    <color name="twhite">#ffffffff</color>
+    <color name="cpBottomSheetBackground">#ffffffff</color>
+    <color name="addEditBtn">#ffefefef</color>
+    <color name="cpBackground">#ffefefef</color>
+    <color name="cpHomeIcon">#ffefefef</color>
+    <color name="cpBackgroundbutton">#ffefefef</color>
+    <color name="cpHelpTextIcon">#FFDADCE0</color>
+    <color name="cpNavLine">#FF999999</color>
+    <color name="cpHelpText">#ff767676</color>
+    <color name="cpTextDark">#ff0F1419</color>
+    <color name="tbstext">#ff0F1419</color>
+    <color name="cpDark">#ff000000</color>
+    <color name="Dark">#ff000000</color>
+    <color name="cpPrimeBlue">#FF188fff</color>
+    <color name="cpOnGreen">#FF00BA7C</color>
+    <color name="cpPrimeHelp">#ffa10eeb</color>
+    <color name="cpRed">#FFFE2C55</color>
+    <color name="cpYellow">#ffff9100</color>
+    <color name="cpTransparent">#00000000</color>
+    <color name="shadow1">#00efefef</color>
+    <color name="shadow2">#1Aefefef</color>
+    <color name="shadow3">#33efefef</color>
+    <color name="shadow4">#4defefef</color>
+    <color name="shadow5">#66efefef</color>
+    <color name="c1">#A30C4A</color>
+    <color name="c2">#F8955B</color>
+    <color name="c3">#7465DB</color>
+    <color name="c4">#52CFFF</color>
+    <color name="cpPrime">#ff7725ff</color>
+    <color name="quantum_black_100">#292727</color>
+</resources>

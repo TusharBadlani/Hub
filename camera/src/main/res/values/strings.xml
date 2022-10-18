@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="upload_video">Upload</string>
+    <string name="music_select_button">   Use this Music  </string>
+    <string name="msg_successful_video_upload">Your video uploaded successfully and will be live in next 10-15 mins.</string>
+    <string name="okay">Okay</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

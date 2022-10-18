@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="cessini.technology.explore.viewmodel.ExploreSearchViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cpWhite"
+        tools:context=".fragment.explore.ExploreSearchFragment">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cpWhite"
+            android:elevation="0dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            app:elevation="0dp"
+            android:paddingHorizontal="@dimen/dimen_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/header_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="@+id/searchViewHeader"
+                    app:layout_constraintTop_toBottomOf="@+id/searchViewHeader"
+                    android:backgroundTint="@color/cpTransparent"
+                    android:singleLine="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="@dimen/dimen_30"
+                    app:tabIndicatorColor="@color/cpTextDark"
+                    app:tabIndicatorHeight="3.6dp"
+                    app:tabIndicator="@drawable/tab_indicator"
+                    app:tabSelectedTextColor="@color/cpTextDark"
+                    app:tabGravity="fill"
+                    app:tabMode="auto"
+                    app:tabRippleColor="@null"
+                    app:tabTextAppearance="@style/TabTextAppearance"
+                    app:tabTextColor="@color/cpTextDark"
+                    />
+
+                <TextView
+                    android:id="@+id/backButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|center_vertical"
+                    android:paddingLeft="@dimen/dimen_10"
+                    android:text="@string/search_cancel"
+                    android:textColor="@color/cpTextDark"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/font_size_18"
+                    app:layout_constraintBottom_toBottomOf="@+id/searchViewHeader"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/searchViewHeader"
+                    app:layout_constraintTop_toTopOf="@+id/searchViewHeader"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/searchViewHeader"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_40"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@drawable/round_viewbutton"
+                    android:theme="@style/SearchView"
+                    app:iconifiedByDefault="false"
+                    app:closeIcon="@drawable/ic_border_cross_cancel"
+                    app:layout_constraintEnd_toStartOf="@+id/backButton"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:queryBackground="@null"
+                    app:queryHint="@string/search_here"
+                    app:searchIcon="@null" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:theme="@style/EdgeOverlayTheme"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appbar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

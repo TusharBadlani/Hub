@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/global_message_flow"
+    app:startDestination="@id/publicProfileRoomMessage">
+
+    <fragment
+        android:id="@+id/publicProfileRoomMessage"
+        android:name="cessini.technology.profile.activity.PublicProfileRoomMessage"
+        android:label="PublicProfileRoomMessage">
+        <argument
+            android:name="profile_id"
+            app:argType="string" />
+        <argument
+            android:name="profile_name"
+            app:argType="string" />
+
+        <!-- Hide bottom navigation bar from this destination -->
+        <argument
+            android:name="@string/nav_arg_hide_bottom_nav"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
+</navigation>

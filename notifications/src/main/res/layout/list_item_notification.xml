@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="content"
+            type="String" />
+
+        <variable
+            name="image"
+            type="String" />
+
+        <variable
+            name="time"
+            type="Long" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_15"
+        android:layout_marginVertical="@dimen/dimen_7"
+        android:onClick="@{onClick}">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userImage"
+            android:layout_width="@dimen/dimen_60"
+            android:layout_height="@dimen/dimen_60"
+            creatorImage="@{image}"
+            android:background="@drawable/ic_user_defolt_avator"
+            android:foreground="@drawable/stroke_drawable"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/notification_content"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_14"
+            android:layout_marginStart="@dimen/dimen_10"
+            android:text="@{content}"
+            app:layout_constraintBottom_toTopOf="@id/notification_time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/userImage"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Content" />
+
+        <TextView
+            android:id="@+id/notification_time"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            dayTime="@{time}"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_5"
+            android:textColor="@color/cpHelpText"
+            android:textSize="@dimen/font_size_12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/notification_content"
+            app:layout_constraintTop_toBottomOf="@id/notification_content"
+            tools:text="10.10" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

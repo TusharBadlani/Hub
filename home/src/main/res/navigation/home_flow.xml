@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_flow"
+    app:startDestination="@id/homeFragment">
+
+    <!--<fragment
+        android:id="@+id/gridFragment"
+        android:name="cessini.technology.home.grid.GridFragment"
+        android:label="GridFragment">
+
+        &lt;!&ndash; Use dark status bar &ndash;&gt;
+        <argument
+            android:name="@string/nav_arg_force_dark_status_bar"
+            app:argType="boolean"
+            android:defaultValue="true" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_commentFragment"
+            app:destination="@id/commentFragment" />
+    </fragment>-->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="cessini.technology.home.fragment.HomeFragment"
+        android:label="HomeFragment">
+        <argument
+            android:name="@string/nav_arg_force_dark_status_bar"
+            app:argType="boolean"
+            android:defaultValue="true" />
+        <action
+            android:id="@+id/action_homeFragment_to_commentFragment"
+            app:destination="@id/commentFragment" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/storiesFragment"
+        android:name="cessini.technology.home.fragment.StoriesFragment"
+        android:label="StoriesFragment" />
+
+    <dialog
+        android:id="@+id/commentFragment"
+        android:name="cessini.technology.commonui.fragment.CommentFragment"
+        android:label="CommentFragment" />
+</navigation>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/storyItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/exo_player_story"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#121212"
+            android:visibility="visible"
+            app:hide_on_touch="false"
+            app:player_layout_id="@layout/exo_simple_player_view"
+            app:resize_mode="fill"
+            app:use_controller="false" />
+
+        <ImageView
+            android:id="@+id/img_user_profile_pic_story"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@id/txt_caption_story"
+            app:layout_constraintStart_toStartOf="@id/txt_caption_story" />
+
+        <TextView
+            android:id="@+id/txt_user_name_story"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:text="@string/user_N"
+            android:textSize="14sp"
+            android:textColor="@color/twhite"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/img_user_profile_pic_story"
+            app:layout_constraintStart_toEndOf="@id/img_user_profile_pic_story"
+            app:layout_constraintTop_toTopOf="@id/img_user_profile_pic_story" />
+
+
+        <TextView
+            android:id="@+id/txt_caption_story"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="30dp"
+            android:text="@string/story_T"
+            android:textColor="@color/twhite"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <ProgressBar
+            android:id="@+id/story_progressBar"
+            android:layout_width="30dp"
+            android:visibility="gone"
+            android:layout_height="30dp"
+            android:indeterminateTint="#ff6347"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/Dark"
+    android:layout_height="match_parent">
+
+    <com.airbnb.epoxy.EpoxyRecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_40"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dimen_55"
+        android:background="@drawable/round_view_roomfunction"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/dimen_15"
+        android:paddingVertical="@dimen/dimen_5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/recycler_view"
+        app:layout_constraintStart_toStartOf="@+id/recycler_view">
+
+
+        <ImageView
+            android:layout_width="@dimen/dimen_15"
+            android:layout_height="@dimen/dimen_15"
+            android:layout_marginRight="@dimen/dimen_3"
+            android:src="@drawable/ic_addmemyspace_w" />
+
+        <TextView
+            android:id="@+id/join_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Join Hub"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_18"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_15"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/myspace_iv3_home"
+            creatorImage="listener3Image"
+            gone="listener3Image.empty"
+            android:layout_width="@dimen/dimen_25"
+            android:layout_height="@dimen/dimen_25"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_user_defolt_avator" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/myspace_iv4_home"
+            creatorImage="listener4Image"
+            gone="listener4Image.empty"
+            android:layout_width="@dimen/dimen_25"
+            android:layout_height="@dimen/dimen_25"
+            android:layout_marginLeft="-15dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_user_defolt_avator" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/myspace_iv5_home"
+            creatorImage="listener5Image"
+            gone="listener5Image.empty"
+            android:layout_width="@dimen/dimen_25"
+            android:layout_height="@dimen/dimen_25"
+            android:layout_marginLeft="-15dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_user_defolt_avator" />
+
+        <TextView
+            android:id="@+id/room_title_home"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:maxLines="1"
+            android:paddingVertical="@dimen/dimen_2"
+            android:paddingLeft="@dimen/dimen_3"
+            android:singleLine="true"
+            android:text="2k"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="@dimen/dimen_30"
+        android:layout_height="@dimen/dimen_30"
+        android:layout_marginBottom="@dimen/dimen_15"
+        android:padding="@dimen/dimen_2"
+        android:elevation="@dimen/dimen_5"
+        app:layout_constraintBottom_toTopOf="@+id/imageView22"
+        app:layout_constraintEnd_toEndOf="@+id/imageView22"
+        app:layout_constraintStart_toStartOf="@+id/imageView22"
+        app:srcCompat="@drawable/ic_like_inactive" />
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="@dimen/dimen_30"
+        android:layout_height="@dimen/dimen_30"
+        android:padding="@dimen/dimen_2"
+        android:elevation="@dimen/dimen_5"
+        android:layout_marginEnd="@dimen/dimen_10"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+        app:srcCompat="@drawable/ic_shareicon_w" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

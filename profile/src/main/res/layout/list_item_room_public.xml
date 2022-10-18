@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="onDetail"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="userPicture"
+            type="String" />
+
+        <variable
+            name="roomName"
+            type="String" />
+
+        <variable
+            name="userName"
+            type="String" />
+
+        <variable
+            name="onProfileClick"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="onJoin"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{onDetail}"
+        android:paddingHorizontal="@dimen/dimen_15"
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/materialButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_43"
+            android:layout_marginVertical="@dimen/dimen_10"
+            android:background="@drawable/button_large_background"
+            android:onClick="@{onJoin}"
+            android:elevation="@dimen/dimen_0"
+            android:padding="@dimen/dimen_10"
+            android:stateListAnimator="@null"
+            android:text="@string/join_myspace"
+            android:textAllCaps="false"
+            android:textColor="@color/cpBottomSheetBackground"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/relativeLayout" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="@dimen/dimen_40"
+            android:layout_height="@dimen/dimen_40"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dimen_5"
+            app:cardCornerRadius="@dimen/dimen_20"
+            app:cardElevation="@dimen/dimen_0"
+            android:background="@color/cpBottomSheetBackground"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_view_border"
+            android:padding="@dimen/dimen_10"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView"
+            app:layout_constraintEnd_toEndOf="@+id/cardView"
+            app:layout_constraintStart_toStartOf="@+id/cardView"
+            app:layout_constraintTop_toTopOf="@+id/cardView">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:background="@color/cpBottomSheetBackground"
+                android:layout_width="@dimen/dimen_30"
+                android:layout_height="@dimen/dimen_30"
+                app:srcCompat="@drawable/ic_hubnew" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/room_name"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_15"
+            android:layout_marginTop="@dimen/dimen_3"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:singleLine="true"
+            android:text="@{roomName}"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="bold"
+            android:paddingRight="@dimen/dimen_15"
+            app:layout_constraintEnd_toStartOf="@+id/materialButton2"
+            app:layout_constraintStart_toEndOf="@+id/cardView"
+            app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_1"
+            android:text="@{userName}"
+            android:textColor="@color/cpHelpText"
+            android:textSize="@dimen/font_size_14"
+            app:layout_constraintStart_toStartOf="@+id/room_name"
+            app:layout_constraintTop_toBottomOf="@+id/room_name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="ProfileImageCroppingFragmentViewModel"
+            type="cessini.technology.profile.viewmodel.EditUserProfileViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_dialog">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/user_image_cropping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="@dimen/dimen_0"
+            android:layout_marginHorizontal="@dimen/dimen_15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/rounded_dialog">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/user_image_cropping_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/back_navigation_button_profile_cropping_fragment"
+                    android:layout_width="@dimen/dimen_40"
+                    android:layout_height="@dimen/dimen_40"
+                    android:layout_marginStart="@dimen/dimen_5"
+                    android:padding="@dimen/dimen_11"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_back_arrow" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/done_cropping_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_40"
+                    android:layout_marginVertical="@dimen/dimen_3"
+                    android:layout_marginRight="@dimen/dimen_15"
+                    android:paddingHorizontal="@dimen/dimen_7"
+                    android:paddingVertical="@dimen/dimen_5"
+                    android:background="@drawable/round_enable_viewbutton"
+                    android:elevation="@dimen/dimen_0"
+                    android:text="Save"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/font_size_16"
+                    android:stateListAnimator="@null"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.adamstyrc.cookiecutter.CookieCutterImageView
+            android:id="@+id/profile_image_cropping_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_user_defolt_avator"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintCircleRadius="700sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_image_cropping"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

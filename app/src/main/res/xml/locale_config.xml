@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Supported languages -->
+<locale-config xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- English -->
+    <locale android:name="en" />
+    <!-- Hindi -->
+    <locale android:name="hi" />
+    <!-- Tamil -->
+    <locale android:name="ta" />
+    <!-- Marathi -->
+    <locale android:name="mr" />
+    <!-- Malayalam -->
+    <locale android:name="ml" />
+    <!-- Gujarati -->
+    <locale android:name="gu" />
+    <!-- Punjabi -->
+    <locale android:name="pa" />
+    <!-- Telugu -->
+    <locale android:name="te" />
+    <!-- Kannada -->
+    <locale android:name="kn" />
+    <!-- Bengali -->
+    <locale android:name="bn" />
+</locale-config>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.HomeActivity">
+
+        <com.airbnb.epoxy.EpoxyRecyclerView
+            android:id="@+id/requests"
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/list_item_request"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+        <TextView
+            android:id="@+id/request_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/dimen_10"
+            android:text="@string/ProfileMore"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_18"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/request_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimen_50"
+            android:visibility="gone"
+            android:gravity="center"
+            android:lineSpacingExtra="5sp"
+            android:paddingHorizontal="@dimen/dimen_50"
+            android:text="@string/when_Nothing"
+            android:textColor="@color/cpHelpText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_story_text" />
+    </FrameLayout>
+</layout>

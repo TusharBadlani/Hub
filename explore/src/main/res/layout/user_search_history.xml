@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="searchViewModel"
+            type="cessini.technology.explore.viewmodel.ExploreSearchViewModel" />
+
+        <variable
+            name="position"
+            type="java.lang.Integer" />
+
+        <variable
+            name="query"
+            type="java.lang.String" />
+
+        <variable
+            name="historyModel"
+            type="cessini.technology.cvo.entity.SearchHistoryEntity" />
+
+        <variable
+            name="onClickHistory"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/dimen_10"
+        android:paddingHorizontal="@dimen/dimen_15"
+        android:onClick="@{onClickHistory}">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='@{historyModel.query}'
+            android:textSize="@dimen/font_size_18"
+            android:textColor="@color/cpTextDark"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:drawableRight="@drawable/ic_addsearch"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

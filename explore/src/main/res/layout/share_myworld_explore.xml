@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+       <variable
+           name="onClick"
+           type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dimen_15">
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_30"
+            android:layout_marginRight="@dimen/dimen_60"
+            android:text="@string/expo_share"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/dimen_24"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:text="@string/expo_share_sub"
+            android:textColor="@color/cpHelpText"
+            android:textSize="@dimen/font_size_14"
+            app:layout_constraintStart_toStartOf="@+id/textView11"
+            app:layout_constraintTop_toBottomOf="@id/textView11">
+
+        </TextView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sharebuttom"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_43"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:background="@drawable/round_enable_viewbutton"
+            android:elevation="@dimen/dimen_0"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:onClick="@{onClick}"
+            android:paddingHorizontal="@dimen/dimen_20"
+            android:stateListAnimator="@null"
+            android:text="@string/expo_share_button"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/cpWhite"
+            android:textSize="@dimen/font_size_16"
+            app:layout_constraintStart_toStartOf="@+id/textView12"
+            app:layout_constraintTop_toBottomOf="@id/textView12"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <View
+            android:id="@+id/navBar_view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:background="@color/cpHelpTextIcon"
+            android:paddingVertical="@dimen/dimen_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sharebuttom"
+            app:layout_constraintVertical_bias="0.059"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

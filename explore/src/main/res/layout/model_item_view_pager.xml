@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Top video "
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dimen_5"
+            android:layout_marginTop="@dimen/dimen_17"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_18"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/info_user_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12m"
+        android:hint="@string/add_T"
+        android:textColor="@color/cpHelpText"
+        android:textSize="@dimen/font_size_14"
+        app:layout_constraintStart_toStartOf="@+id/heading"
+        app:layout_constraintTop_toBottomOf="@+id/heading" />
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/card1"
+            android:layout_width="65dp"
+            android:layout_height="115dp"
+            android:layout_gravity="center_horizontal"
+            android:clickable="true"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:elevation="@dimen/dimen_0"
+            android:focusable="true"
+            app:cardCornerRadius="@dimen/dimen_12"
+            app:cardElevation="@dimen/dimen_0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/info_user_activity">
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/cpBackground"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/videoDescription1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:layout_margin="@dimen/dimen_5"
+                android:background="@drawable/roundwhitebutton"
+                android:backgroundTint="#B3ffffff"
+                android:paddingHorizontal="3.5dp"
+                android:paddingVertical="2dp"
+                android:text="0:00"
+                android:textColor="#333333"
+                android:textSize="@dimen/font_size_8"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:text="Title1"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/card1"
+            app:layout_constraintTop_toTopOf="@+id/card1" />
+
+        <TextView
+            android:id="@+id/user1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_3"
+            android:text="Username"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_13"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/card1"
+            app:layout_constraintStart_toStartOf="@+id/title1"
+            app:layout_constraintTop_toBottomOf="@id/title1"  />
+
+        <TextView
+            android:id="@+id/category1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:paddingVertical="@dimen/dimen_3"
+            android:text="category1"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_13"
+            app:layout_constraintLeft_toRightOf="@id/card1"
+            app:layout_constraintStart_toStartOf="@+id/user1"
+            app:layout_constraintTop_toBottomOf="@id/user1" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card2"
+            android:layout_width="65dp"
+            android:layout_height="115dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_7"
+            android:clickable="true"
+            android:elevation="@dimen/dimen_0"
+            android:focusable="true"
+            app:cardCornerRadius="@dimen/dimen_12"
+            app:cardElevation="@dimen/dimen_0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card1">
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/cpBackground"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/videoDescription2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:layout_margin="@dimen/dimen_5"
+                android:background="@drawable/roundwhitebutton"
+                android:backgroundTint="#B3ffffff"
+                android:paddingHorizontal="3.5dp"
+                android:paddingVertical="2dp"
+                android:text="0:00"
+                android:textColor="#333333"
+                android:textSize="@dimen/font_size_8"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:text="Title1"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/card2"
+            app:layout_constraintTop_toTopOf="@+id/card2" />
+
+        <TextView
+            android:id="@+id/user2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_3"
+            android:text="Username2"
+            android:textColor="@color/cpTextDark"
+            android:textStyle="bold"
+            android:textSize="@dimen/font_size_13"
+            app:layout_constraintLeft_toRightOf="@id/card2"
+            app:layout_constraintStart_toStartOf="@+id/title2"
+            app:layout_constraintTop_toBottomOf="@id/title2"  />
+
+        <TextView
+            android:id="@+id/category2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:paddingVertical="@dimen/dimen_3"
+            android:text="category2"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_13"
+            app:layout_constraintLeft_toRightOf="@id/card2"
+            app:layout_constraintStart_toStartOf="@+id/user2"
+            app:layout_constraintTop_toBottomOf="@id/user2" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card3"
+            android:layout_width="65dp"
+            android:layout_height="115dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_7"
+            android:clickable="true"
+            android:elevation="@dimen/dimen_0"
+            android:focusable="true"
+            app:cardCornerRadius="@dimen/dimen_12"
+            app:cardElevation="@dimen/dimen_0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card2">
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/cpBackground"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/videoDescription3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:layout_margin="@dimen/dimen_5"
+                android:background="@drawable/roundwhitebutton"
+                android:backgroundTint="#B3ffffff"
+                android:paddingHorizontal="3.5dp"
+                android:paddingVertical="2dp"
+                android:text="0:00"
+                android:textColor="#333333"
+                android:textSize="@dimen/font_size_8"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:text="Title1"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/card3"
+            app:layout_constraintTop_toTopOf="@+id/card3" />
+
+        <TextView
+            android:id="@+id/user3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_3"
+            android:text="Username2"
+            android:textColor="@color/cpTextDark"
+            android:textStyle="bold"
+            android:textSize="@dimen/font_size_13"
+            app:layout_constraintLeft_toRightOf="@id/card3"
+            app:layout_constraintStart_toStartOf="@+id/title3"
+            app:layout_constraintTop_toBottomOf="@id/title3"  />
+
+        <TextView
+            android:id="@+id/category3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:paddingVertical="@dimen/dimen_3"
+            android:text="category2"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_13"
+            app:layout_constraintLeft_toRightOf="@id/card3"
+            app:layout_constraintStart_toStartOf="@+id/user3"
+            app:layout_constraintTop_toBottomOf="@id/user3" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+

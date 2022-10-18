@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/global_story_display_flow"
+    app:startDestination="@id/commonStoryDisplayFragment">
+
+    <fragment
+        android:id="@+id/commonStoryDisplayFragment"
+        android:name="cessini.technology.commonui.fragment.storydisplay.CommonStoryDisplayFragment"
+        android:label="CommonStoryDisplayFragment">
+
+        <!-- Hide bottom navigation bar from this destination -->
+        <argument
+            android:name="@string/nav_arg_hide_bottom_nav"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
+</navigation>

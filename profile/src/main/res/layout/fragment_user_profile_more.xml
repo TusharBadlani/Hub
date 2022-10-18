@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.HomeActivity">
+
+
+        <TextView
+            android:id="@+id/profile_save_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dimen_5"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/dimen_5"
+            android:text="@string/ProfileStories"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_18"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/no_save_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimen_50"
+            android:gravity="center"
+            android:lineSpacingExtra="5sp"
+            android:paddingHorizontal="@dimen/dimen_50"
+            android:text="@string/when_Nothing"
+            android:textColor="@color/cpHelpText"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_story_text"
+            tools:visibility="visible" />
+
+        <com.airbnb.epoxy.EpoxyRecyclerView
+            android:id="@+id/save_profile_fragment_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:background="@color/cpWhite"
+            android:backgroundTint="@color/cpWhite"
+            android:layout_marginHorizontal="@dimen/dimen_3"
+            android:fadingEdge="vertical"
+            android:overScrollMode="never"
+            android:fadingEdgeLength="@dimen/dimen_50"
+            android:orientation="vertical"
+            android:visibility="gone"
+
+            app:spanCount="3"
+             />
+
+        <include
+            android:id="@+id/profile_save_shimmer"
+            layout="@layout/shimmer_dummy_page_grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+    </FrameLayout>
+</layout>
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    tools:context=".activity.HomeActivity">-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:gravity="center_horizontal"-->
+<!--        android:padding="@dimen/dimen_10"-->
+<!--        android:text="@string/ProfileMore"-->
+<!--        android:textColor="@color/cpTextDark"-->
+<!--        android:textSize="@dimen/font_size_18"-->
+<!--        android:textStyle="bold" />-->
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="@dimen/dimen_50"-->
+<!--        android:gravity="center"-->
+<!--        android:lineSpacingExtra="5sp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:paddingHorizontal="@dimen/dimen_50"-->
+<!--        android:textColor="@color/cpHelpText"-->
+<!--        android:text="@string/when_Nothing"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/profile_story_text" />-->
+
+
+<!--</FrameLayout>-->

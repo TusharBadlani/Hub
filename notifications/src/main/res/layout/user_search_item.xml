@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+
+        <variable
+            name="position"
+            type="java.lang.Integer" />
+
+        <variable
+            name="imageUrl"
+            type="java.lang.String" />
+
+        <variable
+            name="creator"
+            type="cessini.technology.cvo.exploremodels.SearchCreatorApiResponse" />
+
+        <variable
+            name="onClickCreator"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_7"
+        android:layout_marginBottom="@dimen/dimen_10"
+        android:onClick="@{onClickCreator}">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userImage"
+            android:layout_width="@dimen/dimen_60"
+            android:layout_height="@dimen/dimen_60"
+            android:scaleType="centerCrop"
+            android:foreground="@drawable/stroke_drawable"
+            app:setImage="@{creator.profile_picture}"
+            android:background="@drawable/ic_user_defolt_avator"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/user_name_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_12"
+            android:gravity="center"
+            android:text='@{creator.name,default="Creator name"}'
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_15"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/userImage"
+            app:layout_constraintTop_toTopOf="@+id/userImage" />
+
+        <TextView
+            android:id="@+id/user_channel_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{creator.channel_name,default="Channel"}'
+            android:textColor="@color/cpHelpText"
+            android:textSize="@dimen/font_size_14"
+            android:paddingTop="@dimen/dimen_1"
+            app:layout_constraintBottom_toBottomOf="@+id/userImage"
+            app:layout_constraintStart_toStartOf="@+id/user_name_search"
+            app:layout_constraintTop_toBottomOf="@+id/user_name_search"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

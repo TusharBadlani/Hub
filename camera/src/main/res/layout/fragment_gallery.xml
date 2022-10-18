@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="galleryViewModel"
+            type="cessini.technology.commonui.viewmodel.basicViewModels.GalleryViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded_dialog"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        app:behavior_hideable="true"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        android:name="androidx.navigation."
+        tools:context=".fragment.camera.VideoGalleryFragment">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gallery_image"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_20"
+            android:textStyle="bold"
+            android:paddingVertical="@dimen/dimen_10"
+            app:layout_constraintBottom_toTopOf="@+id/recycler_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.075"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3" />
+
+        <ImageView
+            android:id="@+id/dropdown_icon"
+            android:layout_width="@dimen/dimen_45"
+            android:layout_height="@dimen/dimen_11"
+            android:layout_margin="@dimen/dimen_5"
+            android:layout_marginBottom="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_tabicon" />
+
+        <com.airbnb.epoxy.EpoxyRecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_0"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:fadingEdge="vertical"
+            android:fadingEdgeLength="@dimen/dimen_20"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dropdown_icon"
+            app:spanCount="3"
+            tools:listitem="@layout/gallery_video_recycler_row" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

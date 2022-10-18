@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<data>
+
+    <variable
+        name="musicViewModel"
+        type="cessini.technology.camera.domain.viewmodel.CameraViewModel" />
+
+    <variable
+        name="audioName"
+        type="String" />
+
+    <variable
+        name="onPlayClicked"
+        type="android.view.View.OnClickListener" />
+
+    <variable
+        name="onPausedClicked"
+        type="android.view.View.OnClickListener" />
+
+    <variable
+        name="onAudioSelected"
+        type="android.view.View.OnClickListener" />
+
+    <import type="android.view.View" />
+
+    <variable
+        name="playButtonVisibility"
+        type="Boolean" />
+
+    <variable
+        name="pauseButtonVisibility"
+        type="Boolean" />
+
+    <variable
+        name="setThumbnail"
+        type="String" />
+
+    <variable
+        name="songDuration"
+        type="String" />
+</data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/user_small_tham"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:layout_marginLeft="@dimen/dimen_15"
+            android:onClick="@{onAudioSelected}"
+            app:cardCornerRadius="@dimen/dimen_7"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toTopOf="@id/music_select_button_1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/music_thumbnail"
+                setImageView="@{setThumbnail}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/cpBackground"
+                android:onClick="@{onAudioSelected}"
+                android:scaleType="fitXY" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/user_name_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_12"
+            android:layout_marginTop="@dimen/dimen_12"
+            android:layout_marginRight="@dimen/dimen_40"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:onClick="@{onAudioSelected}"
+            android:singleLine="true"
+            android:text="@{audioName}"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/music_play"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/user_small_tham"
+            app:layout_constraintTop_toTopOf="@+id/user_small_tham" />
+
+        <TextView
+            android:id="@+id/user_channel_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{`0:`+songDuration , default = `0:36`}"
+            android:textColor="@color/cpHelpText"
+            android:textSize="@dimen/font_size_14"
+            android:layout_marginTop="@dimen/dimen_3"
+            app:layout_constraintBottom_toBottomOf="@+id/user_small_tham"
+            app:layout_constraintStart_toStartOf="@+id/user_name_search"
+            app:layout_constraintTop_toBottomOf="@+id/user_name_search"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/music_play"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_marginEnd="@dimen/dimen_13"
+            android:background="@color/cpTransparent"
+            android:elevation="@dimen/dimen_0"
+            android:onClick="@{onPlayClicked}"
+            android:stateListAnimator="@null"
+            app:layout_constraintBottom_toBottomOf="@+id/user_small_tham"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/user_small_tham"
+            app:layout_constraintVertical_bias="0.52" />
+
+        <ImageView
+            android:id="@+id/music_play_button"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:background="@drawable/ic_play_button"
+            android:onClick="@{onPlayClicked}"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/music_play"
+            app:layout_constraintEnd_toEndOf="@+id/music_play"
+            app:layout_constraintStart_toStartOf="@+id/music_play"
+            app:layout_constraintTop_toTopOf="@+id/music_play"
+            app:layout_constraintVertical_bias="0.4" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/music_select_button_1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="@dimen/dimen_15"
+            android:layout_marginVertical="@dimen/dimen_5"
+            android:background="@drawable/round_enable_viewbutton"
+            android:gravity="center"
+            android:padding="2dp"
+            android:stateListAnimator="@null"
+            android:text="@string/music_select_button"
+            android:textAllCaps="false"
+            android:textColor="@color/twhite"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_small_tham" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

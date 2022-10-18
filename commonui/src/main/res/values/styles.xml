@@ -1,0 +1,74 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/cpWhite</item>
+        <item name="colorPrimaryDark">@color/cpDark</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowActivityTransitions">false</item>
+
+    </style>
+
+    <style name="CustomTextAppearanceTab" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">@dimen/font_size_16</item>
+        <item name="tabSelectedTextColor">@color/cpTextDark</item>
+        <item name="tabIndicatorColor">@color/cpTextDark</item>
+        <item name="android:textColor">@color/cpTextDark</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="EdgeOverlayTheme">
+        <item name="android:colorEdgeEffect">@color/cpBackgroundbutton</item>
+    </style>
+
+    <style name="customRv" parent="">
+        <item name="android:verticalSpacing">0dp</item>
+        <item name="android:verticalGap">0dp</item>
+    </style>
+
+    <style name="SearchView" parent="">
+        <item name="android:editTextColor">@color/cpTextDark</item>
+        <item name="android:textColorHint">@color/cpHelpText</item>
+        <item name="android:textSize">@dimen/dimen_16</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+        <item name="android:backgroundDimAmount">0.03</item>
+    </style>
+
+    <style name="AppBottomSheetDarkDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+        <item name="android:backgroundDimAmount">0.03</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_dialog</item>
+    </style>
+
+    <style name="TabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/font_size_15</item>
+    </style>
+
+    <style name="TextShadowStyle">
+        <item name="android:shadowColor">@color/cpHelpText</item>
+        <item name="android:shadowDx">0.1</item>
+        <item name="android:shadowDy">0.1</item>
+        <item name="android:shadowRadius">0.3</item>
+    </style>
+
+    <style name="SearchBottomMenu">
+        <item name="itemIconTint">#852323</item>
+        <item name="itemTextColor">@color/white</item>
+        <item name="android:paddingTop">2dp</item>
+    </style>
+
+
+</resources>

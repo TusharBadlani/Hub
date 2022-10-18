@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="room"
+            type="cessini.technology.model.Room" />
+
+        <variable
+            name="audioListener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="videoListener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_dialog">
+
+
+        <ImageView
+            android:id="@+id/myspace_dropdown_icon"
+            android:layout_width="@dimen/dimen_40"
+            android:layout_height="@dimen/dimen_50"
+            android:layout_marginStart="@dimen/dimen_15"
+            android:padding="@dimen/dimen_10"
+            android:importantForAccessibility="no"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back_down" />
+
+        <TextView
+            android:id="@+id/myspace_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_50"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:paddingHorizontal="@dimen/dimen_25"
+            android:text="@{room.title}"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_18"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/myspace_dropdown_icon"
+            app:layout_constraintEnd_toEndOf="@+id/boder_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/myspace_dropdown_icon"
+            tool:text="Myspace title" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/user_profile_cv"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="@dimen/dimen_30"
+            app:cardCornerRadius="75dp"
+            app:cardElevation="@dimen/dimen_0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/myspace_title">
+
+            <ImageView
+                android:id="@+id/usertham"
+                android:layout_width="match_parent"
+                creatorImage="@{room.creator.profilePicture}"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/profile_image_desc"
+                android:background="@drawable/story_active_inside_view"
+                android:foreground="@drawable/stroke_drawable"
+                android:cropToPadding="true"
+                android:padding="@dimen/dimen_5"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_user_defolt_avator" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/listener_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_15"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:text="@string/listener"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_profile_cv" />
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/listeners_container"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:flexWrap="wrap"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/bottom_list"
+            app:layout_constraintTop_toBottomOf="@id/listener_view"
+             />
+
+        <View
+            android:id="@+id/boder_view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/cpBackgroundbutton"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_list"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottom_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:paddingVertical="@dimen/dimen_7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/listeners_container">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="@dimen/dimen_43"
+                android:layout_height="@dimen/dimen_43"
+               android:layout_marginRight="@dimen/dimen_10"
+                android:background="@drawable/round_viewbutton"
+                android:padding="@dimen/dimen_9"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                app:layout_constraintEnd_toStartOf="@+id/imageView5"
+                app:layout_constraintTop_toTopOf="@+id/imageView5"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/ic_copylink" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="@dimen/dimen_43"
+                android:layout_height="@dimen/dimen_43"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:background="@drawable/round_viewbutton"
+                android:padding="@dimen/dimen_9"
+                app:layout_constraintBottom_toBottomOf="@+id/share"
+                app:layout_constraintEnd_toStartOf="@+id/share"
+                app:layout_constraintTop_toTopOf="@+id/share"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/ic_addfollower" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLeaveRoom"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_43"
+                android:layout_marginStart="@dimen/dimen_15"
+                android:background="@drawable/round_viewbutton"
+                android:elevation="@dimen/dimen_0"
+                android:gravity="center"
+                android:letterSpacing="0.01"
+                android:paddingHorizontal="@dimen/dimen_12"
+                android:stateListAnimator="@null"
+                android:text="@string/leave"
+                android:textAllCaps="false"
+                android:textColor="@color/cpRed"
+                android:textSize="@dimen/font_size_16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/share"
+                android:layout_width="@dimen/dimen_43"
+                android:layout_height="@dimen/dimen_43"
+                android:layout_marginRight="@dimen/dimen_15"
+                android:background="@drawable/round_viewbutton"
+                android:importantForAccessibility="no"
+                android:padding="@dimen/dimen_9"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/ic_shareicon" />
+
+            <Spinner
+                android:id="@+id/delete"
+                style="@style/Widget.AppCompat.Spinner"
+                android:layout_width="@dimen/dimen_45"
+                android:layout_height="@dimen/dimen_45"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:clipChildren="false"
+                android:layout_marginEnd="@dimen/dimen_10"
+                android:spinnerMode="dropdown"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/share"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/cpWhite"/>
+
+
+            <ImageView
+                android:id="@+id/view4"
+                android:layout_width="@dimen/dimen_45"
+                android:layout_height="@dimen/dimen_45"
+                android:background="@drawable/round_viewbutton"
+                android:importantForAccessibility="no"
+                android:padding="@dimen/dimen_12"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/delete"
+                app:layout_constraintEnd_toEndOf="@id/delete"
+                app:layout_constraintTop_toTopOf="@id/delete"
+                app:layout_constraintBottom_toBottomOf="@id/delete"
+                app:srcCompat="@drawable/ic_dot"
+                tool:layout_editor_absoluteY="7dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/is_live"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dimen_15"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_12"
+            android:textStyle="bold"
+            android:paddingVertical="@dimen/dimen_1"
+            android:paddingHorizontal="@dimen/dimen_5"
+            android:background="@drawable/round_enable_viewbutton"
+            app:layout_constraintBottom_toBottomOf="@+id/myspace_dropdown_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/myspace_title"
+            app:layout_constraintTop_toTopOf="@+id/myspace_dropdown_icon"
+            android:text="Live"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/room_time"
+            dayNTime="@{room.time}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dimen_15"
+            android:gravity="right|center_vertical"
+            android:textColor="@color/cpHelpText"
+            android:textSize="@dimen/font_size_12"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/myspace_dropdown_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/myspace_dropdown_icon"
+            tool:text="9:30" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+

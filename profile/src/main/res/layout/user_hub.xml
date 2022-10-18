@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="content"
+            type="String" />
+        <variable
+            name="span"
+            type="android.text.Spanned" />
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="onJoin"
+            type="android.view.View.OnClickListener" />
+        <variable
+            name="live"
+            type="Boolean" />
+
+        <variable
+            name="creatorName"
+            type="String" />
+
+        <variable
+            name="time"
+            type="Long" />
+        <variable
+            name="layoutManager"
+            type="androidx.recyclerview.widget.GridLayoutManager" />
+        <variable
+            name="controller"
+            type="cessini.technology.profile.controller.EpoxyControllerProfile" />
+    </data>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_7"
+            android:layout_marginBottom="@dimen/dimen_5"
+            android:onClick="@{onClick}"
+            android:background="@color/cpWhite"
+            android:layout_marginHorizontal="@dimen/dimen_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <com.airbnb.epoxy.EpoxyRecyclerView
+                android:id="@+id/samplepoxyview"
+                setController="@{controller}"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                setLayoutManager="@{layoutManager}"
+                android:overScrollMode="never"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+<!--            <com.airbnb.epoxy.EpoxyRecyclerView-->
+<!--                android:id="@+id/samplepoxyview"-->
+<!--                setController="@{controller}"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                setLayoutManager="@{layoutManager}"-->
+<!--                app:layoutManager="@{layoutManager}"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+            <TextView
+                android:id="@+id/textView29"
+                setcolor="@{live}"
+                settext="@{live}"
+                setBackground="@{live}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_7"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:background="@drawable/squer_roundview_live"
+                android:paddingHorizontal="@dimen/dimen_5"
+                android:paddingVertical="@dimen/dimen_1"
+                android:text="Live"
+                android:textColor="@color/cpWhite"
+                android:textSize="@dimen/dimen_10"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/samplepoxyview"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/joinRoom"
+                android:layout_width="50dp"
+                android:layout_height="@dimen/dimen_40"
+                android:background="@drawable/join_myspace_upcoming"
+                android:elevation="@dimen/dimen_0"
+                android:gravity="center"
+                android:onClick="@{onJoin}"
+                android:paddingHorizontal="@dimen/dimen_0"
+                android:paddingVertical="@dimen/dimen_7"
+                android:stateListAnimator="@null"
+                android:text="Join"
+                android:textAllCaps="false"
+                android:textColor="@color/cpBackground"
+                android:textSize="@dimen/font_size_16"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/upcoming_room_host_time"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/upcoming_room_title" />
+
+            <TextView
+                android:id="@+id/upcoming_room_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:bufferType="spannable"
+                android:layout_marginRight="@dimen/dimen_7"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/dimen_1"
+                android:maxLines="3"
+                android:paddingRight="@dimen/dimen_9"
+                android:text="@{span}"
+                android:textAllCaps="false"
+                android:textSize="@dimen/font_size_15"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/joinRoom"
+                app:layout_constraintStart_toStartOf="@id/textView29"
+                app:layout_constraintTop_toBottomOf="@id/textView29"
+                tools:text="Hub title" />
+
+            <TextView
+                android:id="@+id/upcoming_room_host_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:maxWidth="150dp"
+                android:paddingTop="@dimen/dimen_2"
+                android:singleLine="true"
+                android:text="@{`@` +creatorName}"
+                android:textColor="@color/cpTextDark"
+                android:textSize="@dimen/font_size_12"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/joinRoom"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/upcoming_room_title"
+                app:layout_constraintTop_toBottomOf="@+id/upcoming_room_title"
+                tools:text="Channel name" />
+
+            <TextView
+
+                android:id="@+id/upcoming_room_time"
+                dayTime="@{time}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/dimen_3"
+                android:textColor="@color/cpHelpText"
+                android:textSize="@dimen/font_size_12"
+                app:layout_constraintEnd_toStartOf="@+id/joinRoom"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/upcoming_room_host_time"
+                app:layout_constraintTop_toBottomOf="@+id/upcoming_room_host_time"
+                tools:text="Time" />
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/squer_roundview_gray"
+                android:paddingHorizontal="@dimen/dimen_3"
+                android:paddingVertical="0.5dp"
+                android:layout_marginLeft="@dimen/dimen_3"
+                android:text="Host"
+                android:textColor="@color/cpHelpText"
+                android:textSize="@dimen/font_size_11"
+                app:layout_constraintBottom_toBottomOf="@+id/upcoming_room_host_time"
+                app:layout_constraintStart_toEndOf="@+id/upcoming_room_host_time"
+                app:layout_constraintTop_toTopOf="@+id/upcoming_room_host_time"
+                app:layout_constraintVertical_bias="1.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,87 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs'
+    id 'org.jlleitschuh.gradle.ktlint' version "$ktlint_version"
+    id 'kotlin-android-extensions'
+}
+
+android {
+    compileSdkVersion 33
+    buildToolsVersion "30.0.3"
+
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("../debug.keystore")
+        }
+    }
+
+    defaultConfig {
+        minSdkVersion 24
+        targetSdkVersion 33
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    kapt {
+        correctErrorTypes = true
+    }
+}
+
+dependencies {
+
+    implementation common_impl
+    implementation navigation
+
+    implementation hilt_lib.impl
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    kapt hilt_lib.kap
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+    implementation 'org.webrtc:google-webrtc:1.0.30039'
+    implementation('io.socket:socket.io-client:0.8.3') {
+        // excluding org.json which is provided by Android
+        exclude group: 'org.json', module: 'json'
+    }
+
+    implementation coil
+    implementation date_time_picker
+
+    implementation flexbox
+
+    implementation webrtc
+
+    implementation project(":commonui")
+
+    kapt "com.airbnb.android:epoxy-processor:4.3.1"
+    implementation "com.airbnb.android:epoxy:4.3.1"
+    implementation "com.airbnb.android:epoxy-databinding:3.9.0"
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+}

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sflGrid"
+    android:background="@color/cpWhite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:shimmer_auto_start="true"
+    app:shimmer_highlight_alpha="1"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="@dimen/dimen_15"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <View
+                    android:layout_width="65dp"
+                    android:layout_height="115dp"
+                    android:background="@drawable/squer_video_simmer_round" />
+
+                    <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:orientation="vertical">
+                <View
+                    android:layout_width="170dp"
+                    android:background="@drawable/squer_video_simmer_round"
+                    android:layout_height="@dimen/dimen_15"
+                    android:layout_marginLeft="@dimen/dimen_7"
+                   />
+
+                    <View
+                    android:layout_width="100dp"
+                        android:background="@drawable/squer_video_simmer_round"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:layout_height="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_7"
+                />
+                </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="65dp"
+                        android:layout_height="115dp"
+                        android:background="@drawable/squer_video_simmer_round" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_20"
+                        android:orientation="vertical">
+                        <View
+                            android:layout_width="170dp"
+                            android:background="@drawable/squer_video_simmer_round"
+                            android:layout_height="@dimen/dimen_15"
+                            android:layout_marginLeft="@dimen/dimen_7"
+                            />
+
+                        <View
+                            android:layout_width="100dp"
+                            android:background="@drawable/squer_video_simmer_round"
+                            android:layout_marginTop="@dimen/dimen_5"
+                            android:layout_height="@dimen/dimen_10"
+                            android:layout_marginLeft="@dimen/dimen_7"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.facebook.shimmer.ShimmerFrameLayout>

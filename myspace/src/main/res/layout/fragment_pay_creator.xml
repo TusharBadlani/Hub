@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="room"
+            type="cessini.technology.model.Room" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/knowMoreMainCL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded_dialog"
+        >
+
+
+        <ImageView
+            android:id="@+id/room_notice_dropdown_icon"
+            android:layout_width="@dimen/dimen_43"
+            android:layout_height="@dimen/dimen_7"
+            android:layout_marginTop="@dimen/dimen_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_tabicon"
+            />
+
+        <ImageView
+            android:id="@+id/room_img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            creatorImage="@{room.creator.profilePicture}"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/dimen_25"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/room_notice_dropdown_icon"
+            app:srcCompat="@drawable/ic_user_defolt_avator" />
+
+        <TextView
+            android:id="@+id/head_text"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_marginTop="@dimen/dimen_3"
+            android:layout_marginLeft="@dimen/dimen_15"
+            android:text="@{room.creator.name}"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_18"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/room_img"
+            app:layout_constraintTop_toTopOf="@+id/room_img" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_next"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="@dimen/dimen_43"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:background="@drawable/round_view_roomfunction"
+            android:layout_marginBottom="@dimen/dimen_15"
+            android:elevation="@dimen/dimen_0"
+            android:gravity="center"
+            android:stateListAnimator="@null"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/payment_chip_group" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/payment_chip_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_15"
+            android:layout_marginVertical="@dimen/dimen_30"
+            android:layout_marginTop="100dp"
+            android:foregroundGravity="center"
+            app:chipSpacingVertical="@dimen/dimen_15"
+            app:chipSpacingHorizontal="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/room_img"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                style="@style/PaymentChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="&#x20B9;100" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/PaymentChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#x20B9;300" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/PaymentChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#x20B9;500" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/PaymentChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#x20B9;700" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/PaymentChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#x20B9;1000" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/PaymentChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other..." />
+
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen_1"
+            android:text="@{room.creator.channelName}"
+            android:textColor="@color/cpHelpText"
+            android:textSize="@dimen/font_size_14"
+            app:layout_constraintBottom_toBottomOf="@+id/room_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/head_text"
+            app:layout_constraintTop_toBottomOf="@+id/head_text"
+            app:layout_constraintVertical_bias="0.0" />
+
+ </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

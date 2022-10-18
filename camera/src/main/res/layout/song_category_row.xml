@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="categoryRecyclerView"
+            type="cessini.technology.camera.domain.viewmodel.CameraViewModel"/>
+
+        <variable
+            name="songCategoryName"
+            type="String" />
+
+        <variable
+            name="songCategoryExpandText"
+            type="String" />
+
+        <variable
+            name="songCategoryExpandClick"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="categoryClicked"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="position"
+            type="Integer" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:layout_marginBottom="@dimen/dimen_15"
+        android:backgroundTint="@color/cpTransparent"
+        android:foreground="@drawable/round_border_for_discovery_cardview"
+        android:onClick="@{songCategoryExpandClick}"
+        >
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cardCornerRadius="@dimen/dimen_13"
+            app:cardElevation="@dimen/dimen_0"
+            android:backgroundTint="@color/cpTransparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtSongCategoryName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_15"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:onClick="@{songCategoryExpandClick}"
+                    android:text="@{songCategoryName}"
+                    android:textColor="@color/cpTextDark"
+                    android:textSize="@dimen/font_size_18"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvMusicRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="true"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtSongCategoryName"
+                    tools:listitem="@layout/music_recycler_row" />
+
+                <View
+                    android:id="@+id/texttopborder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:background="@color/cpBackgroundbutton"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rvMusicRecyclerView"
+                    app:layout_constraintVertical_bias="0.12" />
+
+                <TextView
+                    android:id="@+id/txtViewMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:textSize="@dimen/font_size_16"
+                    android:textStyle="bold"
+                    android:paddingVertical="@dimen/dimen_15"
+                    android:textColor="@color/cpTextDark"
+                    android:onClick="@{songCategoryExpandClick}"
+                    android:text="@{songCategoryExpandText}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/texttopborder" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

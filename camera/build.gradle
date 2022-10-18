@@ -1,0 +1,100 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'com.jakewharton.butterknife'
+    id 'androidx.navigation.safeargs'
+    id 'org.jlleitschuh.gradle.ktlint' version "$ktlint_version"
+}
+
+kapt {
+    correctErrorTypes = true
+}
+
+android {
+    compileSdkVersion 33
+    buildToolsVersion "30.0.3"
+
+    signingConfigs {
+        debug {
+            storeFile file("../debug.keystore")
+        }
+    }
+
+    buildFeatures {
+        dataBinding true
+    }
+
+    defaultConfig {
+        minSdkVersion 24
+        targetSdkVersion 33
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    packagingOptions {
+        resources {
+            excludes += ['META-INF/INDEX.LIST', 'META-INF/DEPENDENCIES', 'META-INF/io.netty.versions.properties']
+        }
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation common_impl
+    implementation navigation
+
+    implementation hilt_lib.impl
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation project(path: ':myspace')
+    kapt hilt_lib.kap
+
+    implementation group: 'org.kurento', name: 'kurento-client', version: '6.13.0'
+    implementation camera
+
+    implementation exoplayer
+//    implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
+//    implementation 'com.google.guava:guava:29.0-android'
+//    implementation "androidx.concurrent:concurrent-futures:1.1.0"
+
+
+    api video_compressor
+
+    implementation epoxy.impl
+    kapt epoxy.kap
+
+    implementation glide
+    implementation cardview
+    implementation circle_image_view
+
+    implementation project(":commonui")
+    implementation project(":newrepository")
+    implementation "androidx.core:core-ktx:1.5.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
+}

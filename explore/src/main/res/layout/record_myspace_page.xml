@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/category_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/dimen_15"
+        android:layout_marginTop="@dimen/dimen_17"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:hint="Recorded Myspcae Category-1"
+        android:textColor="@color/cpTextDark"
+        android:textSize="@dimen/font_size_18"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/live_user_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15m"
+        android:hint="@string/add_T"
+        android:textColor="@color/cpHelpText"
+        android:textSize="@dimen/font_size_14"
+        app:layout_constraintStart_toStartOf="@+id/category_text"
+        app:layout_constraintTop_toBottomOf="@+id/category_text" />
+
+    <com.airbnb.epoxy.EpoxyRecyclerView
+        android:id="@+id/recordedepoxy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen_10"
+        android:theme="@style/EdgeOverlayTheme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/live_user_activity">
+
+    </com.airbnb.epoxy.EpoxyRecyclerView>
+</androidx.constraintlayout.widget.ConstraintLayout>

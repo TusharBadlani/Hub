@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/live_hub_category_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/dimen_15"
+        android:layout_marginTop="@dimen/dimen_17"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:hint="live Hub Category"
+        android:textColor="@color/cpTextDark"
+        android:textSize="@dimen/font_size_18"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/live_user_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="23m"
+        android:hint="@string/add_T"
+        android:textColor="@color/cpHelpText"
+        android:textSize="@dimen/font_size_14"
+        app:layout_constraintStart_toStartOf="@+id/live_hub_category_title"
+        app:layout_constraintTop_toBottomOf="@+id/live_hub_category_title" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="@dimen/dimen_22"
+        android:layout_height="@dimen/dimen_22"
+        android:layout_marginEnd="@dimen/dimen_7"
+        android:padding="@dimen/dimen_5"
+        app:layout_constraintBottom_toTopOf="@+id/live_user_activity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/live_hub_category_title"
+        app:srcCompat="@drawable/ic_back_right_light" />
+
+    <com.airbnb.epoxy.EpoxyRecyclerView
+        android:id="@+id/horizontalepoxy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen_10"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:theme="@style/EdgeOverlayTheme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/live_user_activity">
+
+    </com.airbnb.epoxy.EpoxyRecyclerView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

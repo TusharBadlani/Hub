@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="cessini.technology.myspace">
+
+    <application>
+        <activity android:name="cessini.technology.commonui.activity.GridActivity"
+            android:launchMode="singleTask"
+            android:exported="true"
+            >
+            <intent-filter android:label="Join">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="https"
+                    android:host="www.myworld.com"
+                    android:pathPrefix="/liveRoom" />
+            </intent-filter>
+        </activity>
+<!--        <activity android:name="cessini.technology.commonui.activity.live.LiveMyspaceActivity"-->
+<!--            android:exported="true"/>-->
+        <service
+            android:name="cessini.technology.commonui.activity.services.screen_share.MediaProjectionService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="mediaProjection"
+            tools:targetApi="q" />
+<!--        <service-->
+<!--            android:name="T0"-->
+<!--            android:enabled="true" />-->
+    </application>
+
+</manifest>

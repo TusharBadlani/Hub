@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:paddingLeft="0sp"
+    android:layout_height="wrap_content"
+    android:translationX="-10sp"
+    >
+
+    <TextView
+        android:id="@+id/Category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Expert Video"
+        android:paddingEnd="60dp"
+        android:textColor="@color/cpTextDark"
+        android:textSize="@dimen/dimen_18"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textFocus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/Category"
+        app:layout_constraintBottom_toBottomOf="@id/Category"
+        app:layout_constraintLeft_toRightOf="@id/Category"/>
+
+
+    <com.airbnb.epoxy.EpoxyRecyclerView
+        android:id="@+id/viewpagerepoxy"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Category">
+
+    </com.airbnb.epoxy.EpoxyRecyclerView>
+</androidx.constraintlayout.widget.ConstraintLayout>

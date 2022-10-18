@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/notification_message_CL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".fragment.NotificationBottomNav">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cpWhite"
+            app:elevation="@dimen/dimen_0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/notification_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/notification_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cpWhite"
+                    android:elevation="@dimen/dimen_0"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="?attr/actionBarTheme"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </androidx.appcompat.widget.Toolbar>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_notification_message"
+                    android:layout_width="wrap_content"
+                    android:backgroundTint="@color/cpTransparent"
+                    android:singleLine="true"
+                    android:layout_centerHorizontal="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_height="@dimen/dimen_30"
+                    app:tabIndicatorColor="@color/cpTextDark"
+                    app:tabIndicatorHeight="3.6dp"
+                    app:tabIndicator="@drawable/tab_indicator"
+                    app:tabSelectedTextColor="@color/cpTextDark"
+                    app:tabGravity="fill"
+                    app:tabMode="auto"
+                    app:tabMaxWidth="0dp"
+                    app:tabRippleColor="@null"
+                    app:tabTextAppearance="@style/TabTextAppearance"
+                    app:tabTextColor="@color/cpTextDark">
+
+                </com.google.android.material.tabs.TabLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_notification_message"
+            android:layout_width="match_parent"
+            android:background="@color/cpWhite"
+            android:layout_height="@dimen/dimen_0"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appbar2"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

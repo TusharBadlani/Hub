@@ -1,0 +1,188 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'com.google.gms.google-services'
+    id 'androidx.navigation.safeargs'
+    id 'org.jlleitschuh.gradle.ktlint' version "$ktlint_version"
+    id 'com.jakewharton.butterknife'
+}
+
+kapt {
+    correctErrorTypes = true
+}
+
+android {
+    compileSdkVersion 33
+    buildToolsVersion '31.0.0'
+
+    signingConfigs {
+        debug {
+            storeFile file("../debug.keystore")
+        }
+    }
+
+    defaultConfig {
+        minSdkVersion 24
+        targetSdkVersion 33
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    ndkVersion '21.4.7075529'
+
+    externalNativeBuild {
+        ndkBuild {
+            path 'src/main/jni/Android.mk' //path of Android.mk file
+        }
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+        freeCompilerArgs = ['-Xjvm-default=enable']
+    }
+    dataBinding {
+        enabled = true
+    }
+    buildFeatures {
+        dataBinding true
+    }
+    packagingOptions {
+        resources {
+            excludes += ['META-INF/INDEX.LIST', 'META-INF/DEPENDENCIES', 'META-INF/io.netty.versions.properties']
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation "com.android.support:multidex:2.0.1"
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+
+    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:28.0.0-rc01'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation("androidx.recyclerview:recyclerview:1.2.1")
+    // For control over item selection of both touch and mouse driven selection
+    implementation("androidx.recyclerview:recyclerview-selection:1.1.0")
+
+    //android lifecyle dependency
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.6.0-alpha02"
+
+    implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
+
+    implementation 'org.webrtc:google-webrtc:1.0.30039'
+    implementation('io.socket:socket.io-client:2.0.1') {
+        // excluding org.json which is provided by Android
+        exclude group: 'org.json', module: 'json'
+    }
+
+
+    //RTP for stream grid activity
+    implementation 'com.github.pedroSG94.rtmp-rtsp-stream-client-java:rtplibrary:2.1.9'
+
+    //For AWSMobileClient only:
+    implementation 'com.amazonaws:aws-android-sdk-mobile-client:2.49.0'
+    implementation ('com.amazonaws:aws-android-sdk-mobile-client:2.49.0@aar') { transitive = true; }
+//For the drop-in UI also:
+    implementation 'com.amazonaws:aws-android-sdk-auth-userpools:2.41.1'
+    implementation 'com.amazonaws:aws-android-sdk-auth-ui:2.41.1'
+
+//For hosted UI also:
+    implementation 'com.amazonaws:aws-android-sdk-cognitoauth:2.41.1'
+//    implementation platform('com.amazonaws:aws-java-sdk-bom:1.11.1000')
+//    implementation 'com.amazonaws:aws-java-sdk-s3'
+     implementation "com.amazonaws:aws-android-sdk-s3:2.41.1"
+//    amazon sns client
+    implementation("aws.sdk.kotlin:sns:0.17.1-beta"){
+        exclude module: 'xpp3'
+    }
+    // Import the BoM for the Firebase platform
+//    implementation platform('com.google.firebase:firebase-bom:30.2.0')
+
+
+
+    // Declare the dependency for the Cloud Firestore library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'junit:junit:4.13.2'
+
+//    implementation files('libs/aws-android-sdk-1.4.3-core')
+//    implementation files('libs/aws-android-sdk-1.4.3-s3')
+//    implementation files('libs/Simpl3r-1.0.2')
+//    implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
+//    implementation 'com.google.guava:guava:29.0-android'
+//    implementation "androidx.concurrent:concurrent-futures:1.1.0"
+//
+//    implementation 'com.amazonaws:aws-android-sdk-appsync:2.41.1'
+//    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
+//    implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+    // Support for Java 8 features
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.2.2'
+//    implementation 'com.amazonaws:aws-java-sdk:1.11.404'
+    implementation group: 'org.kurento', name: 'kurento-client', version: '6.16.1'
+
+    //Used Own Epoxy due to version incompatibility
+
+    implementation epoxy.impl
+    kapt epoxy.kap
+
+    implementation common_impl
+    implementation navigation
+    implementation splash
+
+    implementation auth
+    implementation facebook_auth
+    implementation location
+
+    implementation hilt_lib.impl
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    kapt hilt_lib.kap
+
+    implementation glide
+    implementation coil
+
+    implementation exoplayer
+    implementation retrofit
+    implementation firebase
+
+    api socket
+    api shimmer
+    implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
+
+    api project(":cvo")
+    api project(":model")
+    api project(":navigation")
+    api project(":newrepository")
+    implementation project(":newapi")
+    implementation "androidx.core:core-ktx:1.9.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation  "com.skyfishjy.ripplebackground:library:1.0.1"
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation "androidx.multidex:multidex:2.0.1"
+}
+repositories {
+    mavenCentral()
+}

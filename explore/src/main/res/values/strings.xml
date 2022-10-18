@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_result_found">No result found</string>
+    <string name="stay_inspire">Learn It \u0026 Stay Inspired</string>
+    <string name="search_M">Find rooms from myspace</string>
+    <string name="some_text">
+<![CDATA[
+<font color=\'#0F1419\'>%1$s </font><font color=\'#1D9BF0\'>%2$s</font>]]>
+    </string>
+
+    <string-array name="view_pager_items">
+        <item>Farewell, ViewPager.</item>
+        <item>Hello, Epoxy Carousel 1.</item>
+        <item>Hello, Epoxy Carousel 2.</item>
+        <item>Hello, Epoxy Carousel 3.</item>
+        <item>Hello, Epoxy Carousel 4.</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

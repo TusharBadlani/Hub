@@ -1,0 +1,258 @@
+<resources>
+    <string name="app_name">Myworld</string>
+    <string name="large_text">"Avoiding elevation interference.\n\n" </string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sharedPrefName">SuggestionSharedPreference</string>
+    <string name="sharedPrefName2">SuggestionSharedPreference2</string>
+    <string name="sharedPrefName3">SuggestionSharedPreferenceReverse</string>
+    <string name="authSharedPref">AuthSharedPreference</string>
+    <!--Home Fragment -->
+    <string name="gallery_image">Gallery</string>
+    <string name="hint"><font size="15">Search hubs, experts</font></string>
+    <!--video upload category list-->
+    <string-array name="category">
+        <item>Select Video Category</item>
+        <item>Film and animation</item>
+        <item>News and politics</item>
+        <item>Music</item>
+        <item>Education</item>
+        <item>Pets and animals</item>
+        <item>Sport</item>
+        <item>Entertainment</item>
+        <item>Cars and vehicles</item>
+        <item>Web development</item>
+        <item>Cricket</item>
+        <item>Cloud computing</item>
+        <item>Travel and events</item>
+        <item>People and blogs </item>
+        <item>How-to and style</item>
+        <item>Science and technology</item>
+        <item>Non-profits and activism</item>
+    </string-array>
+    <string name="view_all">View All</string>
+    <string name="doyc">Discovery</string>
+    <string name="earn">Monetization</string>
+    <string name="payment">Payments and payouts</string>
+    <string name="autop">Autoplay</string>
+    <string name="video_Q">Video Quality</string>
+    <string name="camera_A">Camera Advancement</string>
+    <string name="notify">Notification</string>
+    <string name="notification_Activity"> All activity</string>
+    <string name="log_O">Log Out</string>
+    <string name="myspace_list">Manage hub</string>
+    <string name="myspace_L_T">Solve your problem\'s at hub</string>
+    <string name="myspace_intro">Let\'s talk at hub</string>
+    <string name="myspace_public_help_text">Start live conversation the problems you have.</string>
+    <string name="Create_s_n">Create something new</string>
+    <string name="myspace">Hub</string>
+    <string name="createmyspace">Create hub</string>
+    <string name="add_mpace">Manage hub</string>
+    <string name="add_myspace">Hub</string>
+    <string name="everyone">Here\'s how it Works</string>
+    <string name="listener">Listeners</string>
+    <string name="leave">Leave</string>
+    <string name="accepted">Accepted</string>
+    <string name="message_wtr">Write a message</string>
+    <string name="video_T">Keep on viewing to similar video track when your video ends </string>
+    <string name="smart_A">Smart adoptive(reduces data usage when network is metered or slow)</string>
+    <string name="recommended_M">Recommended mode base on device (Tab &amp; hold recording)</string>
+    <string name="video_T_N">Set your new video trend notification on</string>
+    <string name="data_S">Data Saver</string>
+    <string name="video_Q_E">Sets Your video quality to low ( equivalent to 40 kbit/s) and disables creator canvases</string>
+    <string name="setting">Settings</string>
+    <string name="views">View Profile</string>
+    <string name="Ok">Okay</string>
+    <string name="active">Join Hub</string>
+    <string name="add_message">Ask me</string>
+    <string name="revenue">Revenue</string>
+    <string name="edit_Pro">Edit Profile</string>
+    <string name="edit_P">Edit</string>
+    <string name="location">Location</string>
+    <string name="email">Email</string>
+    <string name="expo_share">Want to see who you know on Myworld?</string>
+    <string name="expo_share_sub">Take a peek at your contacts</string>
+    <string name="expo_share_button">Get Started</string>
+    <string name="creator_studio">Myworld Creator Studio</string>
+    <string name="share_Bio_H">Share a bit about yourself</string>
+    <string name="share_Bio_E">Area of your expertise</string>
+    <string name="channel_N">Channel Name</string>
+    <string name="search_V">Find the video you can learn </string>
+    <string name="search_My">Find the hub you can inspire</string>
+    <string name="search_M">Find the creators you can talk</string>
+    <string name="search_C">Find the creator who can help</string>
+    <string name="search_H_V_T">from million of creator, specialist and professional.</string>
+    <string name="search_H_M_T">from creators followed by you.</string>
+    <string name="search_H_C_T">from every corner around the world.</string>
+    <string name="manage_hub_help">Create and manage your hub, and user join request, pending hub lists you\'ve liked will live here.</string>
+    <string name="when_Nothing">Experts talks at hub, Story and video playlists you\'ve liked will live here.</string>
+    <string name="Notification_help">Here you\'ll find all friend, follower, hub request, like, commit activities. </string>
+    <string name="make_Y_V_E">Grow your audience by going live to multiple platforms. You can set this up now or later in Settings</string>
+    <string name="make_Y_V">Live your hub everywhere</string>
+    <string name="get_inspire">Today\'s inspiration</string>
+    <string name="yout">YouTube</string>
+    <string name="inst">Instagram</string>
+    <string name="tweet">Twitter</string>
+    <string name="twitch">Twitch</string>
+    <string name="add_G">Continue with Google</string>
+    <string name="add_F">Continue with Facebook</string>
+    <string name="make_M">Overview</string>
+    <string name="make_M_E">You will eligible for monetization once your channel have 50 watch hours viewers, 100 followers and have hosted atlist 5 space.</string>
+    <string name="channel_M">Monetization</string>
+    <string name="add_Comment">Add your comment</string>
+    <string name="post">Post</string>
+    <string name="story_T">Story title</string>
+    <string name="intro_D">Let\'s talk to together </string>
+    <string name="select_L">Which languages do you speak?</string>
+    <string name="login_I">You need a Myworld account to continue</string>
+    <string name="video_l">Learn from the playlist</string>
+    <string name="user_N">User name</string>
+    <string name="edit_prof">Edit Profile</string>
+    <string name="follow">followers</string>
+    <string name="following">following</string>
+    <string name="permisison_allow_button">Allow Access</string>
+    <string name="addContactDetails">Add</string>
+    <string name="save">Save</string>
+    <string name="done">Done</string>
+    <string name="edit_profile_add_intro">Add</string>
+    <string name="abt_u">About You</string>
+    <string name="add_T">Add</string>
+    <string name="edit_profile_user_name">Add us</string>
+    <string name="upload">Upload</string>
+    <string name="for_you">Gallery</string>
+    <string name="ProfileStories">No hub found</string>
+    <string name="ProfileVideo">No Videos found</string>
+    <string name="ProfileMore">No Activity Yet</string>
+    <string name="gallery">Gallery</string>
+    <string name="video_Title">Video Title</string>
+    <string name="more"><a href="http://joinmyworld.ml/faq.html"><b>Learn More</b></a></string>
+    <string name="every">Everyone</string>
+    <string name="Only_people_W">Only people you want</string>
+    <string name="camera_Title">Welcome to the Myworld Camera!</string>
+    <string name="add_I_S">Choose your interests</string>
+    <string name="schedule_H">Schedule Hub</string>
+    <string name="display_title">Schedule time will be sate as reminder\'s will notify.</string>
+    <string name="video_D">Video Description</string>
+    <string name="explore_I">Make Visible on Discovery</string>
+    <string name="explore_info">More Places Your Video Can Appear</string>
+    <string name="camera_intro_text">Create space, edit video, and explore new ways to express yourself</string>
+    <string name="helpforeveryonemyspace">Anyone can send you hub join request.</string>
+    <string name="search_here">Search</string>
+    <string name="search_here_name">Search by name</string>
+    <string name="wellcome_Tochat">Welcome to your inbox!</string>
+    <string name="wellcome_Tochat_helptext">Search experts and more with private conversations between you and other Hubstars.</string>
+    <string name="search_cancel">Cancel</string>
+    <string name="facebook_app_id" translatable="false">1452587895165659</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb1452587895165659</string>
+    <string name="facebook_client_token" translatable="false">b18fe5439bd749036f777f2f8cc7f476</string>
+    <string name="open_camera_for_profile">Open camera</string>
+    <string name="choose_from_gallery_for_profile">Choose From Gallery</string>
+    <string name="edit_profile_UserName">Full Name</string>
+    <string name="audio_file_title">Audio File Title</string>
+    <string name="profile_image_desc">Profile image </string>
+    <string name="n_money_wid">No money to withdraw</string>
+    <string name="MC_revenue">Myworld creator revenue</string>
+    <string name="payment_p">Payments</string>
+    <string name="myworld_payment">Myworld Payments (New!)</string>
+    <string name="payment_info">Give your audience and others easy access to send you money.To start, create an account with Google Pay, our payment partner.</string>
+    <string name="cancel_upload_recorded_video">Discard Entire Video?</string>
+    <string name="dialog_message_video_upload_fragment">If you go back now, you will lose all the clips added to your video.</string>
+    <string name="no_internet_text">It looks as though you\'re offline.</string>
+    <string name="no_internet_sub_text">You\'re Offline. Please check your internet connection</string>
+    <string name="no_internet_text_help">You\'ll see more story when you\'re back online.</string>
+    <string name="music_text">For You</string>
+    <string name="non_profits_and_activism">Non-profits and activism</string>
+    <string name="science_and_technology">Science and technology</string>
+    <string name="education">Education</string>
+    <string name="how_to_and_style">How-to and style</string>
+    <string name="news_and_politics">News and politics</string>
+    <string name="entertainment">Entertainment</string>
+    <string name="comedy">Comedy</string>
+    <string name="people_and_blogs">People and blogs</string>
+    <string name="gaming">Gaming</string>
+    <string name="Roomhint"><font size="13">Add a title of hub</font></string>
+    <string name="Schedule_myspace">Schedule hub</string>
+    <string name="area_of_topic">Chose the area of your conversation</string>
+    <string name="hubLock">Look your hub</string>
+    <string name="travel_and_events">Travel and events</string>
+    <string name="sport">Sport</string>
+    <string name="no_comments_right_now">No comments yet</string>
+    <string name="pets_and_animals">Pets and animals</string>
+    <string name="music">Music</string>
+    <string name="cars_and_vehicles">Cars and vehicles</string>
+    <string name="film_and_animation">Film and animation</string>
+    <string name="get_your_reco">Get your personalized hub conversations, experts, playlist, Please select at least 5 category.</string>
+    <string name="get_your_reco_lan">You\'ll be able to see Hubs conference call, people, and trends in any languages you choose.</string>
+    <string name="english">English</string>
+    <string name="hindi">हिन्दी | Hindi</string>
+    <string name="bangla">বাংলা | Bengali</string>
+    <string name="marathi">मराठी | Marathi</string>
+    <string name="punjabi">ਪੰਜਾਬੀ | Punjabi</string>
+    <string name="telugu">తెలుగు | Telugu</string>
+    <string name="kannada">ಕನ್ನಡ | Kannada</string>
+    <string name="tamil">தமிழ் | Tamil</string>
+    <string name="malayalam">മലയാളം | Malayalam</string>
+    <string name="gujarati">ગુજરાતી | Gujarati</string>
+    <string name="dark_theme">Dark theme</string>
+    <string name="dark_theme_change">Change theme</string>
+    <string name="join_later">Join to later</string>
+    <string name="block">Block</string>
+    <string name="report">Report</string>
+    <string name="dont_recommend">Don\'t recommend</string>
+    <string name="terms_and_privacy_policies">By signing up, you confirm that you agree to our the <a href="http://joinmyworld.ml/terms.html"><b><u>Terms of Use</u></b></a> and have read and understood our <a href="http://joinmyworld.ml/privacy.html"><b><u>Privacy Policy</u></b></a>.</string>
+    <string name="intro_terms_and_privacy">By clicking Discover Myworld you agree to our the Terms of Conditions.</string>
+    <string name="msg_successful_vid">Your %1$s publicly available within 10 minutes</string>
+    <string name="Dis_y_hub">Create your hub</string>
+    <string name="pgwt">Play game, watch together</string>
+    <string name="belowhelptext">Share story, video are good at it</string>
+    <string name="Dyourinspiration">Discover your inspiration</string>
+    <string name="join_myspace">Join</string>
+    <string name="jm_1">let\'s talk at hub.</string>
+    <string name="hubTopic">Topic of hub</string>
+    <string name="jm_2">Ask for help to creator.</string>
+    <string name="jm_3">Connect friend and family.</string>
+    <string name="jm_1_know_more">Royalty support paid at Instant.</string>
+    <string name="jm_2_know_more">Add up to 100 listener\'s.</string>
+    <string name="jm_3_know_more">End-to-end encrypted</string>
+    <string name="hubhelptext">The hub you publish helps Myworld be a safe and inspiring place. Anyone who creates must read and agree to the Creator Code before publishing.</string>
+    <string name="jm_ask_me_anything">Listener\'s can ask where you master at.</string>
+    <string name="jm_Keep_on_con">Keep on video conference with the friends, mentors you love.</string>
+    <string name="jm_ask_me_anything_sub">Listener\'s can ask you on the problem\'s they have.</string>
+    <string name="jm_public_sharevideostories">Every story, video you post on Myworld can help others.</string>
+    <string name="jm_public_watchtogather">With hub you can play and watch movie together.</string>
+    <string name="jm_public_ask">You can ask anything on the problem\'s you have.</string>
+    <string name="jm_anyone_join">Anyone can invite or join on Myworld to talk.</string>
+    <string name="jm_family">Bring your close friends and family together to discuss on your problem\'s</string>
+    <string name="jm_royalty_support">Myworld will ask to the listener\'s to support on your help.</string>
+    <string name="jm_encription">We use zero-knowledge encryption, so no one other then you can access any of your data.</string>
+    <string name="tool_text">Approximately this amount will be available within 48 hours of completion of all security checks</string>
+
+    <string-array name="video_option">
+        <item>Share</item>
+        <item>Delete</item>
+    </string-array>
+    <!--    // share //-->
+    <string name="share_room" formatted="false">Checkout this awesome myspace %s. Join now, click: %s</string>
+    <string name="learn_more">Learn more</string>
+    <string name="go_live">Go live</string>
+    <string name="story">Story</string>
+    <string name="video">Video</string>
+    <string name="camera">Camera</string>
+    <string name="pref_speakerphone_key" translatable="false">speakerphone_preference</string>
+    <string name="pref_speakerphone_default" translatable="false">auto</string>
+    <string name="payment_button_value">Send %1$s %2$s</string>
+    <string name="some_text">
+    </string>
+    <string name="home">Home</string>
+    <string name="explore">Explore</string>
+    <string name="recent">Recent</string>
+    <string name="profile">Profile</string>
+    <string name="mygrid_Title">Welcome to the Hub.</string>
+    <string name="mygrid_intro_text">Create space, share screen and explore new ways to express yourself</string>
+    <string name="action_onboard_welcome">Welcome in!</string>
+    <string name="error_on_boarding_submission">Unable to finish on-boarding, please try again later</string>
+
+    //Common Chat
+
+    <string name="common_chat_hint" translatable="false">Send your message</string>
+    <string name="common_chat_intro" translatable="false">Messages can be seen only during the call by people on the call</string>
+</resources>

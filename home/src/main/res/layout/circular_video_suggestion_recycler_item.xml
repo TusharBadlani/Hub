@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="homeFeedViewModel"
+            type="cessini.technology.home.viewmodel.HomeFeedViewModel" />
+
+        <variable
+            name="setStorySuggestionThumbnail"
+            type="String"/>
+
+        <variable
+            name="onStoryClicked"
+            type="android.view.View.OnClickListener" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_2">
+        <FrameLayout
+            android:layout_width="@dimen/dimen_30"
+            android:layout_height="@dimen/dimen_30"
+            android:clickable="true"
+            android:onClick="@{onStoryClicked}"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_gradientstory"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:padding="1.7dp"
+            android:focusable="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circular_video_suggestion"
+            android:layout_width="@dimen/dimen_27"
+            android:layout_height="@dimen/dimen_27"
+            android:onClick="@{onStoryClicked}"
+            android:scaleType="centerCrop"
+            app:setCircularImageView="@{setStorySuggestionThumbnail}"
+            android:background="@drawable/ic_user_defolt_avator"
+             />
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

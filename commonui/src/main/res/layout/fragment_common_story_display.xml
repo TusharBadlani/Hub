@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="galleryViewModel"
+            type="cessini.technology.commonui.viewmodel.basicViewModels.GalleryViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_story"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" />
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/profile_app_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/cpTransparent"
+            app:elevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/common_story"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/profile_story_back_navigation_button"
+                    android:layout_width="@dimen/dimen_35"
+                    android:layout_height="@dimen/dimen_35"
+                    android:layout_marginStart="@dimen/dimen_15"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:elevation="@dimen/dimen_3"
+                    android:visibility="visible"
+                    android:background="@drawable/round_for_cancle_button"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="@style/AppTheme.ActionBar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:navigationIcon="@drawable/ic_back_white_arow" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

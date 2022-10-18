@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="friendsItemViewModel"
+            type="cessini.technology.explore.viewmodel.ExploreSearchViewModel" />
+
+        <variable
+            name="position"
+            type="java.lang.Integer" />
+
+        <variable
+            name="imageUrl"
+            type="java.lang.String" />
+
+        <variable
+            name="friend"
+            type="cessini.technology.cvo.exploremodels.SearchFriendsModel" />
+
+        <variable
+            name="onClickFriends"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:onClick="@{onClickFriends}">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userImage"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            app:setImage='@{"dnj"}'
+            android:scaleType="centerCrop"
+            android:foreground="@drawable/stroke_drawable"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/ic_user_defolt_avator"/>
+
+        <TextView
+            android:id="@+id/user_name_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_7"
+            android:gravity="center"
+            android:text='@{friend.username,default="Sree Kantoo"}'
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_15"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/userImage"
+            app:layout_constraintTop_toTopOf="@+id/userImage" />
+
+        <TextView
+            android:id="@+id/user_channel_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{friend.email,default="Channel"}'
+            android:textColor="@color/cpHelpText"
+            android:textSize="13dp"
+            app:layout_constraintStart_toStartOf="@+id/user_name_search"
+            app:layout_constraintTop_toBottomOf="@+id/user_name_search" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_40"
+            android:layout_marginEnd="@dimen/dimen_15"
+            android:background="@drawable/roundradiusforbutton"
+            android:text="Follow"
+            android:paddingHorizontal="@dimen/dimen_15"
+            android:gravity="center"
+            android:elevation="0dp"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/dimen_16"
+            app:layout_constraintBottom_toBottomOf="@+id/userImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/userImage"
+            app:layout_constraintVertical_bias="0.4" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

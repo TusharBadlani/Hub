@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="recieved"
+            type="cessini.technology.profile.fragment.publicProfile.SimpleModel" />
+        <variable
+            name="sentPhoto"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/dimen_2"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginVertical="@dimen/dimen_1"
+        >
+
+        <ImageView
+            android:id="@+id/image_gchat_profile_other"
+            android:layout_width="@dimen/dimen_30"
+            android:layout_height="@dimen/dimen_30"
+            android:contentDescription="User Icon"
+            imageUrl="@{sentPhoto}"
+            app:srcCompat="@drawable/ic_user_defolt_avator"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_gchat_message_other"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:backgroundTint="@color/cpTransparent"
+            app:cardElevation="@dimen/dimen_0"
+            android:visibility="@{recieved.content.length()!=0 ? View.VISIBLE : View.GONE}"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true"
+            android:elevation="@dimen/dimen_0"
+            android:layout_marginLeft="@dimen/dimen_5"
+            app:layout_constraintBottom_toBottomOf="@+id/image_gchat_profile_other"
+            app:layout_constraintStart_toEndOf="@+id/image_gchat_profile_other"
+            app:layout_constraintTop_toTopOf="@+id/image_gchat_profile_other">
+
+            <TextView
+                android:id="@+id/text_gchat_message_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="260dp"
+                android:foreground="@drawable/background_received_message_round"
+                android:paddingHorizontal="@dimen/dimen_15"
+                android:paddingVertical="@dimen/dimen_10"
+                android:text="@{recieved.content}"
+                android:textColor="@color/cpTextDark"
+                android:textSize="@dimen/font_size_16" />
+        </androidx.cardview.widget.CardView>
+
+
+        <ImageView
+            android:layout_width="@dimen/dimen_40"
+            android:layout_height="@dimen/dimen_40"
+            android:tint="@color/cpRed"
+            android:layout_marginLeft="@dimen/dimen_5"
+            android:visibility="@{recieved.content.length()==0 ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="@+id/image_gchat_profile_other"
+            app:layout_constraintStart_toEndOf="@+id/image_gchat_profile_other"
+            app:layout_constraintTop_toTopOf="@+id/image_gchat_profile_other"
+            android:src="@drawable/ic_like_active"
+            tools:ignore="UseAppTint" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+        <variable
+            name="CameraViewModel"
+            type="cessini.technology.camera.domain.viewmodel.CameraViewModel" />
+
+        <variable
+            name="context"
+            type="cessini.technology.camera.presentation.fragment.CameraFragment" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/Dark"
+        android:keepScreenOn="true">
+
+        <!--        Camera Surface View For Displaying the Camera View-->
+        <androidx.camera.view.PreviewView
+            android:id="@+id/cameraView"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="@dimen/dimen_0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.2">
+
+        </androidx.camera.view.PreviewView>
+
+        <!--        Back Navigation Button -->
+        <ImageView
+            android:id="@+id/camera_view_back"
+            android:layout_width="@dimen/dimen_37"
+            android:layout_height="@dimen/dimen_37"
+            android:layout_marginStart="@dimen/dimen_15"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:elevation="@dimen/dimen_3"
+            android:padding="@dimen/dimen_5"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_back_white_arow" />
+
+
+        <LinearLayout
+            android:id="@+id/features_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/camera_flash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_15"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_flash" />
+
+            <ImageView
+                android:id="@+id/camera_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_27"
+                app:layout_constraintEnd_toEndOf="@+id/camera_flash"
+                app:layout_constraintStart_toStartOf="@+id/camera_flash"
+                app:layout_constraintTop_toBottomOf="@+id/camera_flash"
+                app:srcCompat="@drawable/ic_camera_frontback" />
+
+            <ImageView
+                android:id="@+id/camera_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_27"
+                app:layout_constraintEnd_toEndOf="@+id/camera_switch"
+                app:layout_constraintStart_toStartOf="@+id/camera_switch"
+                app:layout_constraintTop_toBottomOf="@+id/camera_switch"
+                app:srcCompat="@drawable/ic_timer" />
+
+            <ImageView
+                android:id="@+id/camera_music"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_27"
+                app:layout_constraintEnd_toEndOf="@+id/camera_timer"
+                app:layout_constraintStart_toStartOf="@+id/camera_timer"
+                app:layout_constraintTop_toBottomOf="@+id/camera_timer"
+                app:srcCompat="@drawable/ic_music" />
+
+            <ProgressBar
+                android:id="@+id/pb_camera_music"
+                android:layout_width="@dimen/dimen_35"
+                android:layout_height="@dimen/dimen_35"
+                android:layout_marginTop="@dimen/dimen_27"
+                android:indeterminateTint="@color/white"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/camera_timer"
+                app:layout_constraintStart_toStartOf="@+id/camera_timer"
+                app:layout_constraintTop_toBottomOf="@+id/camera_timer" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_5"
+            android:layout_marginTop="@dimen/dimen_0"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="163dp" />
+
+        <!--         Selected Music Title View   -->
+        <TextView
+            android:id="@+id/music_title_camera_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_55"
+            android:ellipsize="marquee"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="@dimen/dimen_5"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_15"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/camera_view_back"
+            app:layout_constraintEnd_toEndOf="@id/features_holder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/camera_view_back" />
+
+        <!--Linear Layout for the Chronometer-->
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:foregroundGravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            app:layout_constraintBottom_toTopOf="@id/camera_capture"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <!--            Red Dot For the Chronometer-->
+            <!--            <ImageView-->
+            <!--                android:id="@+id/recording_timer_dot"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_gravity="center"-->
+            <!--                android:background="@drawable/chronometer"-->
+            <!--                android:foregroundGravity="center"-->
+            <!--                android:padding="5dp"-->
+            <!--                android:visibility="gone" />-->
+
+            <!--    Chronometer for the timer-->
+            <Chronometer
+                android:id="@+id/recording_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:padding="@dimen/dimen_5"
+                android:textColor="#fff"
+                android:textSize="@dimen/font_size_22"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!--        Camera Capture View-->
+        <View
+            android:id="@+id/camera_capture"
+            android:layout_width="82dp"
+            android:layout_height="82dp"
+            android:layout_marginBottom="@dimen/dimen_60"
+            android:background="@drawable/comera_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!--        Camera Capture Button To Start Recording-->
+        <ImageView
+            android:id="@+id/camera_capture_button_start"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/camera_center_button"
+            android:elevation="0dp"
+            android:scaleType="fitCenter"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/camera_capture"
+            app:layout_constraintEnd_toEndOf="@+id/camera_capture"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/camera_capture"
+            app:layout_constraintTop_toTopOf="@+id/camera_capture" />
+
+        <!--        Camera Capture View-->
+        <View
+            android:id="@+id/camera_capture_stop"
+            android:layout_width="82dp"
+            android:layout_height="82dp"
+            android:layout_marginBottom="@dimen/dimen_60"
+            android:background="@drawable/comera_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/camera_capture" />
+
+        <!--        Camera Capture Button To Stop Recording-->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/camera_capture_button_stop"
+            android:layout_width="63dp"
+            android:layout_height="63dp"
+            android:background="@color/cpTransparent"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/camera_capture"
+            app:layout_constraintEnd_toEndOf="@+id/camera_capture"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/camera_capture"
+            app:layout_constraintTop_toTopOf="@+id/camera_capture" />
+
+        <!--        Gallery Selector Button-->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="@dimen/dimen_35"
+            android:layout_height="@dimen/dimen_35"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:backgroundTint="@color/cpNavLine"
+            android:elevation="@dimen/dimen_5"
+            android:foreground="@drawable/camera_stroke_drawable"
+            android:padding="@dimen/dimen_5"
+            app:cardCornerRadius="@dimen/dimen_7"
+            app:cardElevation="@dimen/dimen_0"
+            app:layout_constraintBottom_toBottomOf="@+id/change_camera_option"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/change_camera_option">
+
+            <ImageView
+                android:id="@+id/gallery_selector"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="@+id/cardView"
+                app:layout_constraintEnd_toEndOf="@+id/cardView"
+                app:layout_constraintStart_toStartOf="@+id/cardView"
+                app:layout_constraintTop_toTopOf="@+id/cardView" />
+        </androidx.cardview.widget.CardView>
+
+        <!--        Welcome Intro Details-->
+        <TextView
+            android:id="@+id/camera_welcometext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_50"
+            android:gravity="center"
+            android:maxEms="10"
+            android:text="@string/camera_Title"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--    Recording starter timer-->
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textFontWeight="600"
+            android:textSize="200sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+        <!--        Camera Into Text-->
+        <TextView
+            android:id="@+id/camera_expresstext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:paddingLeft="70dp"
+            android:paddingRight="70dp"
+            android:text="@string/camera_intro_text"
+            android:textColor="#CCffffff"
+            android:textSize="@dimen/font_size_14"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/camera_welcometext"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="@+id/camera_welcometext"
+            app:layout_constraintTop_toBottomOf="@+id/camera_welcometext" />
+
+        <!--        Camera Permission Button For the Allowance -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/camera_buttan_takepermission"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/roundwhitebutton"
+            android:elevation="0dp"
+            android:gravity="center"
+            android:letterSpacing="0"
+            android:stateListAnimator="@null"
+            android:text="@string/permisison_allow_button"
+            android:textAllCaps="false"
+            android:textColor="@color/cpTextDark"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/camera_welcometext"
+            app:layout_constraintStart_toStartOf="@+id/camera_welcometext"
+            app:layout_constraintTop_toBottomOf="@+id/camera_expresstext" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/camera_modes"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_40"
+            android:layout_margin="@dimen/dimen_10"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/change_camera_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_5"
+            android:text="@string/camera"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/camera_capture" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

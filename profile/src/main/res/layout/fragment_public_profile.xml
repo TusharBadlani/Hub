@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="ProfileViewModel"
+            type="cessini.technology.profile.viewmodel.PublicProfileViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <uz.jamshid.library.IGRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/cpBackground"
+            app:customBar="true"
+            app:offsetTop="200">
+
+            <androidx.constraintlayout.motion.widget.MotionLayout
+                android:id="@+id/container_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/cpWhite"
+                app:layoutDescription="@xml/fragment_public_profile_scene">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/search_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/cpWhite"
+                    android:elevation="@dimen/dimen_0"
+                    android:theme="?attr/actionBarTheme"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/back_navigation_button_public_profile"
+                    android:layout_width="@dimen/dimen_40"
+                    android:layout_height="@dimen/dimen_40"
+                    android:layout_marginStart="@dimen/dimen_5"
+                    android:padding="@dimen/dimen_10"
+                    app:layout_constraintBottom_toBottomOf="@id/search_toolbar"
+                    app:layout_constraintStart_toStartOf="@id/search_toolbar"
+                    app:layout_constraintTop_toTopOf="@id/search_toolbar"
+                    app:srcCompat="@drawable/ic_back_arrow" />
+
+
+                <TextView
+                    android:id="@+id/user_channel_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:gravity="center_vertical"
+                    android:letterSpacing="0.02"
+                    android:paddingRight="150dp"
+                    android:text="@{`@`+ProfileViewModel.channelName}"
+                    android:textColor="@color/cpTextDark"
+                    android:textSize="@dimen/font_size_17"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/search_toolbar"
+                    app:layout_constraintStart_toEndOf="@id/back_navigation_button_public_profile"
+                    app:layout_constraintTop_toTopOf="@id/search_toolbar" />
+
+                <ImageView
+                    android:id="@+id/img_user_profile_small"
+                    imageUrl="@{ProfileViewModel.photoUrl}"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:alpha="0"
+                    android:background="@drawable/story_active_inside_view"
+                    android:padding="@dimen/dimen_5"
+                    app:layout_constraintBottom_toBottomOf="@id/search_toolbar"
+                    app:layout_constraintStart_toEndOf="@id/back_navigation_button_public_profile"
+                    app:layout_constraintTop_toTopOf="@id/search_toolbar"
+                    app:srcCompat="@drawable/ic_user_defolt_avator" />
+
+                <ImageView
+                    android:id="@+id/add_friend"
+                    android:layout_width="@dimen/dimen_40"
+                    android:layout_height="@dimen/dimen_40"
+                    android:layout_marginEnd="@dimen/dimen_10"
+                    android:padding="@dimen/dimen_5"
+                    app:layout_constraintBottom_toBottomOf="@+id/back_navigation_button_public_profile"
+                    app:layout_constraintEnd_toEndOf="@id/search_toolbar"
+                    app:layout_constraintTop_toTopOf="@id/search_toolbar"
+                    app:srcCompat="@drawable/ic_addfollower" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/header_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/dimen_10"
+                    android:paddingBottom="@dimen/dimen_25"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/search_toolbar">
+
+
+                    <ImageView
+                        android:id="@+id/img_user_profile"
+                        imageUrl="@{ProfileViewModel.photoUrl}"
+                        android:layout_width="116dp"
+                        android:layout_height="116dp"
+                        android:background="@drawable/story_active_inside_view"
+                        android:padding="@dimen/dimen_5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_user_defolt_avator" />
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_uname_bio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="30dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/img_user_profile">
+
+                        <LinearLayout
+                            android:id="@+id/profile_name_con"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dimen_15"
+                            android:layout_marginTop="@dimen/dimen_7"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/ll_uname_bio">
+
+
+                            <TextView
+                                android:id="@+id/username"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@{ProfileViewModel.displayName, default=`name`}"
+                                android:textColor="@color/cpTextDark"
+                                android:textSize="@dimen/font_size_27"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/imageView8"
+                                android:layout_width="@dimen/dimen_20"
+                                android:layout_height="@dimen/dimen_20"
+                                android:layout_marginLeft="@dimen/dimen_5"
+                                android:layout_marginTop="@dimen/dimen_2"
+                                android:visibility="gone"
+                                app:srcCompat="@drawable/ic_iamvarified" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/user_intro"
+                            gone="@{ProfileViewModel.bio.empty}"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="center_horizontal"
+                            android:hint="@string/share_Bio_H"
+                            android:lineHeight="@dimen/dimen_15"
+                            android:maxLines="3"
+                            android:paddingHorizontal="@dimen/dimen_5"
+                            android:paddingVertical="@dimen/dimen_3"
+                            android:text="@{ProfileViewModel.bio}"
+                            android:textColor="@color/cpTextDark"
+                            android:textSize="@dimen/font_size_16" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ufollow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/dimen_7"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ll_uname_bio">
+
+                        <TextView
+                            android:id="@+id/followers_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:layout_marginRight="@dimen/dimen_5"
+                            android:text="@{ProfileViewModel.followersCount, default=`00`}"
+                            android:textColor="@color/cpTextDark"
+                            android:textSize="@dimen/font_size_18"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/followers_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/follow"
+                            android:textColor="@color/cpTextDark"
+                            android:textSize="@dimen/font_size_16"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/ufollow"
+                            app:layout_constraintTop_toTopOf="@+id/ufollow" />
+
+                        <View
+                            android:id="@+id/viewdot"
+                            android:layout_width="2dp"
+                            android:layout_height="2dp"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="@dimen/dimen_5"
+                            android:layout_marginTop="@dimen/dimen_1"
+                            android:background="@drawable/round_enable_viewbutton"
+                            android:elevation="@dimen/dimen_0" />
+
+                        <TextView
+                            android:id="@+id/following_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/dimen_5"
+                            android:text="@{ProfileViewModel.followingCount, default=`00`}"
+                            android:textColor="@color/cpTextDark"
+                            android:textSize="@dimen/font_size_18"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/ufollow"
+                            app:layout_constraintTop_toTopOf="@+id/ufollow" />
+
+                        <TextView
+                            android:id="@+id/following_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/dimen_10"
+                            android:text="@string/following"
+                            android:textColor="@color/cpTextDark"
+                            android:textSize="@dimen/font_size_16"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/ufollow"
+                            app:layout_constraintTop_toTopOf="@+id/ufollow" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bconview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dimen_15"
+                        android:layout_marginTop="@dimen/dimen_20"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ufollow">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn_follow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_43"
+                            android:layout_marginEnd="@dimen/dimen_3"
+                            android:background="@drawable/round_viewbutton"
+                            android:elevation="@dimen/dimen_0"
+                            android:gravity="center"
+                            android:letterSpacing="0.02"
+                            android:onClick="@{ProfileViewModel::onFollowClick}"
+                            android:paddingHorizontal="@dimen/dimen_12"
+                            android:stateListAnimator="@null"
+                            android:text="Follow"
+                            android:textAllCaps="false"
+                            android:textColor="@color/cpWhite"
+                            android:textSize="@dimen/font_size_16"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.25"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn_room"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_43"
+                            android:layout_marginStart="@dimen/dimen_2"
+                            android:background="@drawable/round_border_transparent_btn"
+                            android:elevation="0dp"
+                            android:gravity="center"
+                            android:letterSpacing="0.02"
+                            android:paddingHorizontal="@dimen/dimen_15"
+                            android:stateListAnimator="@null"
+                            android:text="@string/add_message"
+                            android:textAlignment="center"
+                            android:textAllCaps="false"
+                            android:textColor="@color/cpTextDark"
+                            android:textSize="@dimen/font_size_16"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toBottomOf="@id/followers_count" />
+
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/profileTab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_30"
+                    android:layout_centerHorizontal="true"
+                    android:backgroundTint="@color/cpTransparent"
+                    android:paddingBottom="@dimen/dimen_5"
+                    android:singleLine="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/header_profile"
+                    app:tabGravity="fill"
+                    app:tabIndicator="@drawable/tab_indicator"
+                    app:tabIndicatorColor="@color/cpTextDark"
+                    app:tabIndicatorHeight="3.6dp"
+                    app:tabMode="auto"
+                    app:tabRippleColor="@null"
+                    app:tabSelectedTextColor="@color/cpTextDark"
+                    app:tabTextAppearance="@style/TabTextAppearance"
+                    app:tabTextColor="@color/cpTextDark">
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/user_story"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Hub" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/user_video"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Video" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/user_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Save" />
+                </com.google.android.material.tabs.TabLayout>
+
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/view_pager_2_public_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:background="@color/cpWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profileTab" />
+
+            </androidx.constraintlayout.motion.widget.MotionLayout>
+        </uz.jamshid.library.IGRefreshLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

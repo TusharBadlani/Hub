@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/create_room_flow"
+    app:startDestination="@id/room_details">
+
+    <navigation
+        android:id="@+id/room_details"
+        app:startDestination="@id/roomFragment">
+        <dialog
+            android:id="@+id/roomFragment"
+            android:name="cessini.technology.myspace.create.CreateRoomFragment"
+            android:label="RoomFragment">
+            <action
+                android:id="@+id/action_roomFragment_to_scheduleFragment"
+                app:destination="@id/scheduleFragment"
+                app:popUpTo="@id/room_details"
+                app:popUpToInclusive="true" />
+        </dialog>
+        <dialog
+            android:id="@+id/scheduleFragment"
+            android:name="cessini.technology.myspace.create.ScheduleFragment"
+            android:label="ScheduleFragment">
+            <action
+                android:id="@+id/action_scheduleFragment_to_roomFragment"
+                app:destination="@id/roomFragment"
+                app:popUpTo="@id/room_details"
+                app:popUpToInclusive="true" />
+        </dialog>
+    </navigation>
+</navigation>

@@ -1,0 +1,98 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs'
+    id 'com.google.gms.google-services'
+    id 'org.jlleitschuh.gradle.ktlint' version "$ktlint_version"
+}
+android {
+    compileSdkVersion 33
+    buildToolsVersion '31.0.0'
+
+    signingConfigs {
+        debug {
+            storeFile file("../debug.keystore")
+        }
+    }
+
+    defaultConfig {
+        applicationId "cessini.technology.myworld"
+        minSdkVersion 24
+        targetSdkVersion 33
+        versionCode 11
+        versionName "8.0.3"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+        freeCompilerArgs = ['-Xjvm-default=enable']
+    }
+    packagingOptions
+            {
+                exclude 'META-INF/INDEX.LIST'
+                exclude 'META-INF/DEPENDENCIES'
+                exclude 'META-INF/io.netty.versions.properties'
+            }
+}
+
+dependencies {
+    implementation platform('com.google.firebase:firebase-bom:29.0.3')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation common_impl
+
+    implementation hilt_lib.impl
+    implementation 'androidx.test:monitor:1.5.0'
+    implementation 'androidx.test.ext:junit-ktx:1.1.3'
+    androidTestImplementation 'junit:junit:4.12'
+    androidTestImplementation 'junit:junit:4.12'
+    kapt hilt_lib.kap
+
+    implementation notify
+
+    implementation project(":newapi")
+    implementation project(":model")
+    implementation project(":newrepository")
+
+    implementation project(":camera")
+    implementation project(":commonui")
+    implementation project(":cvo")
+    implementation project(":explore")
+    implementation project(":home")
+    implementation project(":myspace")
+    implementation project(":navigation")
+    implementation project(":notifications")
+    implementation project(":persistence")
+    implementation project(":profile")
+    implementation "androidx.core:core-ktx:1.5.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "com.vanniktech:emoji-google:0.15.0"
+
+
+//    debugImplementation leak_canary
+
+}
+repositories {
+    mavenCentral()
+}

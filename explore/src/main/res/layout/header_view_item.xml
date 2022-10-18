@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="headerViewModel"
+            type="cessini.technology.explore.viewmodel.SearchViewModel" />
+
+        <variable
+            name="position"
+            type="java.lang.Integer" />
+
+        <variable
+            name="allCategory"
+            type="cessini.technology.cvo.exploremodels.AllCategory" />
+
+        <variable
+            name="headController"
+            type="cessini.technology.explore.controller.ChildRecyclerViewController" />
+
+        <variable
+            name="headAdapter"
+            type="cessini.technology.explore.adapter.MainRecyclerHeaderAdapter" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/get_inspire"
+            android:textColor="@color/cpTextDark"
+            android:paddingVertical="@dimen/dimen_3"
+            android:textSize="@dimen/font_size_18"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/dimen_1"
+            app:layout_constraintBottom_toTopOf="@+id/recyclerViewChild"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/recyclerViewChild"
+            offScreenPageLimit="3"
+            pageTransformer="true"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:elevation="@dimen/dimen_0"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:nestedScrollingEnabled="true"
+            android:orientation="horizontal"
+            android:overScrollMode="never"
+            android:theme="@style/EdgeOverlayTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView27"
+            app:setAdapter="@{headAdapter}" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tabIndicatorHeight="@dimen/dimen_0"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/cpTransparent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewChild"
+            android:layout_marginVertical="@dimen/dimen_5"
+            app:tabBackground="@drawable/tab_indicator_selector"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:setPager="@{recyclerViewChild}"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

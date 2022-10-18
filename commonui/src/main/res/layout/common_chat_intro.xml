@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardCornerRadius="@dimen/dimen_16"
+        android:background="@color/cpHelpText"
+        app:cardBackgroundColor="@color/cpHelpText"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_margin="@dimen/dimen_16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_size_16"
+            android:textColor="@color/twhite"
+            android:text="@string/common_chat_intro"
+            android:gravity="center"
+            android:textAlignment="center" />
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+

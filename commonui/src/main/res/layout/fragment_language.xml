@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="cessini.technology.commonui.viewmodel.suggestionViewModel.SuggestionViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/cpWhite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtViewHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_15"
+
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:paddingRight="@dimen/dimen_30"
+            android:text="@string/select_L"
+            android:textColor="@color/cpTextDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtViewSubHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:layout_marginHorizontal="@dimen/dimen_15"
+            android:paddingRight="@dimen/dimen_30"
+            android:text="@string/get_your_reco_lan"
+            android:textColor="@color/cpHelpText"
+            android:textSize="@dimen/font_size_14"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="@dimen/dimen_1"
+            app:layout_constraintEnd_toEndOf="@+id/txtViewHeader"
+            app:layout_constraintStart_toStartOf="@+id/txtViewHeader"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewHeader" />
+
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            android:fadingEdge="vertical"
+            android:fadingEdgeLength="@dimen/dimen_60"
+            android:requiresFadingEdge="vertical"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toTopOf="@+id/btnNext"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewSubHeader">
+
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_15"
+                android:layout_marginVertical="@dimen/dimen_30"
+                android:orientation="vertical"
+                app:chipSpacing="@dimen/dimen_0"
+                app:chipSpacingVertical="@dimen/dimen_9"
+                app:chipSpacingHorizontal="@dimen/dimen_9"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    style="@style/MyworldChipStyle"
+                    android:id="@+id/english_language"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/english" />
+
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/hindi_language"
+                    style="@style/MyworldChipStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hindi" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/MyworldChipStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tamil" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/MyworldChipStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/marathi" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/MyworldChipStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/malayalam" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/MyworldChipStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gujarati" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/MyworldChipStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_5"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="@string/punjabi" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/MyworldChipStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/telugu" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/MyworldChipStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kannada" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/MyworldChipStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bangla" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+        </ScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_45"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_large_background"
+            android:elevation="0dp"
+            android:gravity="center"
+            android:stateListAnimator="@null"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textColor="@color/cpWhite"
+            android:textSize="@dimen/font_size_20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="@dimen/dimen_50"
+            android:layout_height="@dimen/dimen_50"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_shape_blue"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/cpPrimeBlue"
+            android:translationZ="@dimen/dimen_10"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

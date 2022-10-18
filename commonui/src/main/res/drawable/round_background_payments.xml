@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/cpBackgroundbutton"/>
+    <corners android:radius="@dimen/dimen_15"/>
+    <stroke android:width="1dp" android:color="@color/cpBackgroundbutton" />
+</shape>

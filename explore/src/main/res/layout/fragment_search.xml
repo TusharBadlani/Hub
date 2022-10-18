@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="cessini.technology.explore.viewmodel.SearchViewModel" />
+
+        <variable
+            name="position"
+            type="java.lang.Integer" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/search_CL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <uz.jamshid.library.IGRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:backgroundTint="@color/cpBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appbar"
+            app:customBar="true"
+            app:offsetTop="200">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/cpWhite"
+                >
+
+                <com.airbnb.epoxy.EpoxyRecyclerView
+                    android:id="@+id/recyclerViewParent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"
+                    android:translationZ="-5dp"
+                    android:paddingBottom="@dimen/dimen_47"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/header_view_item"
+                    />
+
+                <include
+                    android:id="@+id/explore_shimmer"
+                    layout="@layout/shimmer_dummy_page_vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </RelativeLayout>
+        </uz.jamshid.library.IGRefreshLayout>
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:background="@color/cpWhite"
+            app:elevation="@dimen/dimen_0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:contentInsetStart="@dimen/dimen_10"
+                android:contentInsetLeft="@dimen/dimen_10"
+                android:contentInsetEnd="@dimen/dimen_10"
+                android:contentInsetRight="@dimen/dimen_10"
+                app:contentInsetEnd="@dimen/dimen_10"
+                app:contentInsetLeft="@dimen/dimen_10"
+                app:contentInsetRight="@dimen/dimen_10"
+                app:contentInsetStart="@dimen/dimen_10"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+
+                <EditText
+                    android:id="@+id/editTextSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_40"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:layout_marginBottom="@dimen/dimen_7"
+                    android:background="@drawable/roundview_with_light_darkbackground"
+                    android:drawableLeft="@drawable/ic_inactivesearch"
+                    android:drawablePadding="@dimen/dimen_12"
+                    android:elevation="@dimen/dimen_0"
+                    android:focusable="false"
+                    android:hint="@string/hint"
+                    android:onClick="@{viewModel::onClickSearch}"
+                    android:paddingHorizontal="@dimen/dimen_15"
+                    android:textColorHint="@color/cpHelpText"
+                    android:textSize="@dimen/font_size_14" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
