@@ -50,20 +50,18 @@ class LanguageFragment : BaseFragment<FragmentLanguageBinding>(R.layout.fragment
             )
         }
 
-        lifecycleScope.launch {
-            try {
-                viewModel.submitOnBoardingSelection()
-                findNavController().navigate(MainNavGraphDirections.actionGlobalHomeFlow())
-            } catch (e: Exception) {
-                Log.e(TAG, "Unable to submit on-boarding selection", e)
-                Toast.makeText(
-                    requireContext(),
-                    getString(R.string.error_on_boarding_submission),
-                    Toast.LENGTH_SHORT
-                )
-            } finally {
-                binding.progressBar.isGone = true
-            }
+        try {
+            viewModel.submitOnBoardingSelection()
+            findNavController().navigate(MainNavGraphDirections.actionGlobalHomeFlow())
+        } catch (e: Exception) {
+            Log.e(TAG, "Unable to submit on-boarding selection", e)
+            Toast.makeText(
+                requireContext(),
+                getString(R.string.error_on_boarding_submission),
+                Toast.LENGTH_SHORT
+            )
+        } finally {
+            binding.progressBar.isGone = true
         }
     }
 }

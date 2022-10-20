@@ -2,11 +2,13 @@ package cessini.technology.commonui.viewmodel.suggestionViewModel
 
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import cessini.technology.newrepository.appRepository.AppRepository
 import cessini.technology.newrepository.explore.VideoCategoryRepository
 import cessini.technology.newrepository.myworld.OnBoardingRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
 import java.util.*
 import javax.inject.Inject
 
@@ -21,7 +23,7 @@ class LanguageSelectionFragmentViewModel @Inject constructor(
      * Submit on-boarding data to backend including language and category selection
      * and mark on boarding as finished, so on-boarding screen is not shown on next startup
      */
-    suspend fun submitOnBoardingSelection() {
+    fun submitOnBoardingSelection() = viewModelScope.launch {
         val language = AppCompatDelegate.getApplicationLocales()[0]?.language
             ?: Locale.getDefault().language // fallback to default
             ?: "en" // fallback to english

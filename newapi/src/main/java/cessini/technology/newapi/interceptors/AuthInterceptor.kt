@@ -72,7 +72,7 @@ class AuthInterceptor @Inject constructor(
 
         val tokenRefresh = request()
             .newBuilder()
-            .url("$BASE_ENDPOINT$REFRESH_TOKEN_ENDPOINT")
+            .url("http://ec2-13-232-34-39.ap-south-1.compute.amazonaws.com/$REFRESH_TOKEN_ENDPOINT")
             .post(body)
             .build()
 
