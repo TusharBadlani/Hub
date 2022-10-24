@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
-import cessini.technology.commonui.common.BaseFragment
+import cessini.technology.commonui.presentation.common.BaseFragment
 import cessini.technology.home.R
 import cessini.technology.home.ViewPager.WebrtcAdapter
 import cessini.technology.home.databinding.FragmentGridBinding
@@ -186,9 +186,9 @@ class GridFragment : BaseFragment<FragmentGridBinding>(R.layout.fragment_grid) {
 //import android.widget.Toast
 //import androidx.lifecycle.ViewModelProvider
 //import androidx.recyclerview.widget.GridLayoutManager
-//import cessini.technology.commonui.activity.EpoxyController
-//import cessini.technology.commonui.activity.HomeActivity
-//import cessini.technology.commonui.activity.data
+//import cessini.technology.commonui.epoxy.videochat.EpoxyController
+//import cessini.technology.commonui.presentation.HomeActivity
+//import cessini.technology.commonui.data.models.data
 //import cessini.technology.commonui.activity.live.PeerConnectionAdapter
 //import cessini.technology.commonui.activity.live.SdpAdapter
 //import cessini.technology.commonui.activity.live.SignalingClient
@@ -305,7 +305,7 @@ class GridFragment : BaseFragment<FragmentGridBinding>(R.layout.fragment_grid) {
 //        binding.linearLayout2.setOnClickListener {
 //            val intent: Intent = Intent()
 //
-//            intent.setClassName(requireContext(),"cessini.technology.commonui.activity.GridActivity")
+//            intent.setClassName(requireContext(),"cessini.technology.commonui.presentation.GridActivity")
 ////            intent.setClassName(requireContext(),"cessini.technology.myspace.live.LiveMyspaceActivity")
 //            intent.putExtra("Room Name","${rname}")
 //            startActivity(intent)

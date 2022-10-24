@@ -110,7 +110,7 @@
         app:destination="@+id/profileImageCroppingFragment" />
     <dialog
         android:id="@+id/shareMyworldFragment"
-        android:name="cessini.technology.commonui.fragment.ShareMyworldFragment"
+        android:name="cessini.technology.commonui.presentation.share.ShareMyworldFragment"
         android:label="ShareMyworldFragment" />
 
 </navigation>

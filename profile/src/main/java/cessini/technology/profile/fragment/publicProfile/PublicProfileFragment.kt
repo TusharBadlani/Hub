@@ -14,8 +14,8 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import cessini.technology.commonui.activity.HomeActivity
-import cessini.technology.commonui.common.BaseFragment
+import cessini.technology.commonui.presentation.HomeActivity
+import cessini.technology.commonui.presentation.common.BaseFragment
 import cessini.technology.commonui.utils.ProfileConstants
 import cessini.technology.navigation.NavigationFlow
 import cessini.technology.navigation.Navigator

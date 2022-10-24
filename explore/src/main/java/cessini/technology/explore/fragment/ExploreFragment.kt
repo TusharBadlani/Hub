@@ -19,8 +19,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.SnapHelper
-import cessini.technology.commonui.activity.HomeActivity
-import cessini.technology.commonui.common.BaseFragment
+import cessini.technology.commonui.presentation.HomeActivity
+import cessini.technology.commonui.presentation.common.BaseFragment
 import cessini.technology.explore.R
 import cessini.technology.explore.controller.MainRecyclerViewController
 import cessini.technology.explore.databinding.FragmentSearchBinding
@@ -86,6 +86,7 @@ class ExploreFragment : BaseFragment<FragmentSearchBinding>(R.layout.fragment_se
         binding.lifecycleOwner = viewLifecycleOwner
 
         Log.d(TAG, "On Create Called")
+        Log.d("CheckNav", "ExploreFragment, ${activity?.localClassName}")
 
         if (userIdentifierPreferences.loggedIn) {
             (activity as HomeActivity).profileDrawable?.let {

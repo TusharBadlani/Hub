@@ -10,18 +10,15 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import cessini.technology.commonui.activity.EpoxyController
-import cessini.technology.commonui.activity.HomeActivity
-import cessini.technology.commonui.activity.data
-import cessini.technology.commonui.activity.live.PeerConnectionAdapter
-import cessini.technology.commonui.activity.live.SdpAdapter
-import cessini.technology.commonui.activity.live.SignalingClient
-import cessini.technology.home.controller.HomeEpoxyController
+import cessini.technology.commonui.epoxy.videochat.EpoxyController
+import cessini.technology.commonui.presentation.HomeActivity
+import cessini.technology.commonui.data.models.data
+import cessini.technology.commonui.data.webrtc.live.PeerConnectionAdapter
+import cessini.technology.commonui.data.webrtc.live.SdpAdapter
+import cessini.technology.commonui.data.webrtc.live.SignalingClient
 import cessini.technology.home.databinding.FragmentWebrtcBinding
 import cessini.technology.model.ViewerX
-import cessini.technology.myspace.R
 import cessini.technology.newapi.model.CreatorListeners
 import cessini.technology.newapi.preferences.AuthPreferences
 import cessini.technology.newrepository.preferences.UserIdentifierPreferences
@@ -29,7 +26,6 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.runBlocking
 import org.json.JSONObject
 import org.webrtc.*
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class WebrtcFragment : Fragment(), SignalingClient.Callback {
@@ -154,7 +150,7 @@ class WebrtcFragment : Fragment(), SignalingClient.Callback {
         mediaStream.addTrack(videoTrack)
 //        recyclerDataArrayList.add(data("user",0,videoTrack,false,eglBaseContext,null))
 //        setupepoxy()
-        cessini.technology.commonui.activity.live.SignalingClient.get()?.init(this, rname)
+        SignalingClient.get()?.init(this, rname)
 
 //        if(recyclerDataArrayList.size==0)
 //        {
@@ -169,7 +165,7 @@ class WebrtcFragment : Fragment(), SignalingClient.Callback {
         binding.linearLayout2.setOnClickListener {
             val intent: Intent = Intent()
 
-            intent.setClassName(requireContext(),"cessini.technology.commonui.activity.GridActivity")
+            intent.setClassName(requireContext(),"cessini.technology.commonui.presentation.GridActivity")
 //            intent.setClassName(requireContext(),"cessini.technology.myspace.live.LiveMyspaceActivity")
             intent.putExtra("Room Name","${rname}")
             startActivity(intent)
@@ -343,7 +339,7 @@ class WebrtcFragment : Fragment(), SignalingClient.Callback {
             ) {
                 override fun onIceCandidate(iceCandidate: IceCandidate) {
                     super.onIceCandidate(iceCandidate)
-                    cessini.technology.commonui.activity.live.SignalingClient.get()?.sendIceCandidate(iceCandidate, socketId)
+                    SignalingClient.get()?.sendIceCandidate(iceCandidate, socketId)
                 }
 
                 override fun onAddStream(mediaStream: MediaStream) {
@@ -390,7 +386,7 @@ class WebrtcFragment : Fragment(), SignalingClient.Callback {
                     SdpAdapter("setLocalSdp:$socketId"),
                     sessionDescription
                 )
-                cessini.technology.commonui.activity.live.SignalingClient.get()?.sendSessionDescription(sessionDescription, socketId,"ok")
+                SignalingClient.get()?.sendSessionDescription(sessionDescription, socketId,"ok")
 
             }
         }, constraints)

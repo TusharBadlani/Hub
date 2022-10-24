@@ -6,7 +6,7 @@
     <data>
         <variable
             name="message"
-            type="cessini.technology.commonui.viewmodel.commonChat.CommonChatPayload" />
+            type="cessini.technology.commonui.data.models.CommonChatPayload" />
 
     </data>
 

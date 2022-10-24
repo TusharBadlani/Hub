@@ -1,7 +1,7 @@
 package cessini.technology.myspace.access
 
-import cessini.technology.commonui.common.BaseBottomSheet
-import cessini.technology.commonui.common.BottomSheetLevelInterface
+import cessini.technology.commonui.presentation.common.BaseBottomSheet
+import cessini.technology.commonui.presentation.common.BottomSheetLevelInterface
 import cessini.technology.myspace.R
 import cessini.technology.myspace.databinding.FragmentBottomSheetAcessRoomBinding
 

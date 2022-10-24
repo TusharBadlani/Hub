@@ -7,10 +7,10 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import cessini.technology.camera.R
 import cessini.technology.camera.databinding.FragmentCameraOptionBottomSheetBinding
-import cessini.technology.commonui.common.BaseBottomSheet
+import cessini.technology.commonui.presentation.common.BaseBottomSheet
 import cessini.technology.commonui.utils.Constant
-import cessini.technology.commonui.viewmodel.basicViewModels.GalleryViewModel
-import cessini.technology.commonui.common.BottomSheetLevelInterface
+import cessini.technology.commonui.presentation.globalviewmodels.GalleryViewModel
+import cessini.technology.commonui.presentation.common.BottomSheetLevelInterface
 import cessini.technology.myspace.create.CreateRoomFragment
 import cessini.technology.myspace.create.CreateRoomSharedViewModel
 import com.google.android.material.bottomsheet.BottomSheetBehavior

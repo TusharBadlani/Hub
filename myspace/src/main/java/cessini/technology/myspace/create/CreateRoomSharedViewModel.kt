@@ -2,8 +2,8 @@ package cessini.technology.myspace.create
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import cessini.technology.commonui.common.BaseViewModel
-import cessini.technology.commonui.common.request
+import cessini.technology.commonui.presentation.common.BaseViewModel
+import cessini.technology.commonui.presentation.common.request
 import cessini.technology.model.Subcategory
 import cessini.technology.myspace.create.CreateRoomSharedViewModel.Event
 import cessini.technology.myspace.create.CreateRoomSharedViewModel.Event.Failed

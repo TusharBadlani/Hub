@@ -7,6 +7,6 @@
 
     <fragment
         android:id="@+id/noInternetFragment"
-        android:name="cessini.technology.commonui.fragment.NoInternetFragment"
+        android:name="cessini.technology.commonui.presentation.nointernet.NoInternetFragment"
         android:label="NoInternetFragment" />
 </navigation>

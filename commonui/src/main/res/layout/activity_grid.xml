@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cpDark"
-    tools:context=".activity.GridActivity">
+    tools:context=".presentation.GridActivity">
 
     <com.airbnb.epoxy.EpoxyRecyclerView
         android:id="@+id/idCourseRV"

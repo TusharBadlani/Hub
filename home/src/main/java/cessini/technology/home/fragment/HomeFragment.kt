@@ -15,16 +15,12 @@ import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.Observer
-import androidx.lifecycle.lifecycleScope
-import androidx.paging.PagingData
-import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.PagerSnapHelper
-import cessini.technology.commonui.activity.HomeActivity
-import cessini.technology.commonui.common.BaseFragment
-import cessini.technology.commonui.common.BaseViewModel
-import cessini.technology.commonui.common.isInDarkTheme
+import cessini.technology.commonui.presentation.HomeActivity
+import cessini.technology.commonui.presentation.common.BaseFragment
+import cessini.technology.commonui.presentation.common.isInDarkTheme
 import cessini.technology.commonui.utils.ProfileConstants
-import cessini.technology.commonui.viewmodel.basicViewModels.GalleryViewModel
+import cessini.technology.commonui.presentation.globalviewmodels.GalleryViewModel
 import cessini.technology.home.R
 import cessini.technology.home.controller.HomeEpoxyController
 import cessini.technology.home.databinding.NewHomeFragmentBinding
@@ -94,6 +90,8 @@ class HomeFragment : BaseFragment<NewHomeFragmentBinding>(R.layout.new_home_frag
         Log.d(TAG, "CREATED")
         authPreferences = AuthPreferences(requireContext())
         userIdentifierPreferences = UserIdentifierPreferences(requireContext(), authPreferences)
+
+        Log.d("CheckNav", "HomeFragment, ${activity?.localClassName}")
 
         /*homeFeedViewModel.activity = requireActivity()*/
         /**Setting up the viewModel to the Binding.*/

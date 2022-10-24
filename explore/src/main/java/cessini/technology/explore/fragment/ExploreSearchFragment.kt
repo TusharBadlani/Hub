@@ -6,7 +6,7 @@ import android.view.View
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
-import cessini.technology.commonui.common.BaseFragment
+import cessini.technology.commonui.presentation.common.BaseFragment
 import cessini.technology.explore.R
 import cessini.technology.explore.adapter.SearchTabviewAdopter
 import cessini.technology.explore.databinding.FragmentExploreSearchBinding

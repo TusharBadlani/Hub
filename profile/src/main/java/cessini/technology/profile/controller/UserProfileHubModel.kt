@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
-import cessini.technology.commonui.common.dayTime
+import cessini.technology.commonui.presentation.common.dayTime
 import cessini.technology.model.Room
 import cessini.technology.model.RoomUsers
 import cessini.technology.navigation.NavigationFlow

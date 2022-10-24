@@ -13,11 +13,11 @@ import android.view.ViewTreeObserver
 import androidx.core.view.isVisible
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
-import cessini.technology.commonui.common.BaseBottomSheet
-import cessini.technology.commonui.common.toast
-import cessini.technology.commonui.fragment.auth.SignInFragment
+import cessini.technology.commonui.presentation.auth.SignInFragment
+import cessini.technology.commonui.presentation.common.BaseBottomSheet
+import cessini.technology.commonui.presentation.common.toast
 import cessini.technology.commonui.utils.Constant.Companion.settingBottomSheetHeight
-import cessini.technology.commonui.common.BottomSheetLevelInterface
+import cessini.technology.commonui.presentation.common.BottomSheetLevelInterface
 import cessini.technology.myspace.R
 import cessini.technology.myspace.create.CreateRoomSharedViewModel.Event.*
 import cessini.technology.myspace.databinding.FragmentCreateRoomBinding
@@ -151,7 +151,7 @@ class CreateRoomFragment(private val listener: BottomSheetLevelInterface?) :
 
                         intent.setClassName(
                             requireContext(),
-                            "cessini.technology.commonui.activity.GridActivity"
+                            "cessini.technology.commonui.presentation.GridActivity"
                         )
 //            intent.setClassName(requireContext(),"cessini.technology.myspace.live.LiveMyspaceActivity")
                         intent.putExtra("Room Name", "${editTextSearch.text.toString().trim()}_room")
@@ -174,7 +174,7 @@ class CreateRoomFragment(private val listener: BottomSheetLevelInterface?) :
 //
 //                intent.setClassName(
 //                    requireContext(),
-//                    "cessini.technology.commonui.activity.GridActivity"
+//                    "cessini.technology.commonui.presentation.GridActivity"
 //                )
 ////            intent.setClassName(requireContext(),"cessini.technology.myspace.live.LiveMyspaceActivity")
 //                intent.putExtra("Room Name", "${editTextSearch.text} room")

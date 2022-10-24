@@ -8,15 +8,11 @@ import android.os.Build
 import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.FragmentActivity
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import cessini.technology.commonui.activity.HomeActivity
-import cessini.technology.model.RoomViews
 import cessini.technology.model.ViewerX
 import cessini.technology.model.search.UserLikes
-import cessini.technology.newapi.model.LiveRoom
 import cessini.technology.newapi.model.LiveRoomData
 import cessini.technology.newapi.model.LiveRoomTimeline
 import cessini.technology.newapi.model.RoomTimeline
@@ -25,8 +21,6 @@ import cessini.technology.newrepository.timlineRoomRepo.TimelineRepository
 import com.google.gson.GsonBuilder
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
-import retrofit2.Response
 import javax.inject.Inject
 
 

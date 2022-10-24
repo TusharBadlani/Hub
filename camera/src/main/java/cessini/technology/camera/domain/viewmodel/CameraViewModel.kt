@@ -7,7 +7,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import cessini.technology.camera.presentation.fragment.CameraFragment
-import cessini.technology.commonui.activity.HomeActivity
+import cessini.technology.commonui.presentation.HomeActivity
 import cessini.technology.model.Audio
 import cessini.technology.model.SongInfo
 import cessini.technology.newrepository.explore.SongsRepository

@@ -1,17 +1,13 @@
 package cessini.technology.profile.viewmodel
 
 import android.app.Activity
-import android.app.Application
 import android.util.Log
 import android.view.View
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import aws.sdk.kotlin.runtime.endpoint.AwsEndpointResolver
-import aws.sdk.kotlin.services.sns.SnsClient
-import cessini.technology.commonui.AmazonSNSImpl
-import cessini.technology.commonui.UserArn
-import cessini.technology.commonui.activity.HomeActivity
+import cessini.technology.commonui.data.amazon.AmazonSNSImpl
+import cessini.technology.commonui.presentation.HomeActivity
 import cessini.technology.commonui.utils.ProfileConstants
 import cessini.technology.cvo.cameraModels.VideoModel
 import cessini.technology.cvo.entity.AuthEntity
@@ -20,14 +16,8 @@ import cessini.technology.cvo.profileModels.ProfileStoryModel
 import cessini.technology.cvo.profileModels.ProfileVideoModel
 import cessini.technology.navigation.NavigationFlow
 import cessini.technology.navigation.ToFlowNavigable
-import cessini.technology.newrepository.datastores.ProfileStoreKeys.followingCount
 import cessini.technology.newrepository.myworld.FollowRepository
 import cessini.technology.newrepository.profileRepository.ProfileRepository
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.firestore.ktx.toObject
-import com.google.firebase.ktx.Firebase
-import com.google.firebase.messaging.FirebaseMessaging
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

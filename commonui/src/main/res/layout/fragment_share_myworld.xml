@@ -10,7 +10,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="cessini.technology.commonui.fragment.ShareMyworldFragment">
+        tools:context="cessini.technology.commonui.presentation.share.ShareMyworldFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/scheduleFragmentConstraintLayout"

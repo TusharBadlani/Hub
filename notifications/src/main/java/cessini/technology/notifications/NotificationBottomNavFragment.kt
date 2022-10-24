@@ -2,8 +2,8 @@ package cessini.technology.notifications
 
 import android.os.Bundle
 import android.view.View
-import cessini.technology.commonui.activity.HomeActivity
-import cessini.technology.commonui.common.BaseFragment
+import cessini.technology.commonui.presentation.HomeActivity
+import cessini.technology.commonui.presentation.common.BaseFragment
 import cessini.technology.notifications.databinding.FragmentNotificationBottomNavBinding
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator

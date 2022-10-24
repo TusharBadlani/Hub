@@ -1,6 +1,5 @@
 package cessini.technology.profile.activity
 
-import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -20,7 +19,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import cessini.technology.commonui.viewmodel.BaseViewModel
+import cessini.technology.commonui.presentation.globalviewmodels.BaseViewModel
 import cessini.technology.navigation.NavigationFlow
 import cessini.technology.navigation.Navigator
 import cessini.technology.newrepository.preferences.UserIdentifierPreferences
@@ -32,11 +31,7 @@ import cessini.technology.profile.fragment.publicProfile.SimpleModel
 import cessini.technology.profile.viewmodel.ProfileViewModel
 import cessini.technology.profile.viewmodel.PublicProfileViewModel
 import com.google.gson.GsonBuilder
-import com.vanniktech.emoji.EmojiButton
-import com.vanniktech.emoji.EmojiEditText
-import com.vanniktech.emoji.EmojiManager
 import com.vanniktech.emoji.EmojiPopup
-import com.vanniktech.emoji.google.GoogleEmojiProvider
 import dagger.hilt.android.AndroidEntryPoint
 import io.socket.client.Socket
 import io.socket.emitter.Emitter

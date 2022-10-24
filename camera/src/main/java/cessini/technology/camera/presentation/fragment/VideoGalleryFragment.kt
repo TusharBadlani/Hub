@@ -14,7 +14,7 @@ import androidx.lifecycle.LifecycleObserver
 import cessini.technology.camera.R
 import cessini.technology.camera.databinding.FragmentGalleryBinding
 import cessini.technology.camera.domain.controller.GalleryVideoController
-import cessini.technology.commonui.viewmodel.basicViewModels.GalleryViewModel
+import cessini.technology.commonui.presentation.globalviewmodels.GalleryViewModel
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment

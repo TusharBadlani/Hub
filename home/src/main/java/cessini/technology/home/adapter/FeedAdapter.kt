@@ -10,8 +10,8 @@ import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.RecyclerView
-import cessini.technology.commonui.`class`.ExoProvider
-import cessini.technology.commonui.activity.HomeActivity
+import cessini.technology.commonui.utils.ExoProvider
+import cessini.technology.commonui.presentation.HomeActivity
 import cessini.technology.commonui.utils.ProfileConstants
 import cessini.technology.commonui.utils.dp
 import cessini.technology.cvo.exploremodels.SearchCreatorApiResponse

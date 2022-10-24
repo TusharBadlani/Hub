@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".activity.HomeActivity">
+        tools:context=".presentation.HomeActivity">
 
         <FrameLayout
             android:id="@+id/noInternetView"

@@ -6,8 +6,7 @@ import android.util.Log
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
-import cessini.technology.commonui.activity.HomeActivity
-import cessini.technology.commonui.common.BaseFragment
+import cessini.technology.commonui.presentation.common.BaseFragment
 import cessini.technology.commonui.utils.ProfileConstants
 import cessini.technology.cvo.cameraModels.VideoModel
 import cessini.technology.profile.R

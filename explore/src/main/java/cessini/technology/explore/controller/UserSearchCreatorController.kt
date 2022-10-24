@@ -3,7 +3,7 @@ package cessini.technology.explore.controller
 import android.content.Context
 import android.util.Log
 import androidx.fragment.app.FragmentActivity
-import cessini.technology.commonui.activity.HomeActivity
+import cessini.technology.commonui.presentation.HomeActivity
 import cessini.technology.commonui.utils.ProfileConstants
 import cessini.technology.cvo.exploremodels.SearchCreatorApiResponse
 import cessini.technology.explore.userSearchCreatorItem

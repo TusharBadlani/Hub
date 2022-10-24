@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/introduction"
-        android:name="cessini.technology.commonui.fragment.suggestion.IntroductionFragment"
+        android:name="cessini.technology.commonui.presentation.appintro.IntroductionFragment"
         android:label="SuggestionParentFragment">
 
         <!-- Hide bottom navigation bar from this destination -->
@@ -31,7 +31,7 @@
 
     <fragment
         android:id="@+id/category_selection"
-        android:name="cessini.technology.commonui.fragment.suggestion.SuggestionFragment">
+        android:name="cessini.technology.commonui.presentation.suggestion.fragment.SuggestionFragment">
 
         <argument
             android:name="@string/nav_arg_hide_bottom_nav"
@@ -49,7 +49,7 @@
 
     <fragment
         android:id="@+id/language_selection"
-        android:name="cessini.technology.commonui.fragment.suggestion.LanguageFragment">
+        android:name="cessini.technology.commonui.presentation.languageselect.LanguageFragment">
 
         <argument
             android:name="@string/nav_arg_hide_bottom_nav"

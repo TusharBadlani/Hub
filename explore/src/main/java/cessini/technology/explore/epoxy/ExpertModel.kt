@@ -5,7 +5,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.ViewModelProvider
-import cessini.technology.commonui.viewmodel.basicViewModels.GalleryViewModel
+import cessini.technology.commonui.presentation.globalviewmodels.GalleryViewModel
 import cessini.technology.cvo.exploremodels.CategoryModel
 import cessini.technology.cvo.exploremodels.ProfileModel
 import cessini.technology.cvo.exploremodels.SearchVideoModel

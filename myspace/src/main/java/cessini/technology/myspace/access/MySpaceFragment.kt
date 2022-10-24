@@ -13,12 +13,12 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import cessini.technology.commonui.common.BaseBottomSheet
-import cessini.technology.commonui.common.navigateToProfile
+import cessini.technology.commonui.presentation.common.BaseBottomSheet
+import cessini.technology.commonui.presentation.common.navigateToProfile
 
-import cessini.technology.commonui.common.toast
+import cessini.technology.commonui.presentation.common.toast
 import cessini.technology.commonui.utils.Constant
-import cessini.technology.commonui.viewmodel.BaseViewModel
+import cessini.technology.commonui.presentation.globalviewmodels.BaseViewModel
 import cessini.technology.model.Listener
 import cessini.technology.model.Room
 import cessini.technology.myspace.R
@@ -77,6 +77,8 @@ internal class MySpaceFragment :
         spinner()
         viewModel.updateRoom(myspaceArgs.roomName)
         roomInformation = viewModel.room.value
+
+        Log.e("CheckNav", "MySpaceFragment, ${activity?.localClassName}")
 
         binding.view4.setOnClickListener {
             findNavController().navigate(

@@ -6,8 +6,8 @@ import android.widget.Toast
 import com.airbnb.epoxy.AsyncEpoxyController
 import cessini.technology.camera.R
 import cessini.technology.camera.galleryVideoRecyclerRow
-import cessini.technology.commonui.activity.HomeActivity
-import cessini.technology.commonui.viewmodel.basicViewModels.GalleryViewModel
+import cessini.technology.commonui.presentation.HomeActivity
+import cessini.technology.commonui.presentation.globalviewmodels.GalleryViewModel
 import cessini.technology.cvo.cameraModels.VideoModel
 import cessini.technology.cvo.homemodels.StoryModel
 import java.io.File

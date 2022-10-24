@@ -3,7 +3,7 @@
     <data>
         <variable
             name="galleryRecyclerViewModel"
-            type="cessini.technology.commonui.viewmodel.basicViewModels.GalleryViewModel" />
+            type="cessini.technology.commonui.presentation.globalviewmodels.GalleryViewModel" />
 
         <variable
             name="galleryImage"

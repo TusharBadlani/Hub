@@ -3,29 +3,25 @@ package cessini.technology.home.adapter
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import android.provider.Settings.Global.getString
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.startActivity
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import cessini.technology.commonui.HomeGrid.ChildRecyclerController
-import cessini.technology.commonui.fragment.auth.SignInFragment
+import cessini.technology.commonui.epoxy.homegrid.story.ChildRecyclerController
 import cessini.technology.home.R
-import cessini.technology.commonui.HomeGrid.GridController2
+import cessini.technology.commonui.epoxy.homegrid.grid.GridController2
+import cessini.technology.commonui.presentation.auth.SignInFragment
 import cessini.technology.model.RoomViews
 import cessini.technology.model.Viewer
 import cessini.technology.model.ViewerX
@@ -34,9 +30,7 @@ import cessini.technology.navigation.Navigator
 import cessini.technology.newapi.model.CreatorListeners
 import cessini.technology.newapi.preferences.AuthPreferences
 import cessini.technology.newrepository.preferences.UserIdentifierPreferences
-import cessini.technology.newrepository.timlineRoomRepo.TimelineRepository
 import cessini.technology.newrepository.websocket.video.RoomViewerUpdaterWebSocket
-import cessini.technology.profile.viewmodel.PublicProfileViewModel
 import com.airbnb.epoxy.EpoxyRecyclerView
 import com.bumptech.glide.Glide
 import de.hdodenhof.circleimageview.CircleImageView
@@ -126,7 +120,7 @@ class RoomPagerAdapter(
         Log.d("Heslo4","RoomPagerAdapter")
           Log.d("Heslo4",roomList[position].toString())
         controller.creatorAndListeners= roomList[position]
-        val childcontroller :ChildRecyclerController = ChildRecyclerController(context)
+        val childcontroller : ChildRecyclerController = ChildRecyclerController(context)
 //        holder.storyRecycler.setController(childcontroller)
 //        childcontroller.viewerItems= newStoryItems
         addImages(holder,newStoryItems)

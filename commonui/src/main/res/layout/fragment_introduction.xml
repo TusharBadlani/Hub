@@ -8,7 +8,7 @@
         android:layout_height="match_parent"
         android:background="@drawable/ic_introscreen"
         android:scaleType="centerCrop"
-        tools:context=".fragment.suggestion.IntroductionFragment">
+        tools:context=".presentation.appintro.IntroductionFragment">
 
         <ImageView
             android:id="@+id/imageView"

@@ -12,7 +12,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import cessini.technology.commonui.viewmodel.BaseViewModel
+import cessini.technology.commonui.presentation.globalviewmodels.BaseViewModel
 import cessini.technology.explore.viewmodel.ExploreSearchViewModel
 import cessini.technology.navigation.NavigationFlow
 import cessini.technology.navigation.ToFlowNavigable

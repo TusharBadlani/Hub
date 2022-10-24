@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/commonVideoDisplayFragment"
-        android:name="cessini.technology.commonui.fragment.videodisplay.CommonVideoDisplayFragment"
+        android:name="cessini.technology.commonui.presentation.videodisplay.fragment.CommonVideoDisplayFragment"
         android:label="CommonVideoDisplayFragment">
 
         <action
@@ -22,7 +22,7 @@
 
     <dialog
         android:id="@+id/commentFragment"
-        android:name="cessini.technology.commonui.fragment.CommentFragment"
+        android:name="cessini.technology.commonui.presentation.comment.fragment.CommentFragment"
         android:label="CommentFragment" />
 
 </navigation>

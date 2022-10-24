@@ -1,19 +1,11 @@
 package cessini.technology.myspace.live
 
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.widget.Toast
-import androidx.core.view.forEach
-import androidx.core.view.get
-import androidx.databinding.DataBindingUtil
-import cessini.technology.commonui.activity.HomeActivity
-import cessini.technology.commonui.common.BaseBottomSheet
-import cessini.technology.commonui.common.toast
-import cessini.technology.commonui.databinding.VideoCategoryChipBinding
+import cessini.technology.commonui.presentation.HomeActivity
+import cessini.technology.commonui.presentation.common.BaseBottomSheet
 import cessini.technology.model.Room
 import cessini.technology.myspace.R
 import cessini.technology.myspace.databinding.FragmentPayCreatorBinding

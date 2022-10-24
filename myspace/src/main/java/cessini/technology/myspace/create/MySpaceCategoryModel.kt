@@ -4,7 +4,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import cessini.technology.commonui.fragment.suggestion.Adapter
+import cessini.technology.commonui.epoxy.suggestion.Adapter
 import cessini.technology.myspace.R
 import com.airbnb.epoxy.EpoxyAttribute
 import com.airbnb.epoxy.EpoxyModelClass

@@ -8,7 +8,7 @@ import android.widget.Filterable
 import androidx.activity.viewModels
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.lifecycleScope
-import cessini.technology.commonui.viewmodel.basicViewModels.GalleryViewModel
+import cessini.technology.commonui.presentation.globalviewmodels.GalleryViewModel
 import cessini.technology.cvo.exploremodels.CategoryModel
 import cessini.technology.cvo.exploremodels.ProfileModel
 import cessini.technology.cvo.exploremodels.SearchVideoModel

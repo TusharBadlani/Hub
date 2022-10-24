@@ -11,8 +11,8 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import cessini.technology.commonui.activity.HomeActivity
-import cessini.technology.commonui.viewmodel.basicViewModels.GalleryViewModel
+import cessini.technology.commonui.presentation.HomeActivity
+import cessini.technology.commonui.presentation.globalviewmodels.GalleryViewModel
 import cessini.technology.cvo.exploremodels.CategoryModel
 import cessini.technology.cvo.exploremodels.ProfileModel
 import cessini.technology.explore.R

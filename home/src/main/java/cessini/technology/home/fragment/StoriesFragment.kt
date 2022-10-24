@@ -44,6 +44,7 @@ class StoriesFragment : Fragment() {
         /**Setting a lifecycleOwner as this Fragment.*/
         binding.lifecycleOwner = viewLifecycleOwner
 
+        Log.d("CheckNav", "StoriesFragment, ${activity?.localClassName}")
 
         Log.d("StorySugAdapter", "Observing Next")
         viewModel.storiesFetchList.observe(viewLifecycleOwner, Observer {

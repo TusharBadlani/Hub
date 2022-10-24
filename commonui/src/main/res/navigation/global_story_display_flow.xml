@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/commonStoryDisplayFragment"
-        android:name="cessini.technology.commonui.fragment.storydisplay.CommonStoryDisplayFragment"
+        android:name="cessini.technology.commonui.presentation.storydisplay.fragment.CommonStoryDisplayFragment"
         android:label="CommonStoryDisplayFragment">
 
         <!-- Hide bottom navigation bar from this destination -->

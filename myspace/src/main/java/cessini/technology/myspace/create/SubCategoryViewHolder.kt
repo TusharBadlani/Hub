@@ -2,10 +2,10 @@ package cessini.technology.myspace.create
 
 import android.content.Context
 import android.util.Log
-import cessini.technology.commonui.fragment.suggestion.category
 import cessini.technology.model.ListCategory
 import com.airbnb.epoxy.TypedEpoxyController
 import java.lang.RuntimeException
+import cessini.technology.commonui.epoxy.suggestion.category
 
 class SubCategoryViewHolder(val context: Context): TypedEpoxyController<ArrayList<ListCategory>>() {
     companion object {

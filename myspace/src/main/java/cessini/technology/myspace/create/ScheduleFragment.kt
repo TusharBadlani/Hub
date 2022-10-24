@@ -6,9 +6,9 @@ import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.activityViewModels
-import cessini.technology.commonui.common.BaseBottomSheet
+import cessini.technology.commonui.presentation.common.BaseBottomSheet
 import cessini.technology.commonui.utils.Constant.Companion.settingBottomSheetHeight
-import cessini.technology.commonui.common.BottomSheetLevelInterface
+import cessini.technology.commonui.presentation.common.BottomSheetLevelInterface
 import cessini.technology.myspace.R
 import cessini.technology.myspace.databinding.FragmentScheduleBinding
 import com.google.android.material.bottomsheet.BottomSheetBehavior

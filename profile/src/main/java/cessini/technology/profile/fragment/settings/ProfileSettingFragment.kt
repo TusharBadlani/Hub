@@ -4,16 +4,17 @@ import android.app.Dialog
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import cessini.technology.commonui.activity.HomeActivity
-import cessini.technology.commonui.common.BaseBottomSheet
+import cessini.technology.commonui.presentation.HomeActivity
+import cessini.technology.commonui.presentation.common.BaseBottomSheet
 import cessini.technology.commonui.utils.Constant.Companion.settingBottomSheetHeight
-import cessini.technology.commonui.viewmodel.BaseViewModel
-import cessini.technology.commonui.common.BottomSheetLevelInterface
+import cessini.technology.commonui.presentation.globalviewmodels.BaseViewModel
+import cessini.technology.commonui.presentation.common.BottomSheetLevelInterface
 import cessini.technology.newrepository.preferences.UserIdentifierPreferences
 import cessini.technology.profile.R
 import cessini.technology.profile.databinding.UserProfileSettingsBinding
@@ -47,6 +48,7 @@ class ProfileSettingFragment
             isDraggable = false
         }
 
+        Log.d("CheckNav", "ProfileSettingFragment, ${activity?.localClassName}")
         binding.userProfileSettingViewModel = profileViewModel
         binding.lifecycleOwner = viewLifecycleOwner
 

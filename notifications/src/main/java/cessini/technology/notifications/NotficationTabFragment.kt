@@ -10,8 +10,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import cessini.technology.commonui.common.navigateToProfile
-import cessini.technology.commonui.viewmodel.BaseViewModel
+import cessini.technology.commonui.presentation.common.navigateToProfile
+import cessini.technology.commonui.presentation.globalviewmodels.BaseViewModel
 import cessini.technology.model.Notification
 import cessini.technology.newapi.model.MyWorldNotification
 import cessini.technology.newapi.preferences.AuthPreferences

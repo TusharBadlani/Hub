@@ -1,7 +1,7 @@
 package cessini.technology.profile.activity
 
-import cessini.technology.commonui.common.BaseBottomSheet
-import cessini.technology.commonui.common.BottomSheetLevelInterface
+import cessini.technology.commonui.presentation.common.BaseBottomSheet
+import cessini.technology.commonui.presentation.common.BottomSheetLevelInterface
 import cessini.technology.profile.R
 import cessini.technology.profile.databinding.BottomSheetChatBinding
 

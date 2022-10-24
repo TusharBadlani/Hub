@@ -10,10 +10,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
-import cessini.technology.commonui.activity.HomeActivity
+import cessini.technology.commonui.presentation.HomeActivity
 import cessini.technology.commonui.utils.ProfileConstants
-import cessini.technology.commonui.viewmodel.BaseViewModel
-import cessini.technology.commonui.viewmodel.basicViewModels.GalleryViewModel
+import cessini.technology.commonui.presentation.globalviewmodels.BaseViewModel
+import cessini.technology.commonui.presentation.globalviewmodels.GalleryViewModel
 import cessini.technology.cvo.exploremodels.ProfileModel
 import cessini.technology.model.Video
 import cessini.technology.newrepository.video.VideoRepository

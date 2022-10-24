@@ -2,7 +2,7 @@ package cessini.technology.home.controller
 
 import android.util.Log
 import androidx.lifecycle.ViewModelProvider
-import cessini.technology.commonui.viewmodel.basicViewModels.GalleryViewModel
+import cessini.technology.commonui.presentation.globalviewmodels.GalleryViewModel
 import cessini.technology.cvo.homemodels.StoriesFetchResponse
 import cessini.technology.home.circularVideoSuggestionRecyclerItem
 import cessini.technology.home.fragment.StoriesFragment

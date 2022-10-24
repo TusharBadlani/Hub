@@ -23,7 +23,6 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
@@ -32,14 +31,13 @@ import cessini.technology.camera.databinding.FragmentCameraBinding
 import cessini.technology.camera.domain.service.AudioService
 import cessini.technology.camera.domain.viewmodel.CameraViewModel
 import cessini.technology.camera.utils.Constant
-import cessini.technology.commonui.activity.HomeActivity
-import cessini.technology.commonui.common.BaseFragment
-import cessini.technology.commonui.viewmodel.BaseViewModel
-import cessini.technology.commonui.viewmodel.basicViewModels.GalleryViewModel
+import cessini.technology.commonui.presentation.HomeActivity
+import cessini.technology.commonui.presentation.common.BaseFragment
+import cessini.technology.commonui.presentation.globalviewmodels.BaseViewModel
+import cessini.technology.commonui.presentation.globalviewmodels.GalleryViewModel
 import cessini.technology.cvo.cameraModels.CameraModes
 import cessini.technology.cvo.cameraModels.VideoModel
 import cessini.technology.cvo.homemodels.StoryModel
-import com.google.android.material.bottomsheet.BottomSheetBehavior
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
 import java.io.File

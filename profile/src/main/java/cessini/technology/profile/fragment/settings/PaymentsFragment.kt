@@ -8,9 +8,9 @@ import android.view.ViewTreeObserver
 import androidx.core.view.isVisible
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.viewModels
-import cessini.technology.commonui.common.BaseBottomSheet
+import cessini.technology.commonui.presentation.common.BaseBottomSheet
 import cessini.technology.commonui.utils.Constant
-import cessini.technology.commonui.common.BottomSheetLevelInterface
+import cessini.technology.commonui.presentation.common.BottomSheetLevelInterface
 import cessini.technology.profile.R
 import cessini.technology.profile.databinding.FragmentPaymentsBinding
 import cessini.technology.profile.viewmodel.ProfileViewModel

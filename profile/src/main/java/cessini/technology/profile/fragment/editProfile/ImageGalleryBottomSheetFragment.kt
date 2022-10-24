@@ -10,10 +10,10 @@ import androidx.annotation.RequiresApi
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
-import cessini.technology.commonui.common.BaseBottomSheet
+import cessini.technology.commonui.presentation.common.BaseBottomSheet
 import cessini.technology.commonui.utils.Constant.Companion.settingBottomSheetHeight
-import cessini.technology.commonui.viewmodel.basicViewModels.GalleryViewModel
-import cessini.technology.commonui.common.BottomSheetLevelInterface
+import cessini.technology.commonui.presentation.globalviewmodels.GalleryViewModel
+import cessini.technology.commonui.presentation.common.BottomSheetLevelInterface
 import cessini.technology.profile.R
 import cessini.technology.profile.`class`.Gallery
 import cessini.technology.profile.controller.GalleryImageController

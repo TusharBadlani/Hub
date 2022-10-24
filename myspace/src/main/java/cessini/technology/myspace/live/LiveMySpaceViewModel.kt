@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import cessini.technology.commonui.common.BaseViewModel
+import cessini.technology.commonui.presentation.common.BaseViewModel
 import cessini.technology.model.Room
 import cessini.technology.myspace.access.MySpaceFragmentViewModel
 import cessini.technology.newrepository.myspace.RoomRepository

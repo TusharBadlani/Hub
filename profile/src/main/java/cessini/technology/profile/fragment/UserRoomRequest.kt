@@ -4,9 +4,9 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
-import cessini.technology.commonui.common.BaseFragment
-import cessini.technology.commonui.common.navigateToProfile
-import cessini.technology.commonui.viewmodel.BaseViewModel
+import cessini.technology.commonui.presentation.common.BaseFragment
+import cessini.technology.commonui.presentation.common.navigateToProfile
+import cessini.technology.commonui.presentation.globalviewmodels.BaseViewModel
 import cessini.technology.model.RequestProfile
 import cessini.technology.profile.R
 import cessini.technology.profile.databinding.FragmentRoomRequestBinding

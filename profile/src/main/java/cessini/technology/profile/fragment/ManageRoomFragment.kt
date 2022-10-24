@@ -7,16 +7,16 @@ import android.util.Log
 import android.view.View
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
-import cessini.technology.commonui.common.BaseBottomSheet
-import cessini.technology.commonui.common.dateTime
-import cessini.technology.commonui.common.navigateToProfile
-import cessini.technology.commonui.common.toast
+import cessini.technology.commonui.presentation.common.BaseBottomSheet
+import cessini.technology.commonui.presentation.common.dateTime
+import cessini.technology.commonui.presentation.common.navigateToProfile
+import cessini.technology.commonui.presentation.common.toast
 import cessini.technology.commonui.utils.Constant.Companion.settingBottomSheetHeight
-import cessini.technology.commonui.viewmodel.BaseViewModel
+import cessini.technology.commonui.presentation.globalviewmodels.BaseViewModel
 import cessini.technology.model.CreateRoomRequest
 import cessini.technology.model.RequestProfile
 import cessini.technology.model.Room
-import cessini.technology.commonui.common.BottomSheetLevelInterface
+import cessini.technology.commonui.presentation.common.BottomSheetLevelInterface
 import cessini.technology.myspace.access.MySpaceFragmentViewModel
 import cessini.technology.myspace.create.CreateRoomFragment
 import cessini.technology.myspace.create.CreateRoomSharedViewModel
@@ -261,7 +261,7 @@ internal class ManageRoomFragment :
                         val intent: Intent = Intent();
                         intent.setClassName(
                             requireContext(),
-                            "cessini.technology.commonui.activity.GridActivity"
+                            "cessini.technology.commonui.presentation.GridActivity"
                         )
                         startActivity(intent)
 

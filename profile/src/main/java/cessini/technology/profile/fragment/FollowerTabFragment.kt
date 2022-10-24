@@ -8,7 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import cessini.technology.commonui.viewmodel.BaseViewModel
+import cessini.technology.commonui.presentation.globalviewmodels.BaseViewModel
 import cessini.technology.model.User
 import cessini.technology.profile.R
 import cessini.technology.profile.controller.FollowerFollowingController

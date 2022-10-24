@@ -43,6 +43,7 @@ class VideoSuggestionFragment : Fragment() {
         /**Setting a lifecycleOwner as this Fragment.*/
         binding.lifecycleOwner = viewLifecycleOwner
 
+        Log.d("CheckNav", "VideoSuggestionFragment, ${activity?.localClassName}")
         Log.d("VidSugAdapter", "Fragment Called")
 
         socketViewModel.suggestedVideos.filter { it.isNotEmpty() }.onEach {

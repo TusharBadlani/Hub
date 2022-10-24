@@ -9,12 +9,12 @@ import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
-import cessini.technology.commonui.common.BaseBottomSheet
-import cessini.technology.commonui.common.toast
+import cessini.technology.commonui.presentation.common.BaseBottomSheet
+import cessini.technology.commonui.presentation.common.toast
 import cessini.technology.commonui.utils.Constant
 import cessini.technology.model.ListCategory
 import cessini.technology.model.Subcategory
-import cessini.technology.commonui.common.BottomSheetLevelInterface
+import cessini.technology.commonui.presentation.common.BottomSheetLevelInterface
 import cessini.technology.myspace.R
 import cessini.technology.myspace.databinding.FragmentMySpaceAreaBinding
 import cessini.technology.newrepository.explore.RegistrationRepository

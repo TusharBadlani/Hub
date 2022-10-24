@@ -25,8 +25,8 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import cessini.technology.commonui.activity.HomeActivity
-import cessini.technology.commonui.common.BaseFragment
+import cessini.technology.commonui.presentation.HomeActivity
+import cessini.technology.commonui.presentation.common.BaseFragment
 import cessini.technology.commonui.utils.ProfileConstants
 import cessini.technology.model.Profile
 import cessini.technology.myspace.create.CreateRoomFragment
@@ -77,6 +77,7 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>(R.layout.fragment_p
 
         Log.d(TAG, "onViewCreated: ")
 
+        Log.d("CheckNav", "ProfileFragment, ${activity?.localClassName}")
         (activity as HomeActivity).setUpNavProfileIcon(null, (activity as HomeActivity).profileDrawable, true)
 
         //setting up the viewPager and the TabLayout

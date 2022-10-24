@@ -25,12 +25,12 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import cessini.technology.commonui.activity.HomeActivity
-import cessini.technology.commonui.common.BaseBottomSheet
-import cessini.technology.commonui.common.toast
+import cessini.technology.commonui.presentation.HomeActivity
+import cessini.technology.commonui.presentation.common.BaseBottomSheet
+import cessini.technology.commonui.presentation.common.toast
 import cessini.technology.commonui.utils.Constant.Companion.settingBottomSheetHeight
-import cessini.technology.commonui.viewmodel.BaseViewModel
-import cessini.technology.commonui.common.BottomSheetLevelInterface
+import cessini.technology.commonui.presentation.globalviewmodels.BaseViewModel
+import cessini.technology.commonui.presentation.common.BottomSheetLevelInterface
 import cessini.technology.newapi.SharedLocationManager
 import cessini.technology.profile.R
 import cessini.technology.profile.databinding.FragmentEditUserProfileBinding

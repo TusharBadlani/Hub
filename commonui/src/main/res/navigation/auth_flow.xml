@@ -6,6 +6,6 @@
 
     <dialog
         android:id="@+id/signInFragment"
-        android:name="cessini.technology.commonui.fragment.auth.SignInFragment"
+        android:name="cessini.technology.commonui.presentation.auth.SignInFragment"
         android:label="SignInFragment" />
 </navigation>

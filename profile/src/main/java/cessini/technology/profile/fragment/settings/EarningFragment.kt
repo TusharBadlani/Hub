@@ -6,9 +6,9 @@ import android.os.Bundle
 import android.view.View
 import android.view.ViewTreeObserver
 import androidx.lifecycle.lifecycleScope
-import cessini.technology.commonui.common.BaseBottomSheet
+import cessini.technology.commonui.presentation.common.BaseBottomSheet
 import cessini.technology.commonui.utils.Constant.Companion.settingBottomSheetHeight
-import cessini.technology.commonui.common.BottomSheetLevelInterface
+import cessini.technology.commonui.presentation.common.BottomSheetLevelInterface
 import cessini.technology.profile.R
 import cessini.technology.profile.databinding.FragmentEarningBinding
 import com.google.android.material.bottomsheet.BottomSheetBehavior

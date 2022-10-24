@@ -30,9 +30,9 @@ import androidx.navigation.fragment.findNavController
 import cessini.technology.camera.R
 import cessini.technology.camera.databinding.DialogeForCameraFragmentBinding
 import cessini.technology.camera.databinding.FragmentVideoUploadBinding
-import cessini.technology.commonui.common.BaseFragment
-import cessini.technology.commonui.viewmodel.BaseViewModel
-import cessini.technology.commonui.viewmodel.basicViewModels.GalleryViewModel
+import cessini.technology.commonui.presentation.common.BaseFragment
+import cessini.technology.commonui.presentation.globalviewmodels.BaseViewModel
+import cessini.technology.commonui.presentation.globalviewmodels.GalleryViewModel
 import cessini.technology.cvo.cameraModels.VideoModel
 import cessini.technology.cvo.homemodels.StoryModel
 import cessini.technology.navigation.NavigationFlow

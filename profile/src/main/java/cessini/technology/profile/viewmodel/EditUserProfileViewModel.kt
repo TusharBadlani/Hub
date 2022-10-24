@@ -5,7 +5,7 @@ import android.graphics.Bitmap
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import cessini.technology.commonui.common.BaseViewModel
+import cessini.technology.commonui.presentation.common.BaseViewModel
 import cessini.technology.newrepository.datastores.ProfileStore
 import cessini.technology.newrepository.myworld.ProfileRepository
 import cessini.technology.profile.viewmodel.EditUserProfileViewModel.Event

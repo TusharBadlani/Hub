@@ -8,7 +8,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import cessini.technology.commonui.activity.HomeActivity
+import cessini.technology.commonui.presentation.HomeActivity
 import cessini.technology.commonui.utils.ProfileConstants
 import cessini.technology.commonui.utils.networkutil.NetworkUtils
 import cessini.technology.cvo.cameraModels.VideoModel

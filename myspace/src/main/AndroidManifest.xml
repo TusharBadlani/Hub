@@ -4,7 +4,7 @@
     package="cessini.technology.myspace">
 
     <application>
-        <activity android:name="cessini.technology.commonui.activity.GridActivity"
+        <activity android:name="cessini.technology.commonui.presentation.GridActivity"
             android:launchMode="singleTask"
             android:exported="true"
             >
@@ -21,7 +21,7 @@
 <!--        <activity android:name="cessini.technology.commonui.activity.live.LiveMyspaceActivity"-->
 <!--            android:exported="true"/>-->
         <service
-            android:name="cessini.technology.commonui.activity.services.screen_share.MediaProjectionService"
+            android:name="cessini.technology.commonui.services.screen_share.MediaProjectionService"
             android:enabled="true"
             android:exported="false"
             android:foregroundServiceType="mediaProjection"

@@ -7,11 +7,11 @@
 
         <variable
             name="sigin"
-            type="cessini.technology.commonui.viewmodel.authViewModels.SignInViewModel" />
+            type="cessini.technology.commonui.presentation.auth.SignInViewModel" />
 
         <variable
             name="scontext"
-            type="cessini.technology.commonui.fragment.auth.SignInFragment" />
+            type="cessini.technology.commonui.presentation.auth.SignInFragment" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottom_sheet_sign_in"

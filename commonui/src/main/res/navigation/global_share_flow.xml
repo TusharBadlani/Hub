@@ -7,7 +7,7 @@
 
     <dialog
         android:id="@+id/share_fragment"
-        android:name="cessini.technology.commonui.fragment.ShareMyworldFragment"
+        android:name="cessini.technology.commonui.presentation.share.ShareMyworldFragment"
         />
 
 </navigation>

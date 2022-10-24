@@ -1,34 +1,23 @@
 package cessini.technology.explore.epoxy
 
-import android.graphics.Color
-import android.os.Build
 import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.ViewModelProvider
-import cessini.technology.commonui.activity.HomeActivity
-import cessini.technology.commonui.utils.ProfileConstants
-import cessini.technology.cvo.exploremodels.SearchCreatorApiResponse
+import cessini.technology.commonui.presentation.HomeActivity
 import cessini.technology.explore.R
 import cessini.technology.explore.states.ExploreOnClickEvents
-import cessini.technology.explore.viewmodel.SearchViewModel
-import cessini.technology.navigation.NavigationFlow
-import cessini.technology.navigation.ToFlowNavigable
-import cessini.technology.newrepository.myworld.ProfileRepository
 import cessini.technology.profile.viewmodel.PublicProfileViewModel
 import com.airbnb.epoxy.EpoxyAttribute
 import com.airbnb.epoxy.EpoxyHolder
 import com.airbnb.epoxy.EpoxyModelClass
 import com.airbnb.epoxy.EpoxyModelWithHolder
 import com.bumptech.glide.Glide
-import kotlinx.coroutines.*
 import java.util.HashMap
-import javax.inject.Inject
 
 @EpoxyModelClass
 abstract class VoiceModel : EpoxyModelWithHolder<VoiceModel.Holder>() {

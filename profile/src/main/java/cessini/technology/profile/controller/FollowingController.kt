@@ -1,7 +1,7 @@
 package cessini.technology.profile.controller
 
 import android.util.Log
-import cessini.technology.commonui.common.navigateToProfile
+import cessini.technology.commonui.presentation.common.navigateToProfile
 import cessini.technology.model.User
 import cessini.technology.profile.followerFollowingItem
 import cessini.technology.profile.fragment.FollowingTabFragment

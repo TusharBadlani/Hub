@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="cessini.technology.commonui.viewmodel.suggestionViewModel.SuggestionViewModel" />
+            type="cessini.technology.commonui.presentation.suggestion.SuggestionViewModel" />
 
     </data>
 

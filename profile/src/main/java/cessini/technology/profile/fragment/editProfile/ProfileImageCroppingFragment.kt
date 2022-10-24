@@ -6,8 +6,8 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import cessini.technology.commonui.activity.HomeActivity
-import cessini.technology.commonui.common.BaseBottomSheet
+import cessini.technology.commonui.presentation.HomeActivity
+import cessini.technology.commonui.presentation.common.BaseBottomSheet
 import cessini.technology.commonui.utils.Constant.Companion.settingBottomSheetHeight
 import cessini.technology.profile.R
 import cessini.technology.profile.databinding.ProfileImageCroppingFragmentBinding
