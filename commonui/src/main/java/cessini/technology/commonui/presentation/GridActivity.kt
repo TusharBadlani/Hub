@@ -22,6 +22,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.*
+import androidx.activity.result.ActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -223,7 +225,9 @@ class GridActivity : AppCompatActivity() , SignalingClient.Callback {
 
             val sendIntent = mediaProjectionService.sendIntent()
             if (sendIntent != null) {
-                startActivityForResult(sendIntent, REQUEST_CODE_STREAM)
+                registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+                    onActivityResult(REQUEST_CODE_STREAM, result)
+                }.launch(sendIntent)
             }
         }
 
@@ -369,6 +373,25 @@ class GridActivity : AppCompatActivity() , SignalingClient.Callback {
         snackbarLayout.addView(customSnackView.root, 0)
     }
 
+    private fun onActivityResult(requestCode:Int, result: ActivityResult) {
+        if(result.resultCode == Activity.RESULT_OK) {
+            val intent = result.data
+            when(requestCode) {
+                REQUEST_CODE_STREAM -> {
+                    intent?.let { intentData ->
+                        mMediaProjectionPermissionResultCode = result.resultCode
+                        mMediaProjectionPermissionResultData = intentData
+                        val displayService: MediaProjectionService? = MediaProjectionService.INSTANCE
+                        val endpoint: String = endPointUrlBase+"app/{$rname}"
+                        displayService?.prepareStreamRtp(endpoint, result.resultCode, intentData)
+                        displayService?.startStreamRtp(endpoint)
+                        screenCast()
+                    }
+                }
+            }
+        }
+    }
+
 
     /**
     * Creating PeerConnectionFactory to create PeerConnection, establishing peer to peer connection
@@ -508,27 +531,27 @@ class GridActivity : AppCompatActivity() , SignalingClient.Callback {
     /**
      * For the case of screen capture handling the Intent result
      */
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode != CAPTURE_PERMISSION_REQUEST_CODE)
-        {
-            Toast.makeText(this,"permission not granted",Toast.LENGTH_SHORT).show()
-            return;
-        }else {
-            mMediaProjectionPermissionResultCode = resultCode
-            mMediaProjectionPermissionResultData = data
-            screenCast()
-        }
-        if (data != null && (requestCode == REQUEST_CODE_STREAM && resultCode == RESULT_OK)
-        ) {
-            mMediaProjectionPermissionResultCode = resultCode
-            mMediaProjectionPermissionResultData = data
-            val displayService: MediaProjectionService? = MediaProjectionService.INSTANCE
-            val endpoint: String = endPointUrlBase+"app/{$rname}"
-            displayService?.prepareStreamRtp(endpoint, resultCode, data)
-            displayService?.startStreamRtp(endpoint)
-        }
-    }
+//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+//        super.onActivityResult(requestCode, resultCode, data)
+//        if (requestCode != CAPTURE_PERMISSION_REQUEST_CODE)
+//        {
+//            Toast.makeText(this,"permission not granted",Toast.LENGTH_SHORT).show()
+//            return;
+//        }else {
+//            mMediaProjectionPermissionResultCode = resultCode
+//            mMediaProjectionPermissionResultData = data
+//            screenCast()
+//        }
+//        if (data != null && (requestCode == REQUEST_CODE_STREAM && resultCode == RESULT_OK)
+//        ) {
+//            mMediaProjectionPermissionResultCode = resultCode
+//            mMediaProjectionPermissionResultData = data
+//            val displayService: MediaProjectionService? = MediaProjectionService.INSTANCE
+//            val endpoint: String = endPointUrlBase+"app/{$rname}"
+//            displayService?.prepareStreamRtp(endpoint, resultCode, data)
+//            displayService?.startStreamRtp(endpoint)
+//        }
+//    }
 
     /**
      * capturing the screen cast stream and adding it to the mediaStream with peerConnectionFactory
